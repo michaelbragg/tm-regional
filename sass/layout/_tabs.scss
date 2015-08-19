@@ -1,0 +1,86 @@
+/**
+ * Tabs
+ */
+
+.tabs-menu {
+    padding: 10px 0 0 0;
+    margin-bottom: 20px;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+.tabs-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tabs-menu ul li {
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+}
+.tabs-menu ul li a {
+    display: block;
+    background-color: $primary-color;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: .9em;
+    border-right: 1px solid #fff;
+}
+.tabs-text {
+    display: none;
+}
+.tabs-menu ul li a:hover,
+.tabs-menu ul li a:active {} @media screen and (max-width: 769px) {
+    .tabicon {
+        cursor: pointer;
+        padding-top: 15px;
+        display: block;
+        background-color: $primary-color;
+        margin: 0;
+        min-height: 35px;
+    }
+    .tabs-menu {
+        height: 0;
+        overflow: hidden;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        clear: both;
+    }
+    .tabs-menu ul li a {
+        border-right: none;
+    }
+    .tabs-menu-expand {
+        height: 100%;
+    }
+    .tabs-menu ul li {
+        display: block;
+    }
+    .tabs-arrow-down {
+        float: left;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #fff;
+        margin: 3px 0 0 15px;
+    }
+    .tabs-arrow-up {
+        float: left;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        border-top: none;
+        margin: 3px 0 0 15px;
+    }
+    .tabs-text {
+        display: block;
+        float: left;
+        margin-left: 10px;
+        margin-top: -5px;
+        color: #fff;
+    }
+}
