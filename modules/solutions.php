@@ -5,7 +5,7 @@
  * @package tm-regional
  */
 ?>
- <section class="solutions section" id="section2">
+ <section class="solutions section js-height-full" id="section2">
     <ul>
         <li>
             <button id="hotspotOne" class="hotspot desktop__visible pulse">

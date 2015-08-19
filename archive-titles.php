@@ -67,6 +67,28 @@ if( $my_posts ) {
         'nopaging' => true
       ));
     ?>
+<div id="tab-container" class='tab-container'>
+ <ul class='etabs'>
+   <li class='tab'><a href="#tabs1-html">HTML Markup</a></li>
+   <li class='tab'><a href="#tabs1-js">Required JS</a></li>
+   <li class='tab'><a href="#tabs1-css">Example CSS</a></li>
+ </ul>
+ <div class='panel-container'>
+  <div id="tabs1-html">
+   <h2>HTML Markup for these tabs</h2>
+   <p>The HTML markup for your tabs and content can be arranged however you want. At the minimum, you need a container, a collection of links for your tabs (an unordered list by default), and matching divs for your tabbed content. Make sure the tab <code>href</code> attributes match the
+<code>id</code> of the target panel. This is standard semantic markup for in-page anchors.</p>
+   <p>The class names above are just to make it easy to style. You can make them whatever you want, there's no magic here.</p>
+  </div>
+   <div id="tabs1-js">
+   <h2>JS for these tabs</h2>
+  </div>
+  <div id="tabs1-css">
+   <h2>CSS Styles for these tabs</h2>
+  </div>
+ </div>
+</div>
+
 
 <div class="tab_expand tabicon ms_hidden ls_hidden">
   <div class="tabs-arrow-down"></div>

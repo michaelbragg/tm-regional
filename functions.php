@@ -143,9 +143,13 @@ function tm_regional_scripts() {
 
 	wp_enqueue_script( 'tm-regional-randomHero', get_template_directory_uri() . '/js/jquery.randomHero.js', array(), '20150724', true );
 
+	wp_enqueue_script( 'tm-regional-tabs', get_template_directory_uri() . '/js/jquery.easytabs.min.js', array(), '20150724', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+
 }
 add_action( 'wp_enqueue_scripts', 'tm_regional_scripts', 100 );
 

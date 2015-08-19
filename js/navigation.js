@@ -48,15 +48,10 @@
 
     $(document).ready(function() {
         js_height_init();
-
     });
 
-
-
     $(window).resize(function() {
-
         js_height_init();
-
     });
 
     function js_height_init() {
