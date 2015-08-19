@@ -12,3 +12,6 @@ npm-debug.log
 #layouts css
 layouts/content-sidebar.css
 layouts/sidebar-content.css
+
+#Node Modules
+node_modules/*

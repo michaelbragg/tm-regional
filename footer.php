@@ -68,7 +68,15 @@
       });
     </script>
 
+
+
     <?php } ?>
+
+      <script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs();
+    });
+  </script>
 
 
 
