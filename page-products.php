@@ -11,14 +11,12 @@ Template Name: Products
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package tm-regional
+ * @package regional-theme
  */
 
 get_header(); ?>
-
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <div class="page-hero"></div>
       <div class="container">
       <?php while ( have_posts() ) : the_post(); ?>
 
@@ -43,12 +41,22 @@ get_header(); ?>
               'nopaging' => true
             ));?>
 
+<div class="tab_expand tabicon ms_hidden ls_hidden">
+  <div class="tabs-arrow-down"></div>
+  <div class="tabs-text">Please select a product</div>
+    <nav class="tabs-menu">
+      <ul>
+      <?php foreach( $post_array as $post ): ?><?php setup_postdata($post); ?><li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li><?php wp_reset_postdata(); ?><?php endforeach;?>
+      </ul>
+    </nav>
+</div>
+
             <ul class="list list__inline">
               <?php /*  Loop  */ ?>
               <?php  foreach( $post_array as $post ):?>
                 <?php setup_postdata($post); ?>
 
-                <h3><?php the_title(); ?></h3>
+                <!--<h3><?php the_title(); ?></h3>-->
 
                 <?php get_template_part( 'content', 'products' );?>
               <?php endforeach;?>

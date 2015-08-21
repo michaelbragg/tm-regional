@@ -16,7 +16,7 @@ var productPreview = productPreview || {};
    */
 
   productPreview.config = {
-    debug: false,
+    debug: true,
     list: '.js-advert--list',
     button: '.js-products--button',
     placeholder: '.js-advert--preview',
@@ -69,7 +69,7 @@ var productPreview = productPreview || {};
    */
 
   productPreview.getData = function() {
-
+event.preventDefault();
     var _button = $(this),
         _parent = $(this).parents( productPreview.config.container );
 

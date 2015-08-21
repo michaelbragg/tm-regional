@@ -1,0 +1,80 @@
+/* ----------------------------
+    OUR BRANDS
+-------------------------------*/
+
+.brands-style{
+  background-color:#fff;
+ 
+}
+.js-advert--list{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+.js-advert--preview{
+  position: relative;
+}
+.js-advert--padding{
+  padding:50px 30px;
+}
+.ad-preview{
+  text-align: center;
+}
+
+.brands-style .np{
+  padding:0;
+}
+
+
+.products-button {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  text-align: left;
+
+  font-size:24px;
+  font-weight: 300;
+  color:#666;
+  outline: none;
+}
+
+.current-product, .products-button:hover {
+  font-weight: 700;
+}
+
+.js-advert--list .products-button:first-child{
+  padding-top:0;
+}
+
+.advert-container{
+ position: relative;
+ display:table;
+
+}
+
+.advert-container-item{
+  float:none;
+  vertical-align: middle;
+  padding:50px 30px;
+}
+
+@media screen and (min-width:992px){
+.advert-container-item{
+  display:table-cell;
+  margin: 0;
+}
+}
+
+.advert-container-item ul{
+margin-bottom: 30px;
+}
+
+.products-container{
+   background-color: $primary-color;
+text-align: center;
+}
+
+
+
+

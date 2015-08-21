@@ -57,7 +57,7 @@ h1::selection {
     background: #dc3333;
 }
 .site-content{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 #masthead {
     position: fixed;
@@ -123,8 +123,9 @@ h1::selection {
     }
 }
 
-.page{
+body{
     background-image:url(./gui/page-grain.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
