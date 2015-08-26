@@ -5,7 +5,7 @@
  * @package tm-regional
  */
 ?>
-
+<div id="<?php the_slug() ?>">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <header class="entry-header">
@@ -45,9 +45,6 @@ if ( have_visualizer() ) {
 }
 
  ?>
-
- <button class="calc-btn calc-btn-fr">My campaign</button>
-
   </section><!-- .container -->
 
   <footer class="entry-meta">
@@ -70,4 +67,4 @@ if ( have_visualizer() ) {
     <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
-
+</div>

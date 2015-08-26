@@ -26,26 +26,21 @@ $my_posts = get_posts($args);
         <div class="products-page-hero"><div class="container">
           <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
         </div>
-      </div>
       
-
 <div class="page-contents">
 
       <div class="container">
-
-   <div id="background-color">
 <?php
 
 if( $my_posts ) {
  
   echo $my_posts[0]->post_content;
-?>
-  </div><!-- #background-color -->
-  </div><!-- .tmr__wrapper  -->
-</div>
-<?php
 }
 ?>
+  </div><!-- .tmr__wrapper  -->
+</div>
+
+</div>
 
 <?php
   $taxonomy_type = 'mediums';
