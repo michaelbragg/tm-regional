@@ -85,16 +85,24 @@
     }
 }
 
-   .etabs { margin: 0; padding: 0; }
-    .tab { display: inline-block; zoom:1; *display:inline; background: $primary-color; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
-    .tab a { color:#fff; font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:30px; margin-top: 30px;  max-width: 800px}
+
+    .tab { display: inline-block; zoom:1; *display:inline; border: solid 1px #666; padding:10px; margin-left:0; margin-right: 10px; margin-bottom: 10px;}
+
+       @media screen and (min-width:481px){
+.tab { display: inline-block; zoom:1; *display:inline; border: solid 1px #666; padding:10px; margin-left:10px; margin-bottom: 10px; margin-right: 0;}
+
+}
+
+    .tab a { color:#666; font-size: 16px; line-height: 1.1; display: block; outline: none; text-transform: uppercase;}
     .tab a:hover { text-decoration: none; color:#fff;}
-    .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666;  }
+    .tab.active { position: relative; border-color: $primary-color;  }
     .tab a.active { font-weight: bold; outline:none; color:$primary-color;}
 
-    .tab a:visited{color:#fff;}
+    .tab a:visited{color:#666;}
     .tab a.active:visited{color:$primary-color;}
-    .tab-container .panel-container { outline:none; background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
-    .panel-container { margin-bottom: 10px; }
-
-    .tab-container .panel-container div { outline:none;}
+    .tab-container .panel-container { outline:none; }
+    .panel-container { clear: both; }
+    .tab-container{margin-bottom:50px;}
+    .tab-container h2 {display: inline-block; margin-bottom:30px; margin-top: 30px; text-transform: uppercase;}
+    .tab-container .panel-container div { outline:none; }

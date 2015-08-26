@@ -74,7 +74,7 @@
 
       <script type="text/javascript">
     $(document).ready( function() {
-      $('#tab-container').easytabs();
+      $('.tab-container').easytabs();
     });
   </script>
 

@@ -7,6 +7,15 @@
 // Mobile Navigation
 (function($) {
 
+$('.tab a').click(function(){
+
+ $('html, body').animate({
+                        scrollTop: $(this).offset().top -130
+                    }, 2000);
+
+});
+
+
     $('.mobile-toggle').click(function() {
         if ($('.main-nav').hasClass('open-nav')) {
             $('.main-nav').removeClass('open-nav');
@@ -149,6 +158,7 @@
              $(this).removeClass('pulse');
         }
     });
+
 
 
 })(jQuery);

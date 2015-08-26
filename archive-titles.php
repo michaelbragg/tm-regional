@@ -9,11 +9,6 @@
 
 get_header(); ?>
 
-  <section id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <div class="page-hero"></div>
-     <div class="container">
-
 <?php
 $the_slug = 'titles';
 $args=array(
@@ -24,19 +19,35 @@ $args=array(
 );
 $my_posts = get_posts($args);
 
-?>   <div id="background-color">
+?>  
+
+  <section id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+        <div class="products-page-hero"><div class="container">
+          <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
+        </div>
+</div>
+
+     <div class="page-contents">
+
+      <div class="container">
+
 <?php
 
 if( $my_posts ) {
-  echo '<h1>' . $my_posts[0]->post_title . '</h1>';
+ 
   echo $my_posts[0]->post_content;
-?>
-  </div><!-- #background-color -->
-  </div><!-- .container -->
-  
-<?php
+
 }
 ?>
+  </div><!-- #background-color -->
+  
+  
+
+
+</div><!-- .container -->
+
+</div><!-- .container -->
 
 <?php
   $taxonomy_type = 'regions';
@@ -47,16 +58,8 @@ if( $my_posts ) {
 <?php /* Start the Loop for regions */ ?>
 
 <?php foreach( $terms as $term ): ?>
-
-  <div class="divider grey-light"></div>
-    <div id="titles-main" class="grey-light cf">
       <div class="container">
-
   <section>
-  <h2><?php echo $term->name; ?></h2>
-
-    <?php /* Start the Loop for posts within regions */ ?>
-
     <?php
       $post_array = get_posts(array(
         'post_type' => 'titles',
@@ -69,41 +72,16 @@ if( $my_posts ) {
     ?>
 
 
-<div id="tab-container" class='tab-container'>
+<div class='tab-container'>
+  <h2><?php echo $term->name; ?></h2>
  <ul class='etabs'>
-   <li class='tab'><a href="#chronicle-xtra">Chronicle Xtra</a></li>
-   <li class='tab'><a href="#runcorn-widnes-weekley-news">Runcorn &amp; Widnes Weekly News</a></li>
-   <li class='tab'><a href="#ellesmere-port-pioneer">Ellesmere Port Pioneer</a></li>
+        <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>
+
  </ul>
+
  <div class='panel-container'>
-  <div id="chronicle-xtra">
-  <h2>Chronicle Xtra</h2>
-
-  </div>
-   <div id="runcorn-widnes-weekley-news">
-   <h2>Runcorn &amp; Widnes Weekly News</h2>
-  </div>
-  <div id="ellesmere-port-pioneer">
-   <h2>Ellesmere Port Pioneer</h2>
-  </div>
- </div>
-</div>
-
-
-<div class="tab_expand tabicon ms_hidden ls_hidden">
-  <div class="tabs-arrow-down"></div>
-  <div class="tabs-text">Please select a title</div>
-
-    <nav class="tabs-menu">
-      <ul>
-    <?php foreach( $post_array as $post ): ?><?php setup_postdata($post); ?><li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li><?php wp_reset_postdata(); ?><?php endforeach;?>
-    </ul></nav>
-</div>
-
-    <?php
-
+<?php
       $single_post_args = array(
-        'numberposts' => 1,
         'post_type' => 'titles',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
@@ -111,18 +89,22 @@ if( $my_posts ) {
         'order' => 'ASC',
         'nopaging' => false
       );
-
       $single_post = get_posts( $single_post_args );
-
       //print_r( $single_post );
       foreach( $single_post as $post ):
       setup_postdata($post);
       //print_r($single);
-        get_template_part( 'content-titles', 'title' );
+        get_template_part( 'content-titles' );
       endforeach;
     ?>
-
     <?php wp_reset_postdata(); ?>
+</div>
+</div>
+
+
+
+
+    
 
     </section>
 
@@ -130,7 +112,7 @@ if( $my_posts ) {
 
 <?php endforeach; ?>
 
-        </div><!-- #titles-main -->
+      
      
     </main><!-- #main -->
   </section><!-- #primary -->

@@ -3,7 +3,57 @@
 --------------------------*/
 
 .page-hero{
+  position: relative;
   height:300px;
   background-size:cover;
   background-position: center center;
+  margin-bottom: 20px;
+
+}
+.products-page-hero{
+  position: relative;
+background-image: url(./gui/hero/our-products.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+    background-position:20% bottom;
+    margin-bottom: 10px;
+  width: 100%;
+}
+
+.hero-page-title{
+ margin-top:130px;
+ margin-bottom:80px;
+max-width:200px;
+}
+
+.hero-page-title h1{
+  -webkit-font-smoothing: antialiased;
+  color:#fff;
+  font-size: 30px;
+  font-weight:300;
+}
+
+@media screen and (min-width:481px){
+.products-page-hero{
+  min-height:650px;
+  background-position: left top;
+  background-attachment:fixed;
+}
+
+.hero-page-title{
+ margin-top:200px;
+max-width:250px;
+}
+
+
+
+}
+
+
+@media screen and (min-width:768px){
+
+.hero-page-title h1{
+
+  font-size: 60px;
+}
 }

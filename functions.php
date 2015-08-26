@@ -145,6 +145,8 @@ function tm_regional_scripts() {
 
 	wp_enqueue_script( 'tm-regional-tabs', get_template_directory_uri() . '/js/jquery.easytabs.min.js', array(), '20150724', true );
 
+	wp_enqueue_script( 'tm-regional-brands-preview', get_template_directory_uri() . '/js/jquery.products-preview.js', array(), '20150724', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -173,6 +175,15 @@ add_action('wp_print_styles', 'tmregional_dequeue_css_from_plugins', 100);
 
 
   }
+}
+
+function the_slug($echo=true){
+  $slug = basename(get_permalink());
+  do_action('before_slug', $slug);
+  $slug = apply_filters('slug_filter', $slug);
+  if( $echo ) echo $slug;
+  do_action('after_slug', $slug);
+  return $slug;
 }
 
 /**

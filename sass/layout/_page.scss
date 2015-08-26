@@ -1,0 +1,20 @@
+/* -----------------------
+    PAGE LAYOUT
+--------------------------*/
+
+.page-contents{
+  position: relative;
+  clear:both;
+  bottom:0;
+  width:100%;
+    background-color: rgba(255,255,255,0.9);
+    padding: 50px 0;
+    text-align:center;
+}
+
+@media screen and (min-width: 481px){
+  .page-contents{
+  position: absolute;
+  }
+
+}
