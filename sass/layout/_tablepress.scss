@@ -7,11 +7,11 @@
 /* Table description */
 .box-gradient{
   margin-bottom: 50px;
-  padding: 1em 14.5px;
   background-color: #fff;
   -webkit-box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
   -moz-box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
   box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
+  padding:10px;
 
 }
 
@@ -24,10 +24,18 @@
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   border: none;
-  font-size:.8em;
+  font-size:.5em;
+  text-align: center;
 }
+
+@media screen and(min-width:992px){
+.tablepress {
+  font-size:14px;
+}
+}
+
 
 .tablepress-wrap{
   padding:20px;
@@ -49,11 +57,16 @@
 
 .tablepress th,
 .tablepress td {
-  padding: 8px;
+  padding: 12px 1px;
   border: none;
   background: none;
-  text-align: left;
+  text-align: center;
 }
+
+.tablepress .column-1{
+  text-align:left;
+}
+
 .tablepress tbody td {
   vertical-align: top;
 }
@@ -88,15 +101,27 @@
 /* Row background colors */
 .tablepress thead th,
 .tablepress tfoot th {
-  background-color: #e7e7e7;
-  font-weight: 600;
+  font-weight: 700;
   vertical-align: middle;
+font-size: .9em;
+}
+@media screen and (min-width:768px){
+.tablepress thead th,
+.tablepress tfoot th {
+
+font-size: 16px;
+}
+
 }
 .tablepress .odd td {
   background-color: #ffffff;
 }
 .tablepress .even td {
   background-color: #ffffff;
+}
+
+.tablepress tr .column-2, .tablepress tr .column-4, .tablepress tr .column-6, .tablepress tr .column-8, , .tablepress tr .column-10, .tablepress tr .column-12{
+  background-color: #f0f0f0;
 }
 .tablepress .row-hover tr:hover td {
   background-color: $primary-color;

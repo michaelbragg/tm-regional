@@ -11,71 +11,97 @@ Template Name: Products
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package regional-theme
+ * @package tm-regional
  */
 
 get_header(); ?>
-  <div id="primary" class="content-area">
+  <?php
+$the_slug = 'products';
+$args=array(
+  'name' => $the_slug,
+  'post_type' => 'page',
+  'post_status' => 'publish',
+  'numberposts' => 1
+);
+$my_posts = get_posts($args);
+
+?>   
+  <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+        <div class="products-page-hero">
+          <div class="container">
+          <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
+        </div>
+      
+      <div class="page-contents">
+
       <div class="container">
-      <?php while ( have_posts() ) : the_post(); ?>
+<?php
 
-              <?php get_template_part( 'content', 'page' ); ?>
-
-      <?php
-        $taxonomy_type = 'mediums';
-        $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=products');
-        $terms = get_terms($taxonomy_type, array());
-      ?>
-
-      <?php foreach( $terms as $term ): ?>
-
-       <h2 id="<?php echo $term->slug; ?>"><?php echo $term->name;?></h2>
-
-      <?php $post_array = get_posts(array(
-              'post_type' => 'products',
-              'taxonomy' => $term->taxonomy,
-              'term' => $term->slug,
-              'orderby' => 'menu_order',
-              'order' => 'ASC',
-              'nopaging' => true
-            ));?>
-
-<div class="tab_expand tabicon ms_hidden ls_hidden">
-  <div class="tabs-arrow-down"></div>
-  <div class="tabs-text">Please select a product</div>
-    <nav class="tabs-menu">
-      <ul>
-      <?php foreach( $post_array as $post ): ?><?php setup_postdata($post); ?><li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li><?php wp_reset_postdata(); ?><?php endforeach;?>
-      </ul>
-    </nav>
+if( $my_posts ) {
+ 
+  echo $my_posts[0]->post_content;
+}
+?>
+  </div><!-- .tmr__wrapper  -->
 </div>
 
-            <ul class="list list__inline">
-              <?php /*  Loop  */ ?>
-              <?php  foreach( $post_array as $post ):?>
-                <?php setup_postdata($post); ?>
+</div>
 
-                <!--<h3><?php the_title(); ?></h3>-->
+<?php
+  $taxonomy_type = 'mediums';
+  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=products');
+  $terms = get_terms($taxonomy_type, array());
+  ?>
 
-                <?php get_template_part( 'content', 'products' );?>
-              <?php endforeach;?>
-              <?php wp_reset_postdata(); ?>
+<?php /* Start the Loop for regions */ ?>
 
-            </ul>
-      <?php endforeach; ?>
+<?php foreach( $terms as $term ): ?>
 
-              <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || '0' != get_comments_number() ) :
-                  comments_template();
-                endif;
-              ?>
+<div class="container">
+  <section>
+  <?php /* Start the Loop for posts within regions */ ?>
 
-      <?php endwhile; // end of the loop. ?>
-      </div><!-- .tmr__wrapper  -->
+    <?php
+      $post_array = get_posts(array(
+        'post_type' => 'products',
+        'taxonomy' => $term->taxonomy,
+        'term' => $term->slug,
+        'orderby' => 'name',
+        'nopaging' => true
+      ));
+    ?>
+
+<div class='tab-container'>
+  <h2><?php echo $term->name; ?></h2>
+ <ul class='etabs'>
+        <?php foreach( $post_array as $post ): ?><?php if ( have_adverts() ) { ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php } ?><?php endforeach;?>
+
+ </ul>
+ <div class='panel-container'>
+<?php
+      $single_post_args = array(
+        'post_type' => 'products',
+        'taxonomy' => $term->taxonomy,
+        'term' => $term->slug,
+        'order' => 'name',
+        'nopaging' => false
+      );
+      $single_post = get_posts( $single_post_args );
+      //print_r( $single_post );
+      foreach( $single_post as $post ):
+      setup_postdata($post);
+      //print_r($single);
+        get_template_part( 'content-products' );
+      endforeach;
+    ?>
+    <?php wp_reset_postdata(); ?>
+</div>
+</div>
+  </section>
+  </div><!-- .tmr__wrapper  -->
+
+<?php endforeach; ?>
+
     </main><!-- #main -->
-  </div><!-- #primary -->
-
-<?php //get_sidebar(); ?>
-<?php get_footer(); ?>
+  </section><!-- #primary -->

@@ -1,8 +1,8 @@
 <?php
 /**
- * The template used for displaying table content in page-audiences.php
+ * The template used for displaying table content in page-products.php
  *
- * @package regional-theme
+ * @package tm-regional
  */
 ?>
 
