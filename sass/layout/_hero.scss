@@ -18,6 +18,18 @@ background-image: url(./gui/hero/our-products.jpg);
     background-position:20% bottom;
     margin-bottom: 10px;
   width: 100%;
+  min-height: 600px;
+}
+
+.audience-page-hero{
+    position: relative;
+background-image: url(./gui/hero/our-audience.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+    background-position:20% bottom;
+    margin-bottom: 10px;
+  width: 100%;
+  min-height: 600px;
 }
 
 .hero-page-title{
@@ -39,6 +51,13 @@ max-width:200px;
   background-position: left top;
   background-attachment:fixed;
 }
+
+.audience-page-hero{
+  min-height:650px;
+  background-position: left bottom;
+  background-attachment:fixed;
+}
+
 
 .hero-page-title{
  margin-top:200px;

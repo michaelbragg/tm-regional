@@ -3,7 +3,7 @@
 --------------------------*/
 
 .page-contents{
-  position: relative;
+  position: absolute;
   clear:both;
   bottom:0;
   width:100%;
@@ -12,9 +12,3 @@
     text-align:center;
 }
 
-@media screen and (min-width: 481px){
-  .page-contents{
-  position: absolute;
-  }
-
-}

@@ -7,7 +7,7 @@
  * @package tm-regional
  */
 ?>
-
+<div id="<?php the_slug() ?>">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
@@ -15,7 +15,7 @@
 
 if ( have_tables() ) { ?>
 
-  <section class="container box-gradient cf">
+  <section class="box-gradient cf">
 
 <?php
 
@@ -38,19 +38,12 @@ $tablepress_options = json_decode(get_option('tablepress_tables'));
 
       /* translators: used between list items, there is a space after the comma */
       $tag_list = get_the_tag_list( '', __( ', ', 'tm-regional' ) );
-
-
-      printf(
-        $meta_text,
-        $category_list,
-        $tag_list,
-        get_permalink()
-      );
     ?>
 
     <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
+</div>
 
 
 

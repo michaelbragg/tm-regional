@@ -11,64 +11,102 @@ Template Name: Audience
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package regional-theme
+ * @package tm-regional
  */
 
 get_header(); ?>
 
-  <div id="primary" class="content-area">
+    <?php
+$the_slug = 'audience';
+$args=array(
+  'name' => $the_slug,
+  'post_type' => 'page',
+  'post_status' => 'publish',
+  'numberposts' => 1
+);
+$my_posts = get_posts($args);
+
+?>   
+
+      <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <div class="page-hero"></div>
-      <div class="container audience-style cf">
-      <?php while ( have_posts() ) : the_post(); ?>
+          <div class="audience-page-hero">
+          <div class="container">
+          <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
+        </div>
+<div class="page-contents">
+        <div class="container">
 
-              <?php get_template_part( 'content', 'page' ); ?>
+       
+                <?php if( $my_posts ) { echo $my_posts[0]->post_content; ?>
+          
+            <!-- #background-color -->
+        </div>
+        <!-- .container  -->
+    </div>
+    </div>
 
-      <?php
-        $taxonomy_type = 'regions';
-        $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=audience');
-        $terms = get_terms($taxonomy_type, array());
-      ?>
+        <?php } ?>
 
-      <?php foreach( $terms as $term ): ?>
+        <?php
+  $taxonomy_type = 'regions';
+  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=audience');
+  $terms = get_terms($taxonomy_type, array());
+  ?>
 
-       <h2 id="<?php echo $term->slug; ?>"><?php echo $term->name;?></h2>
+        <?php /* Start the Loop for regions */ ?>
 
-      <?php $post_array = get_posts(array(
-              'post_type' => 'audience',
-              'taxonomy' => $term->taxonomy,
-              'term' => $term->slug,
-              'orderby' => 'menu_order',
-              'order' => 'ASC',
-              'nopaging' => true
-            ));?>
+           <?php foreach( $terms as $term ): ?>
 
-            <ul class="list list__inline">
-              <?php /*  Loop  */ ?>
-              <?php  foreach( $post_array as $post ):?>
+<div class="container">
+  <section>
+  <?php /* Start the Loop for posts within regions */ ?>
 
-                <?php setup_postdata($post); ?>
+    <?php
+      $post_array = get_posts(array(
+        'post_type' => 'audience',
+        'taxonomy' => $term->taxonomy,
+        'term' => $term->slug,
+       'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'nopaging' => true
+      ));
+    ?>
 
-                <h3><?php the_title(); ?></h3>
+<div class='tab-container'>
+  <h2><?php echo $term->name; ?></h2>
+ <ul class='etabs'>
+        <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>
 
-                <?php get_template_part( 'content', 'audiences' );?>
-              <?php endforeach;?>
-              <?php wp_reset_postdata(); ?>
+ </ul>
+ <div class='panel-container'>
+<?php
+      $single_post_args = array(
+        'post_type' => 'audience',
+        'taxonomy' => $term->taxonomy,
+        'term' => $term->slug,
+         'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'nopaging' => false
+      );
+      $single_post = get_posts( $single_post_args );
+      //print_r( $single_post );
+      foreach( $single_post as $post ):
+      setup_postdata($post);
+      //print_r($single);
+        get_template_part( 'content-audiences' );
+      endforeach;
+    ?>
+    <?php wp_reset_postdata(); ?>
+</div>
+</div>
+  </section>
+  </div><!-- .tmr__wrapper  -->
 
-            </ul>
-      <?php endforeach; ?>
-
-              <?php
-                // If comments are open or we have at least one comment, load up the comment template
-                if ( comments_open() || '0' != get_comments_number() ) :
-                  comments_template();
-                endif;
-              ?>
-
-      <?php endwhile; // end of the loop. ?>
-      </div><!-- .tmr__wrapper  -->
-    </main><!-- #main -->
-  </div><!-- #primary -->
+<?php endforeach; ?>
+    </main>
+    <!-- #main -->
+</section>
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

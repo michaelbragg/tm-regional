@@ -15,6 +15,7 @@ $args=array(
   'name' => $the_slug,
   'post_type' => 'page',
   'post_status' => 'publish',
+   'orderby' => 'menu_order',
   'numberposts' => 1
 );
 $my_posts = get_posts($args);
@@ -23,31 +24,26 @@ $my_posts = get_posts($args);
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="products-page-hero"><div class="container">
+        <div class="products-page-hero">
+          <div class="container">
           <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
         </div>
-</div>
-
-     <div class="page-contents">
+      
+<div class="page-contents">
 
       <div class="container">
-
 <?php
 
 if( $my_posts ) {
  
   echo $my_posts[0]->post_content;
-
 }
 ?>
-  </div><!-- #background-color -->
-  
-  
+  </div><!-- .tmr__wrapper  -->
+</div>
 
+</div>
 
-</div><!-- .container -->
-
-</div><!-- .container -->
 
 <?php
   $taxonomy_type = 'regions';

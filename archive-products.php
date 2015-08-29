@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying Contact Archive pages.
+ * The template for displaying Product Archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package regional-theme
+ * @package tm-regional
  */
 
 get_header(); ?>
@@ -23,7 +23,8 @@ $my_posts = get_posts($args);
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="products-page-hero"><div class="container">
+        <div class="products-page-hero">
+          <div class="container">
           <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
         </div>
       
@@ -61,8 +62,7 @@ if( $my_posts ) {
         'post_type' => 'products',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
+        'orderby' => 'name',
         'nopaging' => true
       ));
     ?>
@@ -79,8 +79,7 @@ if( $my_posts ) {
         'post_type' => 'products',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
+        'order' => 'name',
         'nopaging' => false
       );
       $single_post = get_posts( $single_post_args );
