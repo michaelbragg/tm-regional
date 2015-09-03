@@ -85,7 +85,7 @@
     }
 }
 
-   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:30px; margin-top: 30px;  max-width: 800px}
+   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:5px; margin-top: 5px;  max-width: 850px}
 
     .tab { display: inline-block; zoom:1; *display:inline; border: solid 1px #666; padding:10px; margin-left:0; margin-right: 10px; margin-bottom: 10px;}
 
@@ -94,7 +94,11 @@
 
 }
 
-    .tab a { color:#666; font-size: 16px; line-height: 1.1; display: block; outline: none; text-transform: uppercase;}
+    .tab a { color:#666; font-size: 12px; line-height: 1.1; display: block; outline: none; text-transform: uppercase;}
+    @media screen and(min-width:768px){
+        .tab a { color:#666; font-size: 14px;}
+        .etabs {margin-bottom:30px; margin-top: 30px;}
+    }
     .tab a:hover { text-decoration: none; color:#fff;}
     .tab.active { position: relative; border-color: $primary-color;  }
     .tab a.active { font-weight: bold; outline:none; color:$primary-color;}
@@ -103,6 +107,9 @@
     .tab a.active:visited{color:$primary-color;}
     .tab-container .panel-container { outline:none; }
     .panel-container { clear: both; }
-    .tab-container{margin-bottom:50px;}
+    .tab-container{margin-bottom:5px;}
+    @media screen and(min-width:768px){
+.tab-container{margin-bottom:50px;}
+    }
     .tab-container h2 {display: inline-block; margin-bottom:30px; margin-top: 30px; text-transform: uppercase;}
     .tab-container .panel-container div { outline:none; }
