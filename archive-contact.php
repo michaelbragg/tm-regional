@@ -11,7 +11,7 @@ get_header(); ?>
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
+<div class="container" style="margin-top:400px;">
 <div class='tab-container'>
   <h2></h2>
  <ul class='etabs'>
@@ -34,7 +34,7 @@ get_header(); ?>
 </div>
   </section>
   </div><!-- .tmr__wrapper  -->
-
+</div>
     </main><!-- #main -->
   </section><!-- #primary -->
 
