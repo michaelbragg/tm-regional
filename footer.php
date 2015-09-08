@@ -13,23 +13,32 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
   <div class="container">
-
+<div class="row">
+  <div class="col-sm-6">
   <div class="tm__footer"><img src="<?php echo get_template_directory_uri(); ?>/gui/trinity-logo-grey.png"/></div>
   <div class="copy-credit">Website created by Trinity Mirror Creative</div>
-</footer><!-- #colophon -->
+</div>
+<div class="col-sm-6">
+    <?php if ( has_nav_menu( 'footer' ) ) : ?>
+  <div class="footer-menu">
+         <nav >
+              <?php
+                    // Primary navigation menu.
+                    wp_nav_menu( array(
+                        'menu_class'     => 'footer-nav-menu',
+                        'theme_location' => 'footer',
+                        'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
+                    ) );
+              ?>
+        </nav><!-- .main-navigation -->   
+  </div>
+    <?php endif; ?>
+</div>
 </div><!-- #page -->
+</div>
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
-
-<script>
-;(function( $ ){
-  $(document).ready(function() {
-
-    randomHero.init( { parent: '.page-hero', path: '<?php echo get_template_directory_uri(); ?>/gui/hero/', images: ['hero_001.jpg', 'hero_002.jpg', 'hero_003.jpg', 'hero_004.jpg', 'hero_005.jpg', 'hero_007.jpg', 'hero_008.jpg', 'hero_009.jpg', 'hero_010.jpg'] });
-
-  });
-})( jQuery );
-</script>
 
 
 <?php if(is_page(home)){ ?>

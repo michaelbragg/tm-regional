@@ -1,0 +1,132 @@
+/* -----------------------
+    CONTACT US
+--------------------------*/
+
+.contact-map{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:400px;
+  overflow:hidden;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contact-info .row{
+  margin:0 ;
+  text-transform: uppercase;
+}
+
+.contact-info .white{
+  background-color: #fff;
+}
+
+.contact-info .brand{
+  background-color: $primary-color;
+
+
+}
+
+
+
+.contact-right-col:before,
+.contact-right-col:after {
+    content: "";
+    display: table;
+} 
+.contact-right-col:after {
+    clear: both;
+}
+.contact-right-col{
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+@media screen and (min-width:992px){
+  .contact-info .row{
+   display: flex; 
+  flex-direction: row;
+}
+}
+
+.contact-info .address-details{
+  padding:30px;
+}
+
+.contact-info .address-details h2, .contact-info .contact-form-info h2{
+  margin-top:0;
+}
+
+.contact-info .contact-form-info h2{
+  color:#fff;
+}
+
+.contact-info .contact-form-info {
+ padding:30px;
+color:#fff;
+float:left;
+}
+
+
+.contact-info .contact-form-info input[type="text"], .contact-info .contact-form-info input[type="email"]{
+    width:100%;
+    background-color: transparent;
+    border:1px solid #fff;
+    color:#fff;
+    padding:5px 10px
+}
+
+
+.contact-info .contact-form-info input[type="submit"] {
+
+  display:inline-block;
+  border: 1px solid;
+  border-color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: left;
+  float:right;
+}
+
+.contact-info .contact-form-info label{
+  width: 100%;
+  text-align: left;
+  padding-right:10px;
+  font-weight: 300;
+  padding-top:5px;
+    }
+
+    .contact-info .contact-form-info textarea{
+      background-color: transparent;
+        border:1px solid #fff;
+        color:#fff;
+        height: 100px;
+    }
+
+
+.contact-info .contact-form-info span.wpcf7-form-control-wrap {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width:600px){
+.contact-info .contact-form-info label{
+  width: 25%;
+  float:left;
+  text-align: right;
+    }
+
+.contact-info .contact-form-info span.wpcf7-form-control-wrap {
+  width: 75%;
+  float:left;
+
+}
+
+}

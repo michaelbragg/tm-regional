@@ -9,7 +9,7 @@
         margin: 0;
         padding-left: 0;
         ul {
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 3px rgba(42, 42, 42, 0.2);
             float: left;
             position: absolute;
             top: 1.5em;
@@ -345,8 +345,9 @@
 }
 @media screen and (min-width: 768px) {
     .search-bar .input {
-        font-size: 3em;
-        margin-top: 0;
+        font-size: 2em;
+        padding-top: 15px;
+        margin: 0;
     }
 }
 .scroll-arrow {
