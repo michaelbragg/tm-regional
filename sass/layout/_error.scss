@@ -1,0 +1,68 @@
+/* -----------------------
+    404 Page
+--------------------------*/
+
+
+.top-404{
+  position:absolute;
+  height:50%;
+  width:100%;
+  top:0;
+  background-image:url(./gui/error-back.jpg);
+  background-repeat: repeat;
+}
+
+.top-404:after{
+  content:' ';
+  position: absolute;
+  width:100%;
+  bottom:-48px;
+  z-index: 10;
+ background-image:url(./gui/error-middle.png);
+  background-repeat: repeat-x;
+  background-position:center center;
+  height:96px
+}
+.bottom-404{
+  position:absolute;
+  height:50%;
+  bottom:0;
+  width:100%;
+   background-image:url(./gui/error-bottom.jpg);
+  background-repeat: repeat;
+}
+
+.error404-txt{
+  position: absolute;
+  bottom:24px;
+  font-size:7.5em;
+  color:#fff;
+  font-weight:300;
+  z-index: 11;
+  width:100%;
+  text-align: center;
+  line-height:1;
+}
+
+@media screen and (min-width: 768px){
+  .error404-txt{
+    bottom:14px;
+font-size:15em;
+  }
+
+}
+
+.error-message{
+  color:#fff;
+text-align: center;
+margin-top:50px;
+}
+
+.error-title{
+  width:100%;
+  color:#fff;
+  text-transform: none;
+  z-index: 12;
+  position: relative;
+  font-size: 1.9em;
+}
