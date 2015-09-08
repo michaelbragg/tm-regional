@@ -7,6 +7,11 @@
  * @package tm-regional
  */
 
+$post_type = get_post_type();
+$taxonomy_type = 'mediums';
+$posts = get_categories( 'taxonomy=' . $taxonomy_type . '&type=' . $post_type );
+$terms = get_terms( $taxonomy_type, array() );
+
 get_header(); ?>
 
   <section id="primary" class="content-area">
@@ -25,15 +30,9 @@ get_header(); ?>
 
 </div>
 
-<?php
-  $taxonomy_type = 'mediums';
-  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=products');
-  $terms = get_terms($taxonomy_type, array());
-  ?>
+
 
 <?php /* Start the Loop for regions */ ?>
-
-
 <?php foreach( $terms as $term ): ?>
 
 <div class="divider grey-light"></div>
@@ -48,14 +47,14 @@ get_header(); ?>
   <?php /* Start the Loop for posts within regions */ ?>
 
 <?php
-  $post_array = get_posts(array(
-    'post_type' => 'products',
+  $post_array = get_posts( array(
+    'post_type' => $post_type,
     'taxonomy' => $term->taxonomy,
     'term' => $term->slug,
     'orderby' => 'menu_order',
     'order' => 'ASC',
     'nopaging' => true
-  ));
+  ) );
 ?>
 
 <?php /* Start sections loop */ ?>
@@ -71,7 +70,7 @@ get_header(); ?>
 <?php
       $single_post_args = array(
         'posts_per_page' => 9999,
-        'post_type' => 'products',
+        'post_type' => $post_type,
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
         'orderby' => 'menu_order',
@@ -83,7 +82,7 @@ get_header(); ?>
       foreach( $single_post as $post ):
 
         setup_postdata( $post );
-          get_template_part( 'content-products' );
+          get_template_part( 'content-' . $post_type );
         wp_reset_postdata();
 
       endforeach;
