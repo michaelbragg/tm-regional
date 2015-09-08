@@ -23,10 +23,10 @@
       <button class="dwld-btn">Download technical specifications</button>
     </div>
     <div class=" col-md-5 advert-container-item products-container">
-      <div class=" js-advert--preview advert-preview__placeholder"></div>
+      <div class="js-advert--preview advert-preview__placeholder"></div>
 </div>
     </div>
-    
+
   </section><!-- .container -->
 </div>
 
