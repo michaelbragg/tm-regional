@@ -19,7 +19,7 @@ get_header(); ?>
     <div class="audience-page-hero">
 
       <div class="container">
-        <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
+        <div class= "hero-page-title"><h1>Our Audience<!--<?php echo post_type_archive_title(); ?>--></h1></div>
       </div>
 
       <div class="page-contents">
@@ -38,9 +38,6 @@ get_header(); ?>
 
 <?php foreach( $terms as $term ): ?>
 
-<h2><?php echo $term->name; ?></h2>
-
-
   <?php /* Start the Loop for posts within regions */ ?>
 
     <?php
@@ -55,6 +52,9 @@ get_header(); ?>
     ?>
 
       <?php /* Start sections loop */ ?>
+
+<div class='tab-container'>
+  <h2><?php echo $term->name; ?></h2>
       <ul class='etabs'>
       <?php foreach( $post_array as $post ): ?>
         <?php setup_postdata($post); ?>
@@ -63,8 +63,9 @@ get_header(); ?>
       <?php endforeach;?>
       <?php /* End sections loop */ ?>
       </ul>
+    
 
-
+ <div class='panel-container'>
 <?php
       $single_post_args = array(
         'numberposts' => 999,
@@ -86,11 +87,13 @@ get_header(); ?>
       endforeach;
     ?>
 
+  </div>
+
     <?php /* End post loop */ ?>
 
 
       <?php endforeach; ?>
-
+</div>
       </section>
     </div><!-- .container  -->
 
