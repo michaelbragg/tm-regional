@@ -35,14 +35,13 @@ get_header(); ?>
 <?php /* Start the Loop for regions */ ?>
 <?php foreach( $terms as $term ): ?>
 
-<div class="divider grey-light"></div>
 
 
-<div id="titles-main" class="grey-light cf">
-<div class="tmr__wrapper">
+<div id="titles-main">
+<div class="container">
 
   <section>
-  <h2><?php echo $term->name; ?></h2>
+  
 
   <?php /* Start the Loop for posts within regions */ ?>
 
@@ -57,6 +56,8 @@ get_header(); ?>
   ) );
 ?>
 
+<div class='tab-container'>
+  <h2><?php echo $term->name; ?></h2>
 <?php /* Start sections loop */ ?>
 <ul class='etabs'>
 <?php foreach( $post_array as $post ): ?>
@@ -65,7 +66,9 @@ get_header(); ?>
   <?php wp_reset_postdata(); ?>
 <?php endforeach;?>
 </ul>
+
 <?php /* End sections loop */ ?>
+
 
 <?php
       $single_post_args = array(
@@ -82,13 +85,15 @@ get_header(); ?>
       foreach( $single_post as $post ):
 
         setup_postdata( $post );
+
+
           get_template_part( 'content-' . $post_type );
         wp_reset_postdata();
 
       endforeach;
     ?>
 
-
+</div>
   </section>
   </div><!-- .tmr__wrapper  -->
 </div><!-- #titles-main -->
