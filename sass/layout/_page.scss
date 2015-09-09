@@ -2,6 +2,11 @@
     PAGE LAYOUT
 --------------------------*/
 
+.container{
+ 
+   @include animate;
+}
+
 .page-contents{
   position: absolute;
   clear:both;

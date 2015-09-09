@@ -7,6 +7,7 @@
 ?>
 
 <?php if ( have_adverts() ) { ?>
+<div class='panel-container'>
 <div id="<?php the_slug() ?>">
 <section class="js-advert brands-style cf">
   <div class="advert-container">
@@ -28,6 +29,7 @@
     </div>
 
   </section><!-- .container -->
+</div>
 </div>
 
 <?php } ?>

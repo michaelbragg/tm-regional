@@ -79,7 +79,7 @@ max-width:180px;
 
 .hero-page-title{
  margin-top:200px;
-max-width:250px;
+max-width:200px;
 }
 
 
@@ -93,4 +93,53 @@ max-width:250px;
 
   font-size: 60px;
 }
+}
+
+
+.search-header{
+  height:300px;
+  background-position: bottom center;
+  background-image: url(./gui/search-background.jpg);
+  background-repeat: repeat-x;
+   @include animate;
+   margin-bottom:30px;
+}
+
+
+.search-man{
+  position:absolute;
+  height:120px;
+  width:160px;
+  background-image:url(./gui/search-man.png);
+  background-repeat: no-repeat;
+  background-size:100%;
+  right:0;
+  top:55%;
+         -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+}
+
+
+@media screen and (min-width:768px){
+
+.search-header{
+  height:450px;
+
+}
+
+.search-man{
+  position:absolute;
+  height:250px;
+  width:320px;
+
+}
+
+}
+
+.search-container{
+  position:relative;
+   height: 100%;
+
 }
