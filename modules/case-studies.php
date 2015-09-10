@@ -9,6 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="studies-txt col-md-12">
+              <h1>Case Studies</h1>
                 <?php echo testimonial_rotator( array( 'id'=> 306) ); ?>
             </div>
         </div>

@@ -24,9 +24,10 @@ $my_posts = get_posts($args);
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="titles-page-hero">
+        <div class="titles-page-hero kenburns">
           <div class="container">
           <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
+        </div>
         </div>
       
 <div class="page-contents">
@@ -42,7 +43,7 @@ if( $my_posts ) {
   </div><!-- .tmr__wrapper  -->
 </div>
 
-</div>
+
 
 
 <?php

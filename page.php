@@ -12,7 +12,15 @@
 
 get_header(); ?>
 
-<div class="page-hero"></div>
+
+
+
+<?php if (has_post_thumbnail( $post->ID ) ): ?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+<?php endif; ?>
+<div class="page-hero" style="background-image: url('<?php echo $image[0]; ?>')">
+
+</div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
