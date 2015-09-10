@@ -16,10 +16,12 @@ get_header(); ?>
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="products-page-hero">
+        <div class="products-page-hero kenburns hero-height">
           <div class="container">
           <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
         </div>
+        </div>
+
 
 <div class="page-contents">
 
@@ -28,7 +30,6 @@ get_header(); ?>
   </div><!-- .tmr__wrapper  -->
 </div>
 
-</div>
 
 
 

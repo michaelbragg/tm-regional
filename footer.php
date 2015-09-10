@@ -14,11 +14,11 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
   <div class="container">
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-5">
   <div class="tm__footer"><img src="<?php echo get_template_directory_uri(); ?>/gui/trinity-logo-grey.png"/></div>
   <div class="copy-credit">Website created by Trinity Mirror Creative</div>
 </div>
-<div class="col-sm-6">
+<div class="col-sm-7">
     <?php if ( has_nav_menu( 'footer' ) ) : ?>
   <div class="footer-menu">
          <nav >

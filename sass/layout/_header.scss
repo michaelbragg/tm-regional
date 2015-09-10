@@ -70,7 +70,7 @@ h1::selection {
     position: relative;
     z-index: 10;
     top: 0;
-    height: 70px;
+    height: 75px;
     @include animate;
 }
 .site-branding {
@@ -83,13 +83,13 @@ h1::selection {
 }
 .tm-branding {
     float: left;
-    width: 30%;
     margin-right: 2%;
+    width:114px;
 }
 @media screen and (min-width: 481px) {
     .site-branding {
         padding-top: 5px;
-        width: 350px;
+       
     }
     .site-header {
         height: 60px;
@@ -99,7 +99,7 @@ h1::selection {
 @media screen and (min-width: 1200px) {
     .site-branding {
         padding-top: 5px;
-        width: 420px;
+       
     }
 }
 .branding-resize {
@@ -108,18 +108,22 @@ h1::selection {
 }
 .regional-title {
     float: left;
-    width: 65%;
+  width:50%
+}
+
+.regional-title img, .tm-branding img{
+    width:100%;
 }
 @media screen and (max-width: 480px) {
     .regional-title {
         clear: both;
-        width: 200px;
+      
         @include animate;
     }
 }
 @media screen and (max-width: 480px) {
     .tm-branding {
-        width: 100px;
+        
     }
 }
 

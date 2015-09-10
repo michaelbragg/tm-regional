@@ -101,36 +101,61 @@
         font-size: 14px;
     }
 }
-.btn {
-    padding: 5px 10px;
-}
+
 .solutions .btn-discover {
-    color: $primary-color;
-    background-color: #fff;
+    color: #fff;
+    border-color: #fff;
 }
-.solutions .hotspot {
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    background-image: url(./gui/hotspots.png);
-    background-size: 110px;
-    background-position-x: 1px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    margin: 0;
+
+.solutions .btn-discover:hover{
+    color: #fff;
+    border-color: $secondary-color;
 }
+
+
+.solutions .hotspot{
+  position: absolute;
+  z-index:1;
+  display: block;
+  width: 45px;
+  height: 45px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: $primary-color;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba($primary-color, .5);
+  -webkit-animation: pulse 1.5s infinite;
+  outline:none;
+}
+
+@keyframes pulse {
+    from { transform: scale(0.9); }
+    70% { transform: scale(1);
+    box-shadow: 0 0 0 50px rgba($primary-color, 0); }
+    to { transform: scale(0.9); 
+    box-shadow: 0 0 0 0 rgba($primary-color, 0);
+}
+}
+
+.hotspot-icon{position: absolute; top:0; left:0; width:25px; height:25px; z-index:2; 
+ background-image: url(./gui/hotspots-icon.png);
+background-size: 200%;
+top:11px;
+left:11px;
+background-repeat: no-repeat;
+}
+
 .solutions ul {
     list-style: none;
 }
 .solutions .opened {
-    background-position-x: -58px;
+     -webkit-animation: none;
+    background-position: -27px 0px;
 }
 .solutions .hotspot .hotspot-info {
     visibility: hidden;
@@ -272,7 +297,7 @@
 /* STRUCTURE */
 
 .testimonial_rotator_wrap {
-    overflow: hidden;
+    
     position: relative;
 }
 .testimonial_rotator .slide {
@@ -314,9 +339,9 @@
 .testimonial_rotator_single.has-image .text {
     width: 100%;
     float: left;
-    padding: 0 35px;
+    padding-right: 35px;
     margin-top: 0;
-    font-size: 11px;
+    font-size: 13px;
 }
 @media screen and(min-width: 768px) {
     .testimonial_rotator .has-image .text,
@@ -354,6 +379,7 @@
     margin: 0 0 15px 0;
     border-bottom: 1px solid #242830;
     padding-bottom: 15px;
+    text-align: left;
 }
 /* SINGLE VERSION */
 
@@ -372,7 +398,6 @@
     font-style: italic;
     line-height: 1.3;
     padding-left: 15px;
-    border-left: solid 3px #efefef;
     margin: 10px 0;
 }
 .testimonial_rotator_author_info p {
@@ -420,25 +445,72 @@
 
 .testimonial_rotator_nav {} .testimonial_rotator_prev,
 .testimonial_rotator_next {
-    font-size: 20px;
-    line-height: 20px;
-    color: #666;
-    color: rgba(42, 42, 42, 0.2);
-    cursor: pointer;
-    position: absolute;
-    top: 45%;
-    z-index: 8888;
-    transition: all 0.25s;
+      position: absolute;
+  z-index:9999;
+   bottom:-40px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 1.1em;
+  padding-top:3px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: $primary-color;
+  cursor: pointer;
+  box-shadow: 0 0 0 5px rgba($primary-color, .3);
+  outline:none;
 }
+
+@media screen and (min-width:768px){
+.testimonial_rotator_nav {} .testimonial_rotator_prev,
+.testimonial_rotator_next {
+   bottom:20px;
+}
+}
+
+.testimonial_rotator_quote{
+    position: relative;
+    text-align: left;
+    font-style: italic;
+}
+
+.testimonial_rotator_quote:before, .testimonial_rotator_quote:after{
+  content: '  ';
+display:block;
+
+height:40px;
+width:100%;
+top:-5px;
+  left:-15px;
+  font-size: 50px;
+  line-height: 1;
+  text-align: left;
+  background-image: url(./gui/open-quotes.png);
+  background-repeat: no-repeat;
+}
+
+.testimonial_rotator_quote:after{
+ background-image: url(./gui/closed-quotes.png);
+  background-repeat: no-repeat;
+  margin-top:10px;
+}
+
+
 .testimonial_rotator_prev:hover,
 .testimonial_rotator_next:hover {
-    color: rgba(42, 42, 42, 0.5);
+    background-color: $secondary-color;
+  cursor: pointer;
+  box-shadow: 0 0 0 5px rgba($secondary-color, .3);
 }
 .testimonial_rotator_prev {
-    left: 3px;
+    left: 0px;
+   
 }
 .testimonial_rotator_next {
-    right: 3px;
+  left:50px;
 }
 
 /* WIDGET */
