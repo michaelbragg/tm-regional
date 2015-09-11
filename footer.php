@@ -64,7 +64,10 @@
          //reaching our last section? The one with our normal site?
         if (nextIndex == 4) {
             $('.scroll-arrow').hide();
-             $('video').get(0).play();
+            if ($(window).width() > 1025) {
+   $('video').get(0).play();
+}
+             
             //fading out navigation bullets
         }else{
             $('.scroll-arrow').show();
@@ -87,7 +90,11 @@
     });
   </script>
 
-
+<script>
+$('.carousel').carousel({
+    pause: "false"
+});
+</script>
 
 </body>
 </html>

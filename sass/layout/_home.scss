@@ -14,15 +14,22 @@
 /* Welcome Section */
 
 .tm_intro {
-    background-color: #000;
-    background-image: url(./gui/hero-image.gif);
+    background-color: #3b3b3b;
     background-repeat: none;
     background-position: top center;
     background-size: cover;
     overflow: hidden;
 }
 .welcome {
-    margin: 0 50px 0 50px;
+    position: absolute;
+    top:50%;
+    left:50%;
+   
+     -ms-transform: translate(-50% -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .main-heading {
     display: inline-block;
@@ -40,10 +47,8 @@
 }
 @media screen and(min-width: 768px) {
     .welcome {
-        margin: 0 50px 0 50px;
-        display: table;
-        vertical-align: middle;
-        margin: 0 auto;
+      
+    
     }
     .main-heading {
         padding: 25px;
@@ -536,3 +541,58 @@ div.testimonial-rotator-error {
     height: 100%;
 }
 
+/* CAROUSEL */
+
+.carousel {
+  position: initial;
+}
+
+.home-carousel{
+    position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+
+.carousel-inner {
+  position: inherit;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel .carousel-inner .item {
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+}
+.carousel .carousel-inner .item,
+.carousel .carousel-inner .active.left,
+.carousel .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel .carousel-inner .active,
+.carousel .carousel-inner .next.left,
+.carousel .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel .carousel-inner .next,
+.carousel .carousel-inner .prev,
+.carousel .carousel-inner .active.left,
+.carousel .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel .carousel-control {
+  z-index: 2;
+}
+
+.carousel-indicators{
+display:none;
+
+}
+.carousel-inner .item{
+    height: 100% !important;
+    position: absolute;
+  width: 100%;
+}
