@@ -43,15 +43,12 @@
 }
 
 .titles-container .col-md-4, .titles-container .col-md-8, .titles-container .col-sm-4, .titles-container .col-sm-8{
-  border-bottom:solid 1px #d4d4d4;
+  margin-bottom:5px;
 
 }
 
 @media screen and (min-width:768px){
 .titles-container .col-md-4, .titles-container .col-md-8, .titles-container .col-sm-4, .titles-container .col-sm-8{
-  border-right:solid 1px #d4d4d4;
-
-  border-bottom:solid 1px #d4d4d4;
   margin-bottom:5px;
   margin-right:5px;
 }
@@ -59,6 +56,17 @@
 
 .titles-container .titles-margin .col-md-4, .titles-container .titles-margin .col-md-8,  .titles-container .titles-margin .titles-container .col-sm-4, .titles-container .titles-margin .col-sm-8{
   border:none;
+  margin-right: 0;
+}
+
+.titles-container .titles-margin .col-md-4:last-child{
+  margin-right: 0;
+}
+
+@media screen and (min-width:768px){
+  .titles-container .titles-margin .col-md-4:last-child{
+    margin-right: 5px;
+  }
 }
 
 .titles-container h3{
@@ -80,6 +88,11 @@
   float:left;
 }
 
+.title-item h2{
+  display:block;
+}
+
+
 .titles-container .dop{
   width:100%;
   color:#fff;
@@ -94,14 +107,10 @@
 
 @media screen and (min-width: 992px) {
 .titles-container .dop{
-  width:50%;
   color:#fff;
   padding-left:40px;
 }
 
-.titles-container .front-page{
-  width:50%;
-}
 
 .titles-container .dop{
   text-align: left;
@@ -112,6 +121,8 @@
 .titles-container .dop h2{
   color:#fff;
   text-transform: none;
+  font-size: 1.5em;
+  line-height: 1.3;
 }
 
 
