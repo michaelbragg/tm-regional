@@ -85,26 +85,55 @@
     }
 }
 
-   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:5px; margin-top: 5px;  max-width: 850px}
+   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:5px; margin-top: 5px;  max-width:700px}
 
-    .tab { display: inline-block; zoom:1; *display:inline; border: solid 1px #666; padding:10px; margin-left:0; margin-right: 10px; margin-bottom: 10px;}
+    .tab { position:relative; display: inline-block; zoom:1; *display:inline;   margin-left:0; margin-right: 10px; margin-bottom: 10px; border-radius: 4px;}
 
        @media screen and (min-width:481px){
-.tab { display: inline-block; float:right; zoom:1; *display:inline; border: solid 1px #666; padding:10px; margin-left:10px; margin-bottom: 10px; margin-right: 0;}
+.tab { display: inline-block; float:right; zoom:1; *display:inline;  margin-left:10px; margin-bottom: 10px; margin-right: 0; transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;}
 
 }
 
-    .tab a { color:#666; font-size: 12px; line-height: 1.1; display: block; outline: none; text-transform: uppercase;}
+    .tab a { border-radius:4px; border: solid 1px $secondary-color; font-weight:300; color:$secondary-color; font-size: 12px; line-height: 1.1; display: block; outline: none; text-transform: uppercase; padding: 11px 17px}
+   
+    .tab a:hover {
+  color: #fff !important;
+  border: 1px solid $secondary-color !important;
+  border-radius:5px;
+}
+
+.tab a:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(42, 42, 42, 0.9);
+  border-radius:4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  color: #fff;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+.tab a:hover:before {
+  top: 0;
+}
+
     @media screen and(min-width:768px){
-        .tab a { color:#666; font-size: 14px;}
+        .tab a { font-size: 14px;}
         .etabs {margin-bottom:30px; margin-top: 30px;}
     }
     .tab a:hover { text-decoration: none; color:#fff;}
-    .tab.active { position: relative; border-color: $primary-color;  }
-    .tab a.active { font-weight: bold; outline:none; color:$primary-color;}
+    .tab a.active { position: relative; border-color: $primary-color; background-color: $primary-color;}
+    .tab a.active { font-weight: bold; outline:none; color:#fff;}
 
-    .tab a:visited{color:#666;}
-    .tab a.active:visited{color:$primary-color;}
+   
+    .tab a.active:hover{border-color:$primary-color !important;}
     .tab-container .panel-container { outline:none; }
     .panel-container { clear: both; }
     .tab-container{margin-bottom:5px;}

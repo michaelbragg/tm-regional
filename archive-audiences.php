@@ -16,19 +16,19 @@ get_header(); ?>
 <section id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
-    <div class="audience-page-hero">
+    <div class="audience-page-hero kenburns hero-height">
 
       <div class="container">
         <div class= "hero-page-title"><h1>Our Audience<!--<?php echo post_type_archive_title(); ?>--></h1></div>
       </div>
-
+</div>
       <div class="page-contents">
         <div class="container">
 
         </div>
               <!-- .container  -->
       </div>
-    </div>
+    
 
 
     <div class="container">

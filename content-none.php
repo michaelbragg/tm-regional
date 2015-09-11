@@ -10,8 +10,8 @@
 ?>
 
 <section class="no-results not-found">
-  <header class="page-header">
-    <h1 class="page-title"><?php _e( 'Nothing Found', 'tm-regional' ); ?></h1>
+  <header>
+    <h1 class="page-title"><?php _e( 'oops!', 'tm-regional' ); ?></h1>
   </header><!-- .page-header -->
 
   <div class="page-content">
@@ -21,7 +21,7 @@
 
     <?php elseif ( is_search() ) : ?>
 
-      <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tm-regional' ); ?></p>
+      <h1><?php _e( '0 results found', 'tm-regional' ); ?></h1>
       <?php get_search_form(); ?>
 
     <?php else : ?>

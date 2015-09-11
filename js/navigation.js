@@ -73,24 +73,24 @@ $('.tab a').click(function(){
 
 
     var image = {
-        width: 1525,
-        height: 966
+        width: 1440,
+        height: 1000
     };
     var targetOne = {
-        x: 740,
-        y: 190
+        x: 705,
+        y: 170
     };
     var targetTwo = {
-        x: 1100,
-        y: 380
+        x: 1075,
+        y: 360
     };
     var targetThree = {
-        x: 1100,
-        y: 520
+        x: 1080,
+        y: 510
     };
     var targetFour = {
-        x: 820,
-        y: 770
+        x: 790,
+        y: 750
     };
 
     var hotspotOne = $('#hotspotOne');
@@ -140,6 +140,7 @@ $('.tab a').click(function(){
 
         if ($(this).children('.hotspot-info').hasClass('desktop__visible')) { //check if hidden or not
             $(this).children('.hotspot-info').removeClass('desktop__visible');  //if yes hide
+            $('.hotspot-icon').removeClass('opened');
             $(this).removeClass('opened');
             $(this).delay(500).queue(function(){
         $(this).addClass('pulse').clearQueue();
@@ -148,13 +149,13 @@ $('.tab a').click(function(){
 
         } else {
             $('.hotspot').removeClass('opened');
+            $('.hotspot-icon').removeClass('opened');
+            $(this).removeClass('opened');
            $('.hotspot').addClass('pulse');
-           
-       
             $('.hotspot').children('.hotspot-info').removeClass('desktop__visible'); 
             $(this).children('.hotspot-info').addClass('desktop__visible'); // else show
             $(this).addClass('opened');
-             
+              $(this).find('.hotspot-icon').addClass('opened');
              $(this).removeClass('pulse');
         }
     });

@@ -9,7 +9,8 @@
     <ul>
         <li>
             <button id="hotspotOne" class="hotspot desktop__visible pulse">
-                <div class="hotspot-info info-one">
+                 <div class='hotspot-icon'></div>
+                 <div class="hotspot-info info-one">
                     <p>Over 40 local newspapers and more than 50 local websites
                         <p>
                 </div>
@@ -17,6 +18,7 @@
         </li>
         <li>
             <button id="hotspotTwo" class="hotspot desktop__visible pulse">
+                 <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-two">
                     <p>1.8 Million Adults reached by our multimedia portfolio</p>
                 </div>
@@ -24,6 +26,7 @@
         </li>
         <li>
             <button id="hotspotThree" class="hotspot desktop__visible pulse">
+                 <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-three">
                     <p>A range of lifestyle and major sporting publications</p>
                 </div>
@@ -31,6 +34,7 @@
         </li>
         <li>
             <button id="hotspotFour" class="hotspot desktop__visible pulse">
+                <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-four">
                     <p>Outdoor advertising and leaflet services</p>
                 </div>

@@ -96,9 +96,7 @@
           </div>
           <div class="col-md-8 white">
             
-<?php if ( have_visualizer() ) {
-  the_visualizer();
-} ?>     
+   
 
 </div>
           
@@ -106,57 +104,9 @@
         </div>
     </div>
 
-<?php
-if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-  the_post_thumbnail();
-}
-?>
-
-<?php
-
-if ( have_custom_meta() ) { ?>
-
-  <ul>
-
-  <?php foreach ( the_custom_meta() as $meta ):?>
-
-    <li>
-      <h3 class="title-sub"><?php echo $meta['title']; ?></h3>
-      <p><?php echo $meta['content']; ?></p>
-    </li>
-
-  <?php endforeach;?>
-  </ul>
-
-<?php }
-
-/* Add graph to page */
-if ( have_visualizer() ) {
-  the_visualizer();
-}
-
- ?>
 
   </section><!-- .container -->
 
-  <footer class="entry-meta">
-    <?php
-      /* translators: used between list items, there is a space after the comma */
-      $category_list = get_the_category_list( __( ', ', 'tm-regional' ) );
 
-      /* translators: used between list items, there is a space after the comma */
-      $tag_list = get_the_tag_list( '', __( ', ', 'tm-regional' ) );
-
-
-      printf(
-        $meta_text,
-        $category_list,
-        $tag_list,
-        get_permalink()
-      );
-    ?>
-
-    <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
-  </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
 </div>
