@@ -21,45 +21,32 @@ get_header(); ?>
           <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
         </div>
         </div>
-
-
+<?php if( have_solutions_description() ): ?>
 <div class="page-contents">
-
-      <div class="container">
-
+      <div class="container">     
+  <p><?php the_solutions_description(); ?></p>
   </div><!-- .tmr__wrapper  -->
 </div>
-
-
+<?php endif; ?>
     <div class="container-fluid region-selector">
-
 <div class=" container">
 <div class='region-tab-container'>
   <h2>Select your media</h2>
       <ul class='etabs'>
       <?php foreach( $terms as $term ): ?>
         <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
-        
       <?php endforeach;?>
       <?php /* End sections loop */ ?>
       </ul>
-      </div>
+  </div>
 </div>
 
 </div>
-
-
 <?php /* Start the Loop for regions */ ?>
 <?php foreach( $terms as $term ): ?>
-
-
-
 <div id="titles-main">
-<div class="container">
-
+  <div class="container">
   <section>
-  
-
   <?php /* Start the Loop for posts within regions */ ?>
 
 <?php
@@ -100,17 +87,11 @@ get_header(); ?>
 
       $single_post = get_posts( $single_post_args );
       foreach( $single_post as $post ):
-
         setup_postdata( $post );
-
-
-          get_template_part( 'content-' . $post_type );
+        get_template_part( 'content-' . $post_type );
         wp_reset_postdata();
-
-      endforeach;
-    ?>
-
-</div>
+      endforeach;?>
+    </div>
   </section>
   </div><!-- .tmr__wrapper  -->
 </div><!-- #titles-main -->
