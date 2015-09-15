@@ -109,15 +109,27 @@
           <div class="row">
             <div class="col-sm-4 brand">
              <div class="title-item">
-              <h3>Readership profile - print and online</h3>
-              <p>Increase your reach - By booking your advert in both print and online, you can reach XXXXX local people!</p>
-          <div class="graph-key">
-            <ul>
-            <li><span class="graph-key-icon"></span><span class="graph-key-text paper-title">Chester Chronicle</span></li>
-            <li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title">chesterchronicle.co.uk</span></li>
-          </ul>
-        </div>
-              </div>
+               <?php if( has_website_name() ) {  ?>
+              <h3>Readership profile - Print and Online</h3>
+              <p>Increase your reach - By booking your advert in both print and online.</p>
+            <div class="graph-key">
+                <ul>
+                  <li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_title(); ?></span></li>
+                  <li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li>
+              </ul>
+                </div>
+              
+            <?php  } else { ?>
+              <h3>Readership profile - Print</h3>
+              <p>Increase your reach - By booking an advert in our print title.</p>
+            <div class="graph-key">
+                <ul>
+                  <li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_title(); ?></span></li>
+              </ul>
+                </div>
+          <?php   } ?>
+          </div>
+
           </div>
           <div class="col-sm-8 white">
            <?php if ( has_visualizer() ) {
