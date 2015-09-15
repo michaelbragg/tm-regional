@@ -81,16 +81,16 @@ $('.tab a').click(function(){
         y: 170
     };
     var targetTwo = {
-        x: 1075,
-        y: 360
+        x: 1065,
+        y: 380
     };
     var targetThree = {
-        x: 1080,
-        y: 510
+        x: 1070,
+        y: 520
     };
     var targetFour = {
-        x: 790,
-        y: 750
+        x: 780,
+        y: 760
     };
 
     var hotspotOne = $('#hotspotOne');

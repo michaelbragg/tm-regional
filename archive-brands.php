@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <?php
-$the_slug = 'titles';
+$the_slug = 'brands';
 $args=array(
   'name' => $the_slug,
   'post_type' => 'page',
@@ -24,9 +24,9 @@ $my_posts = get_posts($args);
 
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="titles-page-hero kenburns">
+        <div class="titles-page-hero kenburns hero-height">
           <div class="container">
-          <div class= "hero-page-title"><?php echo '<h1>' . $my_posts[0]->post_title . '</h1>'; ?></div>
+          <div class= "hero-page-title"><h1>Our Brands</h1></div>
         </div>
         </div>
       
@@ -48,7 +48,7 @@ if( $my_posts ) {
 
 <?php
   $taxonomy_type = 'regions';
-  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=titles');
+  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=brands');
   $terms = get_terms($taxonomy_type, array());
   ?>
 
@@ -59,7 +59,7 @@ if( $my_posts ) {
   <section>
     <?php
       $post_array = get_posts(array(
-        'post_type' => 'titles',
+        'post_type' => 'brands',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
         'orderby' => 'menu_order',
@@ -79,7 +79,7 @@ if( $my_posts ) {
  <div class='panel-container'>
 <?php
       $single_post_args = array(
-        'post_type' => 'titles',
+        'post_type' => 'brands',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
         'orderby' => 'menu_order',
@@ -91,7 +91,7 @@ if( $my_posts ) {
       foreach( $single_post as $post ):
       setup_postdata($post);
       //print_r($single);
-        get_template_part( 'content-titles' );
+        get_template_part( 'content-brands' );
       endforeach;
     ?>
     <?php wp_reset_postdata(); ?>

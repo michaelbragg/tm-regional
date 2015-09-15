@@ -4,8 +4,8 @@
 
 .page-hero {
     position: relative;
-    height: 300px;
-    background-size: cover;
+    height: 250px;
+  background-repeat-x: repeat;
     background-position: center center;
     margin-bottom: 20px;
 }
@@ -15,6 +15,10 @@
 @media screen and (min-width:600px){
     .hero-height{
     min-height: 450px;
+}
+.page-hero {
+    height: 450px;
+
 }
 }
 .products-page-hero {
@@ -43,7 +47,6 @@ background-size: 150%;
     background-repeat: no-repeat;
     background-position: 40% bottom;
     width: 100%;
-    background-size: 140%;
 }
 .kenburns {
     animation: kenburns 20s ease-out;
