@@ -26,7 +26,7 @@ $my_posts = get_posts($args);
     <main id="main" class="site-main" role="main">
         <div class="titles-page-hero kenburns hero-height">
           <div class="container">
-          <div class= "hero-page-title"><h1>Our Brands</h1></div>
+          <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
         </div>
         </div>
       
