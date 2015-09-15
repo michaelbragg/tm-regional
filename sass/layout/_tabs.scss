@@ -30,7 +30,6 @@
 .tabs-text {
     display: none;
 }
-
 @media screen and (max-width: 769px) {
     .tabicon {
         cursor: pointer;
@@ -84,61 +83,160 @@
         color: #fff;
     }
 }
-
-   .etabs { margin: 0; padding: 0; display:inline-block; float:right; margin-bottom:5px; margin-top: 5px;  max-width:700px}
-
-    .tab { position:relative; display: inline-block; zoom:1; *display:inline;   margin-left:0; margin-right: 10px; margin-bottom: 10px; border-radius: 4px;}
-
-       @media screen and (min-width:481px){
-.tab { display: inline-block; float:right; zoom:1; *display:inline;  margin-left:10px; margin-bottom: 10px; margin-right: 0; transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;}
-
+.etabs {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    max-width: 700px
 }
-
-    .tab a { border-radius:4px; border: solid 1px $secondary-color; font-weight:300; color:$secondary-color; font-size: 12px; line-height: 1.1; display: block; outline: none; text-transform: uppercase; padding: 11px 17px}
-   
-    .tab a:hover {
-  color: #fff !important;
-  border: 1px solid $secondary-color !important;
-  border-radius:5px;
+.tab {
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
-
+@media screen and (min-width: 481px) {
+    .tab {
+        display: inline-block;
+        float: right;
+        zoom: 1;
+        *display: inline;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        transition: 0.08s ease-in;
+        -o-transition: 0.08s ease-in;
+        -ms-transition: 0.08s ease-in;
+        -moz-transition: 0.08s ease-in;
+        -webkit-transition: 0.08s ease-in;
+    }
+}
+.tab a {
+    border-radius: 4px;
+    border: solid 1px $secondary-color;
+    font-weight: 300;
+    color: $secondary-color;
+    font-size: 12px;
+    line-height: 1.1;
+    display: block;
+    outline: none;
+    text-transform: uppercase;
+    padding: 11px 17px
+}
+.tab a:hover {
+    color: #fff !important;
+    border: 1px solid $secondary-color !important;
+    border-radius: 5px;
+}
 .tab a:before {
-  content: "";
-  position: absolute;
-  background-color: rgba(42, 42, 42, 0.9);
-  border-radius:4px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: -1;
-  color: #fff;
-  -webkit-transition: top 0.09s ease-in;
+    content: "";
+    position: absolute;
+    background-color: rgba(42, 42, 42, 0.9);
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    color: #fff;
+    -webkit-transition: top 0.09s ease-in;
 }
-
 .tab a:hover:before {
-  top: 0;
+    top: 0;
+}
+@media screen and(min-width: 768px) {
+    .tab a {
+        font-size: 14px;
+    }
+}
+.tab a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.tab a.active {
+    position: relative;
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+.tab a.active {
+    font-weight: bold;
+    outline: none;
+    color: #fff;
+}
+.tab a.active:hover {
+    border-color: $primary-color !important;
+}
+.tab-container .panel-container {
+    outline: none;
+}
+.panel-container {
+    clear: both;
+}
+.tab-container {
+    margin-bottom: 5px;
+    outline:none;
+}
+@media screen and(min-width: 768px) {
+    .tab-container {
+        margin-bottom: 50px;
+    }
+}
+.tab-container h2 {
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.tab-container .panel-container div {
+    outline: none;
 }
 
-    @media screen and(min-width:768px){
-        .tab a { font-size: 14px;}
-        .etabs {margin-bottom:30px; margin-top: 30px;}
-    }
-    .tab a:hover { text-decoration: none; color:#fff;}
-    .tab a.active { position: relative; border-color: $primary-color; background-color: $primary-color;}
-    .tab a.active { font-weight: bold; outline:none; color:#fff;}
+/*--------------------- Region Selector  -----------------------*/
+ 
+ .region-selector .tab a {
+    border: solid 1px #989798;
+    color:#989798;
+}
+ .region-selector .tab a:hover {
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    border-radius: 5px;
+}
+ .region-selector .tab a:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    color: $secondary-color;
+    -webkit-transition: top 0.09s ease-in;
+}
+ .region-selector  .tab a:hover:before {
+    top: 0;
+}
 
-   
-    .tab a.active:hover{border-color:$primary-color !important;}
-    .tab-container .panel-container { outline:none; }
-    .panel-container { clear: both; }
-    .tab-container{margin-bottom:5px;}
-    @media screen and(min-width:768px){
-.tab-container{margin-bottom:50px;}
-    }
-    .tab-container h2 {display: inline-block; margin-bottom:30px; margin-top: 30px; text-transform: uppercase;}
-    .tab-container .panel-container div { outline:none; }
+ .region-selector .region-tab-container .etabs{
+      margin-bottom: 10px;
+      margin-top: 20px;
+ }
+
+  .region-selector .tab a.active {
+    position: relative;
+    border-color: #fff;
+    background-color: #fff;
+}
+ .region-selector .tab a.active {
+    font-weight: bold;
+    outline: none;
+    color: #fff;
+}

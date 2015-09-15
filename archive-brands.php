@@ -9,6 +9,13 @@
 
 get_header(); ?>
 
+
+<?php
+  $taxonomy_type = 'regions';
+  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=brands');
+  $terms = get_terms($taxonomy_type, array());
+  ?>
+
 <?php
 $the_slug = 'brands';
 $args=array(
@@ -43,20 +50,32 @@ if( $my_posts ) {
   </div><!-- .tmr__wrapper  -->
 </div>
 
+    <div class="container-fluid region-selector">
+
+<div class=" container">
+<div class='region-tab-container'>
+  <h2>Select your region</h2>
+      <ul class='etabs'>
+      <?php foreach( $terms as $term ): ?>
+        <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+        
+      <?php endforeach;?>
+      <?php /* End sections loop */ ?>
+      </ul>
+      </div>
+</div>
+
+</div>
 
 
-
-<?php
-  $taxonomy_type = 'regions';
-  $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=brands');
-  $terms = get_terms($taxonomy_type, array());
-  ?>
 
 <?php /* Start the Loop for regions */ ?>
 
+<div class="container">
+  
 <?php foreach( $terms as $term ): ?>
-      <div class="container">
-  <section>
+      
+
     <?php
       $post_array = get_posts(array(
         'post_type' => 'brands',
@@ -69,7 +88,7 @@ if( $my_posts ) {
     ?>
 
 
-<div class='tab-container'>
+<div id="<?php echo $term->name; ?>" class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
  <ul class='etabs'>
         <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>
@@ -102,12 +121,12 @@ if( $my_posts ) {
 
 
     
+<?php endforeach; ?>
 
-    </section>
 
    </div><!-- .tmr__wrapper  -->
 
-<?php endforeach; ?>
+
 
       
      

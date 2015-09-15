@@ -16,7 +16,7 @@ get_header(); ?>
 <section id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
-    <div class="audience-page-hero kenburns hero-height">
+    <div class="rates-page-hero kenburns hero-height">
 
       <div class="container">
         <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
@@ -29,7 +29,22 @@ get_header(); ?>
               <!-- .container  -->
       </div>
 
+<div class="container-fluid region-selector">
 
+<div class=" container">
+<div class='region-tab-container'>
+  <h2>Select your region</h2>
+      <ul class='etabs'>
+      <?php foreach( $terms as $term ): ?>
+        <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+        
+      <?php endforeach;?>
+      <?php /* End sections loop */ ?>
+      </ul>
+      </div>
+</div>
+
+</div>
 
     <div class="container">
 
@@ -53,7 +68,9 @@ get_header(); ?>
 
       <?php /* Start sections loop */ ?>
 
-<div class='tab-container'>
+
+
+<div id="<?php echo $term->name; ?>" class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
       <ul class='etabs'>
       <?php foreach( $post_array as $post ): ?>
@@ -92,9 +109,10 @@ get_header(); ?>
     <?php /* End post loop */ ?>
 
 
-      <?php endforeach; ?>
+      
 </div>
-      </section>
+
+<?php endforeach; ?>
     </div><!-- .container  -->
 
   </main><!-- #main -->
