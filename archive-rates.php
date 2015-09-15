@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Audiences Archive pages.
+ * The template for displaying Rates Archive pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,7 +8,7 @@
  */
 
 $taxonomy_type = 'regions';
-$posts = get_categories('taxonomy=' . $taxonomy_type . '&type=audiences');
+$posts = get_categories('taxonomy=' . $taxonomy_type . '&type=rates');
 $terms = get_terms($taxonomy_type, array());
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
         </div>
               <!-- .container  -->
       </div>
-    
+
 
 
     <div class="container">
@@ -42,7 +42,7 @@ get_header(); ?>
 
     <?php
       $post_array = get_posts(array(
-        'post_type' => 'audiences',
+        'post_type' => 'rates',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
         'orderby' => 'menu_order',
@@ -63,13 +63,13 @@ get_header(); ?>
       <?php endforeach;?>
       <?php /* End sections loop */ ?>
       </ul>
-    
+
 
  <div class='panel-container'>
 <?php
       $single_post_args = array(
         'numberposts' => 999,
-        'post_type' => 'audiences',
+        'post_type' => 'rates',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
         'orderby' => 'menu_order',
@@ -81,7 +81,7 @@ get_header(); ?>
 
       foreach( $single_post as $post ):
       setup_postdata($post);
-        get_template_part( 'content-audiences' );
+        get_template_part( 'content-rates' );
       wp_reset_postdata();
 
       endforeach;
