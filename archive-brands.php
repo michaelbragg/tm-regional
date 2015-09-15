@@ -9,7 +9,6 @@
 
 get_header(); ?>
 
-
 <?php
   $taxonomy_type = 'regions';
   $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=brands');
@@ -28,54 +27,41 @@ $args=array(
 $my_posts = get_posts($args);
 
 ?>  
-
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="titles-page-hero kenburns hero-height">
-          <div class="container">
-          <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
-        </div>
-        </div>
-      
-<div class="page-contents">
+      <div class="titles-page-hero kenburns hero-height">
+        <div class="container">
+        <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
+      </div>
+  </div>
 
-      <div class="container">
-<?php
-
-if( $my_posts ) {
- 
-  echo $my_posts[0]->post_content;
-}
-?>
-  </div><!-- .tmr__wrapper  -->
-</div>
+<?php if( have_brands_description() ): ?>
+  <div class="page-contents">
+    <div class="container">
+        <p><?php the_brands_description(); ?></p>
+    </div><!-- .tmr__wrapper  -->
+  </div>
+<?php endif; ?>
 
     <div class="container-fluid region-selector">
 
 <div class=" container">
-<div class='region-tab-container'>
-  <h2>Select your region</h2>
-      <ul class='etabs'>
-      <?php foreach( $terms as $term ): ?>
-        <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
-        
-      <?php endforeach;?>
-      <?php /* End sections loop */ ?>
+    <div class='region-tab-container'>
+      <h2>Select your region</h2>
+        <ul class='etabs'>
+          <?php foreach( $terms as $term ): ?>
+          <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+          <?php endforeach;?>
+        <?php /* End sections loop */ ?>
       </ul>
-      </div>
+    </div>
+  </div>
 </div>
-
-</div>
-
-
 
 <?php /* Start the Loop for regions */ ?>
 
 <div class="container">
-  
 <?php foreach( $terms as $term ): ?>
-      
-
     <?php
       $post_array = get_posts(array(
         'post_type' => 'brands',
@@ -86,15 +72,11 @@ if( $my_posts ) {
         'nopaging' => true
       ));
     ?>
-
-
 <div id="<?php echo $term->name; ?>" class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
  <ul class='etabs'>
         <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>
-
  </ul>
-
  <div class='panel-container'>
 <?php
       $single_post_args = array(
@@ -116,20 +98,8 @@ if( $my_posts ) {
     <?php wp_reset_postdata(); ?>
 </div>
 </div>
-
-
-
-
-    
 <?php endforeach; ?>
-
-
    </div><!-- .tmr__wrapper  -->
-
-
-
-      
-     
     </main><!-- #main -->
   </section><!-- #primary -->
 
