@@ -41,6 +41,7 @@ $tablepress_options = json_decode( get_option('tablepress_tables') );
     <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
+
 </div>
 
 
