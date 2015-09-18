@@ -43,18 +43,20 @@ $my_posts = get_posts($args);
   </div>
 <?php endif; ?>
 
-    <div class="container-fluid region-selector">
-
+<div class="container-fluid region-selector">
 <div class=" container">
+  <div class="tab_expand tabicon">
+    <div class="tabs-arrow-down"></div>
     <div class='region-tab-container'>
       <h2>Select your region</h2>
-        <ul class='etabs'>
+         <ul class='tabs-menu etabs'>
           <?php foreach( $terms as $term ): ?>
-          <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+          <li class='tab'><a href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
           <?php endforeach;?>
         <?php /* End sections loop */ ?>
       </ul>
     </div>
+  </div>
   </div>
 </div>
 
@@ -72,7 +74,7 @@ $my_posts = get_posts($args);
         'nopaging' => true
       ));
     ?>
-<div id="<?php echo $term->name; ?>" class='tab-container'>
+<div id="<?php echo $term->slug; ?>" class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
  <ul class='etabs'>
         <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>

@@ -1,22 +1,14 @@
-/**
+/*
+ *
  * navigation.js
  *
  * Handles toggling the navigation menu for small screens and enables tab
  * support for dropdown menus.
  */
-// Mobile Navigation
+/* ---------------------------------------------
+ Main Navigation 
+ --------------------------------------------- */
 (function($) {
-
-$('.tab a').click(function(){
-
-var DivLink = $(this).attr('href');
-
- $('html, body').animate({
-                        scrollTop: $(DivLink).offset().top -130
-                    }, 2000);
-
-});
-
 
     $('.mobile-toggle').click(function() {
         if ($('.main-nav').hasClass('open-nav')) {
@@ -74,24 +66,28 @@ var DivLink = $(this).attr('href');
     }
 
 
+    /* ---------------------------------------------
+ Hotspots
+ --------------------------------------------- */
+
     var image = {
         width: 1440,
         height: 1000
     };
     var targetOne = {
-        x: 705,
-        y: 170
+        x: 704,
+        y: 185
     };
     var targetTwo = {
-        x: 1065,
-        y: 380
+        x: 1090,
+        y: 390
     };
     var targetThree = {
-        x: 1070,
-        y: 520
+        x: 1010,
+        y: 600
     };
     var targetFour = {
-        x: 780,
+        x: 810,
         y: 760
     };
 
@@ -141,27 +137,37 @@ var DivLink = $(this).attr('href');
         e.stopPropagation();
 
         if ($(this).children('.hotspot-info').hasClass('desktop__visible')) { //check if hidden or not
-            $(this).children('.hotspot-info').removeClass('desktop__visible');  //if yes hide
+            $(this).children('.hotspot-info').removeClass('desktop__visible'); //if yes hide
             $('.hotspot-icon').removeClass('opened');
             $(this).removeClass('opened');
-            $(this).delay(500).queue(function(){
-        $(this).addClass('pulse').clearQueue();
-    });
-           
+            $(this).delay(500).queue(function() {
+                $(this).addClass('pulse').clearQueue();
+            });
+
 
         } else {
             $('.hotspot').removeClass('opened');
             $('.hotspot-icon').removeClass('opened');
             $(this).removeClass('opened');
-           $('.hotspot').addClass('pulse');
-            $('.hotspot').children('.hotspot-info').removeClass('desktop__visible'); 
+            $('.hotspot').addClass('pulse');
+            $('.hotspot').children('.hotspot-info').removeClass('desktop__visible');
             $(this).children('.hotspot-info').addClass('desktop__visible'); // else show
             $(this).addClass('opened');
-              $(this).find('.hotspot-icon').addClass('opened');
-             $(this).removeClass('pulse');
+            $(this).find('.hotspot-icon').addClass('opened');
+            $(this).removeClass('pulse');
         }
     });
 
+    $('.tab a').click(function() {
+        var DivLink = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(DivLink).offset().top - 130
+        }, 2000);
+    });
 
+    $('.tab_expand').on('click', function() {
+        $(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
+        $(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
+    });
 
 })(jQuery);
