@@ -7,7 +7,7 @@
  * @package tm-regional
  */
 ?>
-<div id="<?php the_slug() ?>">
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
@@ -43,7 +43,7 @@ $tablepress_options = json_decode(get_option('tablepress_tables'));
     <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->
 </article><!-- #post-## -->
-</div>
+
 
 
 
