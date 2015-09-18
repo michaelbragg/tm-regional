@@ -30,49 +30,51 @@
 .tabs-text {
     display: none;
 }
-@media screen and (max-width: 769px) {
+
+@media screen and (max-width: 767px) {
     .tabicon {
+        position: relative;
         cursor: pointer;
         padding-top: 15px;
         display: block;
-        background-color: $primary-color;
         margin: 0;
         min-height: 35px;
     }
     .tabs-menu {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         -moz-transition: all .3s ease-in;
         -o-transition: all .3s ease-in;
         -webkit-transition: all .3s ease-in;
         clear: both;
     }
+    .tabs-arrow-down {
+      position: absolute;
+      right:0;
+      top:40px;
+      width: 25px;
+      height: 25px;
+      background-image: url(./gui/icons/scroll-arrow.svg);
+      background-repeat: no-repeat;
+      margin: 3px 0 0 15px;
+
+    }
     .tabs-menu ul li a {
         border-right: none;
     }
     .tabs-menu-expand {
-        height: 100%;
+        max-height: 500px;
     }
     .tabs-menu ul li {
         display: block;
     }
-    .tabs-arrow-down {
-        float: left;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid #fff;
-        margin: 3px 0 0 15px;
-    }
     .tabs-arrow-up {
-        float: left;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid #fff;
-        border-top: none;
+        position: absolute;
+      right:0;
+      top:40px;
+      width: 25px;
+      height: 25px;
+      background-image: url(./gui/icons/scroll-arrow-up.svg);
         margin: 3px 0 0 15px;
     }
     .tabs-text {
@@ -83,30 +85,35 @@
         color: #fff;
     }
 }
+
 .etabs {
     margin-bottom: 30px;
-    margin-top: 30px;
+
     padding: 0;
-    display: inline-block;
-    float: right;
-    max-width: 700px
+}
+@media screen and (min-width:768px){
+    .etabs {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 0;
+        display: inline-block;
+        float: right;
+        max-width: 700px;
+    }
 }
 .tab {
     position: relative;
-    display: inline-block;
+    display: block;
     zoom: 1;
     *display: inline;
     margin-left: 0;
-    margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
     .tab {
         display: inline-block;
         float: right;
-        zoom: 1;
-        *display: inline;
         margin-left: 10px;
         margin-bottom: 10px;
         margin-right: 0;
@@ -192,12 +199,23 @@
     margin-bottom: 30px;
     margin-top: 30px;
     text-transform: uppercase;
+
 }
+@media screen and(min-width: 768px) {
+.tab-container h2 {
+    float:left;
+}
+}
+
 .tab-container .panel-container div {
     outline: none;
 }
 
 /*--------------------- Region Selector  -----------------------*/
+
+.region-tab-container{
+    position:relative;
+}
  
  .region-selector .tab a {
     border: solid 1px #989798;
@@ -240,3 +258,4 @@
     outline: none;
     color: #fff;
 }
+
