@@ -21,7 +21,7 @@
       <div class="col-md-4 advert-container-item">
         <h3><?php the_title(); ?></h3>
       <?php the_content(); ?>
-      <button class="dwld-btn">Download technical specifications</button>
+      <button class="dwld-btn">Build Guide</button>
     </div>
     <div class=" col-md-5 advert-container-item products-container">
       <div class="js-advert--preview advert-preview__placeholder"></div>

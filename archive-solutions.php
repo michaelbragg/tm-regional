@@ -63,7 +63,7 @@ get_header(); ?>
   ) );
 ?>
 
-<div id="<?php echo $term->slug; ?>"  class='tab-container'>
+<div id='<?php echo $term->slug; ?>' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
 <?php /* Start sections loop */ ?>
 <ul class='etabs'>
@@ -94,7 +94,7 @@ get_header(); ?>
         get_template_part( 'content-' . $post_type );
         wp_reset_postdata();
       endforeach;?>
-    </div>
+  </div>
   </section>
   </div><!-- .tmr__wrapper  -->
 </div><!-- #titles-main -->

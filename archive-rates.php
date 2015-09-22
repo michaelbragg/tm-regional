@@ -61,6 +61,7 @@ get_header(); ?>
     ?>
       <?php /* Start sections loop */ ?>
 <div id="<?php echo $term->slug; ?>" class='tab-container'>
+<div id='tab-container' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
       <ul class='etabs'>
       <?php foreach( $post_array as $post ): ?>
@@ -92,6 +93,7 @@ get_header(); ?>
     ?>
   </div>
     <?php /* End post loop */ ?>
+</div>
 </div>
 <?php endforeach; ?>
     </div><!-- .container  -->

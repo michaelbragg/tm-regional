@@ -63,12 +63,12 @@ get_header(); ?>
 
       <?php /* Start sections loop */ ?>
 
-<div id="<?php echo $term->slug; ?>" class='tab-container'>
+<div id='<?php echo $term->slug; ?>' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
-      <ul class='etabs'>
+      <ul class='posts-menu etabs'>
         <?php foreach( $post_array as $post ): ?>
         <?php setup_postdata($post); ?>
-        <li class='tab'><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+        <li class='tab'><a href="#<?php the_slug() ; ?>"><?php the_title(); ?></a></li>
         <?php wp_reset_postdata(); ?>
         <?php endforeach;?>
       <?php /* End sections loop */ ?>
@@ -96,6 +96,7 @@ get_header(); ?>
   </div>
     <?php /* End post loop */ ?>
 </div>
+
 
 <?php endforeach; ?>
     </div><!-- .container  -->
