@@ -74,10 +74,10 @@ $my_posts = get_posts($args);
         'nopaging' => true
       ));
     ?>
-<div id="<?php echo $term->slug; ?>" class='tab-container'>
+<div id='<?php echo $term->slug; ?>' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
  <ul class='etabs'>
-        <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php the_slug() ?>"><?php the_title(); ?></a></li><?php endforeach;?>
+        <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
  </ul>
  <div class='panel-container'>
 <?php
@@ -98,8 +98,9 @@ $my_posts = get_posts($args);
       endforeach;
     ?>
     <?php wp_reset_postdata(); ?>
+  </div>
 </div>
-</div>
+
 <?php endforeach; ?>
    </div><!-- .tmr__wrapper  -->
     </main><!-- #main -->

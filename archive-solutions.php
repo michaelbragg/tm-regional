@@ -36,7 +36,7 @@ get_header(); ?>
   <h2>Select your media</h2>
       <ul class='tabs-menu etabs'>
       <?php foreach( $terms as $term ): ?>
-        <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+        <li class='tab'><a href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
       <?php endforeach;?>
       <?php /* End sections loop */ ?>
       </ul>
@@ -63,7 +63,7 @@ get_header(); ?>
   ) );
 ?>
 
-<div id="<?php echo $term->name; ?>"  class='tab-container'>
+<div id='<?php echo $term->slug; ?>' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
 <?php /* Start sections loop */ ?>
 <ul class='etabs'>
@@ -94,7 +94,7 @@ get_header(); ?>
         get_template_part( 'content-' . $post_type );
         wp_reset_postdata();
       endforeach;?>
-    </div>
+  </div>
   </section>
   </div><!-- .tmr__wrapper  -->
 </div><!-- #titles-main -->

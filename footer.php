@@ -84,9 +84,10 @@
 
     <?php } ?>
 
-      <script type="text/javascript">
+
+   <script type="text/javascript">
     $(document).ready( function() {
-      $('.tab-container').easytabs();
+      $('#cheshire, #merseyside, #online, #print').easytabs();
     });
   </script>
 

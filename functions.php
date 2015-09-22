@@ -144,7 +144,7 @@ function tm_regional_scripts() {
 
 	wp_enqueue_script( 'tm-regional-randomHero', get_template_directory_uri() . '/js/jquery.randomHero.js', array(), '20150724', true );
 
-	wp_enqueue_script( 'tm-regional-tabs', get_template_directory_uri() . '/js/jquery.easytabs.min.js', array(), '20150724', true );
+	wp_enqueue_script( 'tm-regional-tabs', get_template_directory_uri() . '/js/libs/jquery.easytabs.js', array(), '20150724', true );
 
 	wp_enqueue_script( 'tm-regional-brands-preview', get_template_directory_uri() . '/js/jquery.products-preview.js', array(), '20150724', true );
 

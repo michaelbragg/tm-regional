@@ -158,10 +158,17 @@
         }
     });
 
-    $('.tab a').click(function() {
+    $('.posts-menu .tab a').click(function() {
+        
+        $('html, body').animate({
+            scrollTop: $(this).offset().top -130
+        }, 2000);
+    });
+
+      $('.tabs-menu .tab a').click(function() {
         var DivLink = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(DivLink).offset().top - 130
+            scrollTop: $(DivLink).offset().top -130
         }, 2000);
     });
 

@@ -36,7 +36,7 @@ get_header(); ?>
       <h2>Select your region</h2>
       <ul class='tabs-menu etabs'>
         <?php foreach( $terms as $term ): ?>
-          <li class='tab'><a href="#<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
+          <li class='tab'><a href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
           <?php endforeach;?>
         <?php /* End sections loop */ ?>
       </ul>
@@ -60,7 +60,8 @@ get_header(); ?>
       ));
     ?>
       <?php /* Start sections loop */ ?>
-<div id="<?php echo $term->name; ?>" class='tab-container'>
+<div id="<?php echo $term->slug; ?>" class='tab-container'>
+<div id='tab-container' class='tab-container'>
   <h2><?php echo $term->name; ?></h2>
       <ul class='etabs'>
       <?php foreach( $post_array as $post ): ?>
@@ -92,6 +93,7 @@ get_header(); ?>
     ?>
   </div>
     <?php /* End post loop */ ?>
+</div>
 </div>
 <?php endforeach; ?>
     </div><!-- .container  -->
