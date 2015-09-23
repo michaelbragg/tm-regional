@@ -82,6 +82,7 @@
 }
 .title-item h2 {
     display: block;
+    padding-bottom: 10px;
 }
 .titles-container .dop {
     width: 100%;
@@ -161,4 +162,9 @@
     vertical-align: middle;
     padding-left: 10px;
     float: left;
+}
+
+.figure-source{
+    display: block;
+    clear: both;
 }

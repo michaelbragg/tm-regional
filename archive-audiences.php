@@ -63,7 +63,7 @@ get_header(); ?>
 
       <?php /* Start sections loop */ ?>
 
-<div id='<?php echo $term->slug; ?>' class='tab-container'>
+<div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
   <h2><?php echo $term->name; ?></h2>
       <ul class='posts-menu etabs'>
         <?php foreach( $post_array as $post ): ?>
