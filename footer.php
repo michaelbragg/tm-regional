@@ -87,7 +87,7 @@
 
    <script type="text/javascript">
     $(document).ready( function() {
-      $('#cheshire, #merseyside, #online, #print').easytabs();
+      $("[class$=-section-block]").easytabs();
     });
   </script>
 

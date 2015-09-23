@@ -17,10 +17,10 @@ var productPreview = productPreview || {};
 
   productPreview.config = {
     debug: true,
-    list: '.js-advert--list',
+    list: '.js-solutions--list',
     button: '.js-products--button',
-    placeholder: '.js-advert--preview',
-    container: '.js-advert'
+    placeholder: '.js-solutions--preview',
+    container: '.js-solutions'
   };
 
   /**
@@ -87,7 +87,7 @@ event.preventDefault();
 
   productPreview.pushData = function( _parent, _button ) {
 
-    var _url = _button.data('advert-preview');
+    var _url = _button.data('solutions-preview');
 
     productPreview.toggleCurrent( _parent, _button );
 
