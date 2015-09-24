@@ -12,8 +12,8 @@ get_header(); ?>
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 <div class="container" style="margin-top:410px;">
-<div class='tab-container'>
-  <h2>Contact Us</h2>
+<div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
+<h2>Contact Us</h2>
  <ul class='etabs'>
 
 <?php /* Start the Loop */ ?>
