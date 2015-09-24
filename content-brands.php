@@ -68,7 +68,7 @@
           <div class="title-item">
             <h3>Why advertise online?</h3>
               <p>Online advertising offers local businesses the chance to reach an additional audience to those that are reached through print. Advertising on local newspaper websites is 77% more likely to be believed and relied upon than advertising on other websites Advertising on local websites is nearly 2x more trustworthy and reliable than 'national' websites.<br>
-              <small>Source: Newspaper Society, Wants ads III, 2007.</small></p>
+               <small class="figure-source">Source: Newspaper Society, Wants ads III, 2007.</small></p>
             </div>
           </div>
         </div>

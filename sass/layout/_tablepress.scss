@@ -332,3 +332,12 @@ font-size: 16px;
   margin: 2px;
   width: auto;
 }
+
+.tablepress caption{
+  background-color: $primary-color !important;
+  padding: 5px 20px !important;
+}
+
+.tablepress caption a{
+color:#fff;
+  }
