@@ -13,6 +13,8 @@ $terms = get_terms($taxonomy_type, array());
 
 get_header(); ?>
 
+
+
 <section id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
     <div class="audience-page-hero kenburns hero-height">
@@ -46,6 +48,10 @@ get_header(); ?>
 </div>
 
 <div class="container">
+
+
+
+
 <?php /* Start the Loop for regions */ ?>
 
 <?php foreach( $terms as $term ): ?>
