@@ -47,32 +47,22 @@
             </div>
           </div>
           </div>
-        
-        
-        <div class="row">
-          <div class="col-md-4 white">
-            <div class="title-item">
-              <h3>Early results</h3>
-                  <p>This title encourages additional early week trade for our advertisers, as well as providing our readers with the most up to date community news, breaking news and be first for weekend sport updates and reports.</p>
-            </div>
-          </div>
-        
-        <div class="col-md-4 white">
-            <div class="title-item">
-              <h3>The place to advertise</h3>
-              <p>The Chronicle Xtra contains fantastic new advertising platforms and opportunities both in-paper and online. An advert booked in the The Chronicle Xtra combined with the Chester Chronicle Series would have 138,949 opportunities to be seen! <br>
-              <small class="figure-source">Source: JICREG 1/04/2013. ABC July-Dec 2012.</small></p>
-            </div>
-          </div>
-        <div class="col-md-4 white">
-          <div class="title-item">
-            <h3>Why advertise online?</h3>
-              <p>Online advertising offers local businesses the chance to reach an additional audience to those that are reached through print. Advertising on local newspaper websites is 77% more likely to be believed and relied upon than advertising on other websites Advertising on local websites is nearly 2x more trustworthy and reliable than 'national' websites.<br>
-               <small class="figure-source">Source: Newspaper Society, Wants ads III, 2007.</small></p>
-            </div>
-          </div>
-        </div>
 
+      <?php  if( has_blocks() ) {
+          echo '<div class="row">';
+            $blocks = the_blocks();
+              for($i = 0; $i < count( $blocks ); ++$i ) {
+                echo '<div class="' . class_blocks( 'col-md-12 white', 'col-md-6 white', 'col-md-4 white') . '">';
+                echo '<div class="title-item">';
+                echo "<h3>" . $blocks[$i]['heading'] . "</h3>";
+                echo "<p>" . $blocks[$i]['text'] . "</p>";
+                echo '</div>';
+                echo '</div>';
+              }
+            echo '</div>';
+        }
+        ?>
+        
         <?php if( has_website_name() ) {  ?>
           <div class="row titles-margin">
             <div class="col-md-4 brand">

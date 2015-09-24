@@ -21,12 +21,9 @@
 .ad-preview{
   text-align: center;
 }
-
 .brands-style .np{
   padding:0;
 }
-
-
 .products-button {
   width: 100%;
   background-color: #fff;
@@ -38,34 +35,26 @@
   outline: none;
   text-transform: inherit;
 }
-
 .current-product, .products-button:hover {
-  font-weight: 700;
-  color:$secondary-color;
+  color:$primary-color;
 }
-
 .js-solutions--list li{
 padding-left:0;
-
 }
 .js-solutions--list .products-button:first-child{
   padding-top:0;
   padding-left:0;
-
 }
-
 .solutions-container{
  position: relative;
  display:table;
  width:100%;
 }
-
 .solutions-container-item{
   float:none;
   vertical-align: middle;
   padding:20px 30px;
 }
-
 @media screen and (min-width:481px){
 .solutions-container-item{
   padding:50px 30px;
@@ -78,27 +67,20 @@ padding-left:0;
   margin: 0;
 }
 }
-
 .solutions-container-item ul{
-margin-bottom: 30px;
+margin-bottom: 0;
 }
-
 .products-container{
    background-color: $primary-color;
 text-align: center;
 }
-
-
  .js-solutions--preview img{
   width:100%;
   max-width: 300px;
  }
-
-
 .solutions-container-separator{
   border-right:1px solid #666;
 }
-
 .dwld-btn{
   background-image:url(./gui/download-icon.svg);
   background-repeat:no-repeat;
