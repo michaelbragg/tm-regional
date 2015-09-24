@@ -88,7 +88,7 @@
              <?php if( has_unique_users() ) {  ?>
                 <h3>Monthly unique users</h3>
                 <h2><?php the_unique_users( 'figure' ); ?></h2>
-               <small><?php the_unique_users( 'source' );?></small>
+               <small class="figure-source"><?php the_unique_users( 'source' );?></small>
             <?php } ?>
            </div>
         </div>
@@ -98,7 +98,7 @@
               <?php if( has_page_views() ) {  ?>
                <h3>Monthly unique users</h3>
                 <h2><?php the_page_views( 'figure' ); ?></h2>
-                <small><?php the_page_views( 'source' ); ?></small>
+                <small class="figure-source"><?php the_page_views( 'source' ); ?></small>
               <?php } ?>
             </div>
           </div>
