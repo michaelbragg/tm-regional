@@ -62,7 +62,7 @@
             echo '</div>';
         }
         ?>
-  
+        
         <?php if( has_website_name() ) {  ?>
           <div class="row titles-margin">
             <div class="col-md-4 brand">
