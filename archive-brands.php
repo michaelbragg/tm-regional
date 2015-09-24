@@ -26,7 +26,7 @@ $args=array(
 );
 $my_posts = get_posts($args);
 
-?>  
+?>
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <div class="titles-page-hero kenburns hero-height">
@@ -82,6 +82,7 @@ $my_posts = get_posts($args);
  <div class='panel-container'>
 <?php
       $single_post_args = array(
+        'posts_per_page'   => 99999,
         'post_type' => 'brands',
         'taxonomy' => $term->taxonomy,
         'term' => $term->slug,
