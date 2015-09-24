@@ -61,7 +61,7 @@
             <div class="title-item">
               <h3>The place to advertise</h3>
               <p>The Chronicle Xtra contains fantastic new advertising platforms and opportunities both in-paper and online. An advert booked in the The Chronicle Xtra combined with the Chester Chronicle Series would have 138,949 opportunities to be seen! <br>
-              <small>Source: JICREG 1/04/2013. ABC July-Dec 2012.</small></p>
+              <small class="figure-source">Source: JICREG 1/04/2013. ABC July-Dec 2012.</small></p>
             </div>
           </div>
         <div class="col-md-4 white">

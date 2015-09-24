@@ -6,16 +6,16 @@
   background-color:#fff;
  
 }
-.js-advert--list{
+.js-solutions--list{
   list-style-type: none;
   margin:0;
   padding:0;
 }
 
-.js-advert--preview{
+.js-solutions--preview{
   position: relative;
 }
-.js-advert--padding{
+.js-solutions--padding{
   padding:50px 30px;
 }
 .ad-preview{
@@ -32,7 +32,7 @@
   background-color: #fff;
   border: none;
   text-align: left;
-  font-size:22px;
+  font-size:21px;
   font-weight: 300;
   color:$secondary-color;
   outline: none;
@@ -44,42 +44,42 @@
   color:$secondary-color;
 }
 
-.js-advert--list li{
+.js-solutions--list li{
 padding-left:0;
 
 }
-.js-advert--list .products-button:first-child{
+.js-solutions--list .products-button:first-child{
   padding-top:0;
   padding-left:0;
 
 }
 
-.advert-container{
+.solutions-container{
  position: relative;
  display:table;
  width:100%;
 }
 
-.advert-container-item{
+.solutions-container-item{
   float:none;
   vertical-align: middle;
   padding:20px 30px;
 }
 
 @media screen and (min-width:481px){
-.advert-container-item{
+.solutions-container-item{
   padding:50px 30px;
 }
 }
 
 @media screen and (min-width:992px){
-.advert-container-item{
+.solutions-container-item{
   display:table-cell;
   margin: 0;
 }
 }
 
-.advert-container-item ul{
+.solutions-container-item ul{
 margin-bottom: 30px;
 }
 
@@ -89,13 +89,13 @@ text-align: center;
 }
 
 
- .js-advert--preview img{
+ .js-solutions--preview img{
   width:100%;
-  max-width: 345px;
+  max-width: 300px;
  }
 
 
-.advert-container-separator{
+.solutions-container-separator{
   border-right:1px solid #666;
 }
 
