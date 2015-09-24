@@ -161,7 +161,7 @@
     $('.posts-menu .tab a').click(function() {
         
         $('html, body').animate({
-            scrollTop: $(this).offset().top -130
+            scrollTop: $(this).offset().top -180
         }, 2000);
     });
 
