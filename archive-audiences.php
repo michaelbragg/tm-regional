@@ -48,10 +48,6 @@ get_header(); ?>
 </div>
 
 <div class="container">
-
-
-
-
 <?php /* Start the Loop for regions */ ?>
 
 <?php foreach( $terms as $term ): ?>
