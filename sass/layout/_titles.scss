@@ -39,14 +39,16 @@
 .titles-container .col-md-4,
 .titles-container .col-md-8,
 .titles-container .col-sm-4,
-.titles-container .col-sm-8 {
+.titles-container .col-sm-8,
+.titles-container .col-sm-12{
     margin-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
     .titles-container .col-md-4,
     .titles-container .col-md-8,
     .titles-container .col-sm-4,
-    .titles-container .col-sm-8 {
+    .titles-container .col-sm-8,
+    .titles-container .col-sm-12 {
         margin-bottom: 5px;
         margin-right: 5px;
     }
