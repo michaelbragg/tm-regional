@@ -12,9 +12,10 @@ get_header(); ?>
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 <div class="container" style="margin-top:410px;">
+
 <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
 <h2>Contact Us</h2>
- <ul class='etabs'>
+ <ul class='posts-menu etabs'>
 
 <?php /* Start the Loop */ ?>
       <?php while ( have_posts() ) : the_post(); ?>
@@ -30,8 +31,9 @@ get_header(); ?>
 </div>
 
 <?php endwhile; ?>
-
 </div>
+
+
   </section>
   </div><!-- .tmr__wrapper  -->
 </div>
