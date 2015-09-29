@@ -41,7 +41,7 @@
 .titles-container .col-md-8,
 .titles-container .col-sm-4,
 .titles-container .col-sm-8,
-.titles-container .col-sm-12{
+.titles-container .col-sm-12 {
     margin-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
@@ -84,7 +84,7 @@
     padding: 30px 20px;
     float: left;
 }
-.title-item .entry-content{
+.title-item .entry-content {
     padding: 0;
 }
 .title-item h2 {
@@ -121,6 +121,7 @@
     -webkit-box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
     -moz-box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
     box-shadow: 2px 3px 9px 2px rgba(69, 69, 71, 0.25);
+    border: solid 5px #fff;
 }
 @media screen and (min-width: 768px) {
     .titles-container .row {
@@ -170,44 +171,34 @@
     padding-left: 10px;
     float: left;
 }
-
-.figure-source{
+.figure-source {
     display: block;
     clear: both;
 }
-
-
-.brand-select h2{
-     color:#fff;
+.brand-select h2 {
+    color: #fff;
 }
-
-@media screen and (min-width:768px){
-    .brand-select h2{
-     color:$secondary-color;
+@media screen and (min-width: 768px) {
+    .brand-select h2 {
+        color: $secondary-color;
+    }
+    .brand-select {
+        background-color: transparent;
+        padding: 0;
+    }
 }
-
-.brand-select{
-    background-color:transparent;
-    padding:0;
-   
-}
-
-}
-
 .brand-wrap .tabs-arrow-down {
- margin-top:10px;
-     background-image: url(./gui/icons/scroll-arrow-mob.svg);
+    margin-top: 10px;
+    background-image: url(./gui/icons/scroll-arrow-mob.svg);
     background-repeat: no-repeat;
 }
-
 .brand-wrap .tabs-arrow-up {
- margin-top:10px;
-     background-image: url(./gui/icons/scroll-arrow-up-mob.svg);
+    margin-top: 10px;
+    background-image: url(./gui/icons/scroll-arrow-up-mob.svg);
     background-repeat: no-repeat;
 }
-
-@media screen and (min-width:768px){
-    .brand-select-text{
-        display:none;
+@media screen and (min-width: 768px) {
+    .brand-select-text {
+        display: none;
     }
 }
