@@ -28,7 +28,7 @@ get_header(); ?>
       </div>
       <?php endif; ?>
 
-<div class="container-fluid region-selector">
+<div class="region-selector">
   <div class=" container">
      <div class="tab_expand tabicon">
     <div class="tabs-arrow-down"></div>

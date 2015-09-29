@@ -43,7 +43,7 @@ $my_posts = get_posts($args);
   </div>
 <?php endif; ?>
 
-<div class="container-fluid region-selector">
+<div class="region-selector">
 <div class=" container">
   <div class="tab_expand tabicon">
     <div class="tabs-arrow-down"></div>
@@ -63,6 +63,7 @@ $my_posts = get_posts($args);
 <?php /* Start the Loop for regions */ ?>
 
 <div class="container">
+  
 <?php foreach( $terms as $term ): ?>
     <?php
       $post_array = get_posts(array(
@@ -74,11 +75,14 @@ $my_posts = get_posts($args);
         'nopaging' => true
       ));
     ?>
-<div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
-  <h2><?php echo $term->name; ?></h2>
- <ul class='posts-menu etabs'>
-        <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
- </ul>
+<div class="tab_expand tabicon brand-wrap">
+    <div class="tabs-arrow-down"></div>
+      <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
+        <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a brand</small></h2>
+          <ul class='posts-menu tabs-menu etabs brand-select'>
+            <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
+          </ul>
+
  <div class='panel-container'>
 <?php
       $single_post_args = array(
@@ -101,7 +105,7 @@ $my_posts = get_posts($args);
     <?php wp_reset_postdata(); ?>
   </div>
 </div>
-
+</div>
 <?php endforeach; ?>
    </div><!-- .tmr__wrapper  -->
     </main><!-- #main -->

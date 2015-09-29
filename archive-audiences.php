@@ -30,7 +30,7 @@ get_header(); ?>
       </div>
     <?php endif; ?>
 
-<div class="container-fluid region-selector">
+<div class="region-selector">
 <div class="container">
   <div class="tab_expand tabicon">
     <div class="tabs-arrow-down"></div>
@@ -48,6 +48,9 @@ get_header(); ?>
 </div>
 
 <div class="container">
+
+  
+
 <?php /* Start the Loop for regions */ ?>
 
 <?php foreach( $terms as $term ): ?>
@@ -63,11 +66,13 @@ get_header(); ?>
       ));
     ?>
 
-      <?php /* Start sections loop */ ?>
+<?php /* Start sections loop */ ?>
 
+<div class="tab_expand tabicon brand-wrap">
+    <div class="tabs-arrow-down"></div>
 <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
-  <h2><?php echo $term->name; ?></h2>
-      <ul class='posts-menu etabs'>
+  <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select an statistic</small></h2>
+        <ul class='posts-menu tabs-menu etabs brand-select'>
         <?php foreach( $post_array as $post ): ?>
         <?php setup_postdata($post); ?>
         <li class='tab'><a href="#<?php the_slug() ; ?>"><?php the_title(); ?></a></li>
@@ -77,7 +82,7 @@ get_header(); ?>
      </ul>
   
  <div class='panel-container'>
-<?php
+  <?php
       $single_post_args = array(
         'numberposts' => 999,
         'post_type' => 'audiences',
@@ -88,19 +93,19 @@ get_header(); ?>
         'nopaging' => false
       );
 
-      $single_post = get_posts( $single_post_args );
-      foreach( $single_post as $post ):
-      setup_postdata($post);
-        get_template_part( 'content-audiences' );
-      wp_reset_postdata();
-      endforeach;
-    ?>
-  </div>
-    <?php /* End post loop */ ?>
+        $single_post = get_posts( $single_post_args );
+        foreach( $single_post as $post ):
+        setup_postdata($post);
+          get_template_part( 'content-audiences' );
+        wp_reset_postdata();
+        endforeach;
+      ?>
+   </div>
+  <?php /* End post loop */ ?>
 </div>
-
-
+</div>
 <?php endforeach; ?>
+
     </div><!-- .container  -->
   </main><!-- #main -->
 </section><!-- #primary -->
