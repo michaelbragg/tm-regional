@@ -30,8 +30,6 @@
         }
     })
 
-
-
     $('.search-icon').click(function() {
         $(".site-header").toggleClass("resize-header");
         $(".site-branding").toggleClass("branding-resize");
@@ -159,13 +157,12 @@
     });
 
     $('.posts-menu .tab a').click(function() {
-        
         $('html, body').animate({
             scrollTop: $(this).offset().top -180
         }, 2000);
     });
 
-      $('.tabs-menu .tab a').click(function() {
+      $('.region-tab-container .tabs-menu .tab a').click(function() {
         var DivLink = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(DivLink).offset().top -130
