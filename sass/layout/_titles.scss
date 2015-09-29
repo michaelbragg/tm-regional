@@ -84,6 +84,9 @@
     padding: 30px 20px;
     float: left;
 }
+.title-item .entry-content{
+    padding: 0;
+}
 .title-item h2 {
     display: block;
     padding-bottom: 10px;
@@ -159,7 +162,7 @@
     height: 40px;
     border-radius: 100%;
     border: 1px solid #fff;
-    background-color: #808080;
+    background-color: $secondary-color;
 }
 .graph-key-text {
     padding-top: 8px;
