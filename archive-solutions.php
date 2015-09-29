@@ -28,7 +28,7 @@ get_header(); ?>
   </div><!-- .tmr__wrapper  -->
 </div>
 <?php endif; ?>
-    <div class="container-fluid region-selector">
+    <div class="region-selector">
 <div class=" container">
    <div class="tab_expand tabicon">
     <div class="tabs-arrow-down"></div>
@@ -62,11 +62,12 @@ get_header(); ?>
     'nopaging' => true
   ) );
 ?>
-
+<div class="tab_expand tabicon brand-wrap">
+    <div class="tabs-arrow-down"></div>
 <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
-  <h2><?php echo $term->name; ?></h2>
+  <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a solution</small></h2>
 <?php /* Start sections loop */ ?>
- <ul class='posts-menu etabs'>
+   <ul class='posts-menu tabs-menu etabs brand-select'>
 <?php foreach( $post_array as $post ): ?>
   <?php setup_postdata($post); ?>
   <li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li>
@@ -96,6 +97,7 @@ get_header(); ?>
       endforeach;?>
   </div>
   </section>
+</div>
   </div><!-- .tmr__wrapper  -->
 </div><!-- #titles-main -->
 <?php endforeach; ?>
