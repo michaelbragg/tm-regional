@@ -78,6 +78,9 @@
     line-height: 1.2;
     text-align: left;
     float: right;
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 }
 .contact-info .contact-form-info label {
     width: 100%;
@@ -111,4 +114,19 @@
 }
 .address-details h2 {
     float: none;
+}
+span.wpcf7-not-valid-tip {
+    color: #fff;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}
+div.wpcf7-validation-errors {
+    margin-top:20px;
+    background-color: #fff;
+    color:$primary-color;
+    border:none;
+    float:left;
+    text-align: center;
+    width:100%;
 }
