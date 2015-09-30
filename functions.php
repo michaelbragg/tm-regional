@@ -122,21 +122,19 @@ function module($module, $options = null){
  */
 function tm_regional_scripts() {
 
-	wp_register_script('tm_regional_jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '20150724', true);
-
-	wp_enqueue_script( 'tm_regional_jquery' );
+	
 
 	wp_register_style( 'main-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'main-style' );
 
 	wp_enqueue_style( 'tm-regional-style', get_stylesheet_uri() );
+
+	wp_register_script('tm-regional-grid-system', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '20150424', true);
           
     wp_enqueue_script( 'tm-regional-grid-system' );
 
 	wp_enqueue_script( 'tm-regional-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-wp_register_script('tm-regional-grid-system', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '20150424', true);
 
 	wp_enqueue_script( 'tm-regional-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -220,3 +218,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+

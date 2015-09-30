@@ -14,13 +14,13 @@
         js_height_init();
   
 
-    $(window).resize(function() {
+    jQuery(window).resize(function() {
         js_height_init();
     });
 
     function js_height_init() {
-        (function($) {
-            $('.js-height-full').height($(window).height());
+        (function(jQuery) {
+            jQuery('.js-height-full').height(jQuery(window).height());
 
         })(jQuery);
 
@@ -31,39 +31,39 @@
 /* ---------------------------------------------
  Main Navigation 
  --------------------------------------------- */
-(function($) {
+(function(jQuery) {
 
-    $('.mobile-toggle').click(function() {
-        if ($('.main-nav').hasClass('open-nav')) {
-            $('.main-nav').removeClass('open-nav');
-            $('.masthead').removeClass('revealed');
-            $('.menu-panel').removeClass('menu-panel-open');
-            $('.quote-panel').removeClass('quote-panel-open');
-            $(".search-bar").removeClass("search-open");
-            $(".search-icon").removeClass("search-icon-open");
+    jQuery('.mobile-toggle').click(function() {
+        if (jQuery('.main-nav').hasClass('open-nav')) {
+            jQuery('.main-nav').removeClass('open-nav');
+            jQuery('.masthead').removeClass('revealed');
+            jQuery('.menu-panel').removeClass('menu-panel-open');
+            jQuery('.quote-panel').removeClass('quote-panel-open');
+            jQuery(".search-bar").removeClass("search-open");
+            jQuery(".search-icon").removeClass("search-icon-open");
 
         } else {
-            //$('.mobile-toggle span').addClass('white-color');
-            $('.main-nav').addClass('open-nav');
-            $('.masthead').addClass('revealed');
-            $('.menu-panel').addClass('menu-panel-open');
-            $('.quote-panel').addClass('quote-panel-open');
-            $(".search-bar").removeClass("search-open");
-            $(".search-icon").removeClass("search-icon-open");
+            //jQuery('.mobile-toggle span').addClass('white-color');
+            jQuery('.main-nav').addClass('open-nav');
+            jQuery('.masthead').addClass('revealed');
+            jQuery('.menu-panel').addClass('menu-panel-open');
+            jQuery('.quote-panel').addClass('quote-panel-open');
+            jQuery(".search-bar").removeClass("search-open");
+            jQuery(".search-icon").removeClass("search-icon-open");
         }
     })
 
-    $('.search-icon').click(function() {
-        $(".site-header").toggleClass("resize-header");
-        $(".site-branding").toggleClass("branding-resize");
-        $(".search-bar").toggleClass("search-open");
-        $(".search-icon").toggleClass("search-icon-open");
+    jQuery('.search-icon').click(function() {
+        jQuery(".site-header").toggleClass("resize-header");
+        jQuery(".site-branding").toggleClass("branding-resize");
+        jQuery(".search-bar").toggleClass("search-open");
+        jQuery(".search-icon").toggleClass("search-icon-open");
 
     });
 
-    $('.scroll-arrow').click(function() {
+    jQuery('.scroll-arrow').click(function() {
 
-        $.fn.pagepiling.moveSectionDown();
+        jQuery.fn.pagepiling.moveSectionDown();
     });
 
     /* ---------------------------------------------
@@ -91,17 +91,17 @@
         y: 760
     };
 
-    var hotspotOne = $('#hotspotOne');
-    var hotspotTwo = $('#hotspotTwo');
-    var hotspotThree = $('#hotspotThree');
-    var hotspotFour = $('#hotspotFour');
+    var hotspotOne = jQuery('#hotspotOne');
+    var hotspotTwo = jQuery('#hotspotTwo');
+    var hotspotThree = jQuery('#hotspotThree');
+    var hotspotFour = jQuery('#hotspotFour');
 
-    $(document).ready(updatePointer);
-    $(window).resize(updatePointer);
+    jQuery(document).ready(updatePointer);
+    jQuery(window).resize(updatePointer);
 
     function updatePointer() {
-        var windowWidth = $(window).width();
-        var windowHeight = $(window).height();
+        var windowWidth = jQuery(window).width();
+        var windowHeight = jQuery(window).height();
 
         // Get largest dimension increase
         var xScale = windowWidth / image.width;
@@ -133,47 +133,47 @@
         hotspotFour.css('left', (targetFour.x) * scale + xOffset);
     }
 
-    $('.hotspot').click(function(e) {
+    jQuery('.hotspot').click(function(e) {
         e.stopPropagation();
 
-        if ($(this).children('.hotspot-info').hasClass('desktop__visible')) { //check if hidden or not
-            $(this).children('.hotspot-info').removeClass('desktop__visible'); //if yes hide
-            $('.hotspot-icon').removeClass('opened');
-            $(this).removeClass('opened');
-            $(this).delay(500).queue(function() {
-                $(this).addClass('pulse').clearQueue();
+        if (jQuery(this).children('.hotspot-info').hasClass('desktop__visible')) { //check if hidden or not
+            jQuery(this).children('.hotspot-info').removeClass('desktop__visible'); //if yes hide
+            jQuery('.hotspot-icon').removeClass('opened');
+            jQuery(this).removeClass('opened');
+            jQuery(this).delay(500).queue(function() {
+                jQuery(this).addClass('pulse').clearQueue();
             });
 
 
         } else {
-            $('.hotspot').removeClass('opened');
-            $('.hotspot-icon').removeClass('opened');
-            $(this).removeClass('opened');
-            $('.hotspot').addClass('pulse');
-            $('.hotspot').children('.hotspot-info').removeClass('desktop__visible');
-            $(this).children('.hotspot-info').addClass('desktop__visible'); // else show
-            $(this).addClass('opened');
-            $(this).find('.hotspot-icon').addClass('opened');
-            $(this).removeClass('pulse');
+            jQuery('.hotspot').removeClass('opened');
+            jQuery('.hotspot-icon').removeClass('opened');
+            jQuery(this).removeClass('opened');
+            jQuery('.hotspot').addClass('pulse');
+            jQuery('.hotspot').children('.hotspot-info').removeClass('desktop__visible');
+            jQuery(this).children('.hotspot-info').addClass('desktop__visible'); // else show
+            jQuery(this).addClass('opened');
+            jQuery(this).find('.hotspot-icon').addClass('opened');
+            jQuery(this).removeClass('pulse');
         }
     });
 
-    $('.posts-menu .tab a').click(function() {
-        $('html, body').animate({
-            scrollTop: $(this).offset().top -180
+    jQuery('.posts-menu .tab a').click(function() {
+        jQuery('html, body').animate({
+            scrollTop: jQuery(this).offset().top -180
         }, 2000);
     });
 
-      $('.region-tab-container .tabs-menu .tab a').click(function() {
-        var DivLink = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(DivLink).offset().top -130
+      jQuery('.region-tab-container .tabs-menu .tab a').click(function() {
+        var DivLink = jQuery(this).attr('href');
+        jQuery('html, body').animate({
+            scrollTop: jQuery(DivLink).offset().top -130
         }, 2000);
     });
 
-    $('.tab_expand').on('click', function() {
-        $(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
-        $(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
+    jQuery('.tab_expand').on('click', function() {
+        jQuery(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
+        jQuery(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
     });
 
 })(jQuery);
