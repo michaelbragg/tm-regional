@@ -14,8 +14,9 @@ input[type="submit"] {
 	&:hover {
 		   
   color: $primary-color;
-  border-radius:5px;
-
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 	}
 
 	&:active,
