@@ -30,12 +30,10 @@
 .tabs-text {
     display: none;
 }
-
 @media screen and (max-width: 767px) {
     .tabicon {
         position: relative;
         cursor: pointer;
-        padding-top: 15px;
         display: block;
         margin: 0;
         min-height: 35px;
@@ -49,15 +47,14 @@
         clear: both;
     }
     .tabs-arrow-down {
-      position: absolute;
-      right:0;
-      top:40px;
-      width: 25px;
-      height: 25px;
-      background-image: url(./gui/icons/scroll-arrow.svg);
-      background-repeat: no-repeat;
-      margin: 3px 0 0 15px;
-
+        position: absolute;
+        right: 0;
+        top: 25px;
+        width: 25px;
+        height: 25px;
+        background-image: url(./gui/icons/scroll-arrow.svg);
+        background-repeat: no-repeat;
+        margin: 3px 0 0 15px;
     }
     .tabs-menu ul li a {
         border-right: none;
@@ -70,11 +67,11 @@
     }
     .tabs-arrow-up {
         position: absolute;
-      right:0;
-      top:40px;
-      width: 25px;
-      height: 25px;
-      background-image: url(./gui/icons/scroll-arrow-up.svg);
+        right: 0;
+        top: 25px;
+        width: 25px;
+        height: 25px;
+        background-image: url(./gui/icons/scroll-arrow-up.svg);
         margin: 3px 0 0 15px;
     }
     .tabs-text {
@@ -85,39 +82,34 @@
         color: #fff;
     }
 }
-
 .etabs {
     margin-bottom: 20px;
-
     padding: 0;
 }
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
     .region-tab-container .etabs {
         margin-bottom: 20px;
-        margin-top: 30px;
+        margin-top: 18px;
         padding: 0;
         display: inline-block;
         float: right;
         max-width: 700px;
     }
 }
-
-@media screen and (min-width:768px){
-    .tab-container  .etabs {
+@media screen and (min-width: 768px) {
+    .tab-container .etabs {
         margin-bottom: 20px;
         padding: 0;
         display: block;
-        width:100%;
+        width: 100%;
         float: left;
     }
-
-     .tab-container  .etabs .tab {
+    .tab-container .etabs .tab {
         float: left;
         margin-left: 0;
-        margin-right:10px;
+        margin-right: 10px;
     }
 }
-
 .tab {
     position: relative;
     display: block;
@@ -204,7 +196,7 @@
 }
 .tab-container {
     margin-bottom: 5px;
-    outline:none;
+    outline: none;
 }
 @media screen and(min-width: 768px) {
     .tab-container {
@@ -216,34 +208,50 @@
     margin-bottom: 30px;
     margin-top: 30px;
     text-transform: uppercase;
-
 }
 @media screen and(min-width: 768px) {
-.tab-container h2 {
-    float:left;
+    .tab-container h2 {
+        float: left;
+    }
 }
-}
-
 .tab-container .panel-container div {
     outline: none;
 }
-
 /*--------------------- Region Selector  -----------------------*/
 
-.region-tab-container{
-    position:relative;
+.region-tab-container {
+    position: relative;
 }
- 
- .region-selector .tab a {
+.region-selector {
+    background-color: $secondary-color;
+    top: 0;
+    @include animate;
+}
+.region-selector h2 {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0;
+}
+@media screen and(min-width: 768px) {
+    .region-selector h2 {
+        padding: 7px;
+    }
+}
+.region-selector .tab-container {
+    margin-bottom: 0;
+}
+.region-selector .tab a {
     border: solid 1px #989798;
-    color:#989798;
+    color: #989798;
 }
- .region-selector .tab a:hover {
+.region-selector .tab a:hover {
     color: #fff !important;
     border: 1px solid #fff !important;
     border-radius: 5px;
 }
- .region-selector .tab a:before {
+.region-selector .tab a:before {
     content: "";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
@@ -256,23 +264,35 @@
     color: $secondary-color;
     -webkit-transition: top 0.09s ease-in;
 }
- .region-selector  .tab a:hover:before {
+.region-selector .tab a:hover:before {
     top: 0;
 }
-
- .region-selector .region-tab-container .etabs{
-      margin-bottom: 10px;
-      margin-top: 20px;
- }
-
-  .region-selector .tab a.active {
+.region-selector .region-tab-container .etabs {
+    margin-bottom: 10px;
+}
+.region-selector .tab a.active {
     position: relative;
     border-color: #fff;
     background-color: #fff;
 }
- .region-selector .tab a.active {
+.region-selector .tab a.active {
     font-weight: bold;
     outline: none;
     color: #fff;
 }
-
+.fixed {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    z-index: 9998;
+    @include animate;
+}
+@media screen and(min-width: 481px) {
+    .fixed {
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 9998;
+        @include animate;
+    }
+}

@@ -122,8 +122,6 @@ function module($module, $options = null){
  */
 function tm_regional_scripts() {
 
-	
-
 	wp_register_style( 'main-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'main-style' );
