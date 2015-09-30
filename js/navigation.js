@@ -5,6 +5,29 @@
  * Handles toggling the navigation menu for small screens and enables tab
  * support for dropdown menus.
  */
+
+
+    /* ---------------------------------------------
+ Height 100%
+ --------------------------------------------- */
+
+        js_height_init();
+  
+
+    $(window).resize(function() {
+        js_height_init();
+    });
+
+    function js_height_init() {
+        (function($) {
+            $('.js-height-full').height($(window).height());
+
+        })(jQuery);
+
+    }
+
+
+
 /* ---------------------------------------------
  Main Navigation 
  --------------------------------------------- */
@@ -42,27 +65,6 @@
 
         $.fn.pagepiling.moveSectionDown();
     });
-
-    /* ---------------------------------------------
- Height 100%
- --------------------------------------------- */
-
-    $(document).ready(function() {
-        js_height_init();
-    });
-
-    $(window).resize(function() {
-        js_height_init();
-    });
-
-    function js_height_init() {
-        (function($) {
-            $('.js-height-full').height($(window).height());
-
-        })(jQuery);
-
-    }
-
 
     /* ---------------------------------------------
  Hotspots
