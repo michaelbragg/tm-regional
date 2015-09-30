@@ -30,7 +30,7 @@
                         'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
                     ) );
               ?>
-        </nav><!-- .main-navigation -->   
+        </nav><!-- .main-navigation -->
   </div>
     <?php endif; ?>
 </div>
@@ -47,7 +47,7 @@ jQuery.noConflict();
 
 </script>
 
-<?php if(is_page(home)){ ?>
+<?php if( is_front_page() ){ ?>
 <script type="text/javascript">
     var deleteLog = false;
     jQuery(document).ready(function() {
@@ -63,7 +63,7 @@ jQuery.noConflict();
                 afterRender: function(){
           //playing the video
          jQuery('video').get(0).pause();
-        },  
+        },
 
         onLeave: function (index, nextIndex, direction) {
 
@@ -73,7 +73,7 @@ jQuery.noConflict();
             if (jQuery(window).width() > 1025) {
    jQuery('video').get(0).play();
 }
-             
+
             //fading out navigation bullets
         }else{
             jQuery('.scroll-arrow').show();
