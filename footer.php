@@ -40,12 +40,18 @@
 
 <?php wp_footer(); ?>
 
+<script>
+
+jQuery.noConflict();
+// Do something with jQuery
+
+</script>
 
 <?php if(is_page(home)){ ?>
 <script type="text/javascript">
     var deleteLog = false;
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
+    jQuery(document).ready(function() {
+        jQuery('#pagepiling').pagepiling({
           menu: '#menu',
          anchors: ['intro', 'solutions', 'casestudies', 'process'],
           navigation: {
@@ -56,22 +62,22 @@
             },
                 afterRender: function(){
           //playing the video
-         $('video').get(0).pause();
+         jQuery('video').get(0).pause();
         },  
 
         onLeave: function (index, nextIndex, direction) {
 
          //reaching our last section? The one with our normal site?
         if (nextIndex == 4) {
-            $('.scroll-arrow').hide();
-            if ($(window).width() > 1025) {
-   $('video').get(0).play();
+            jQuery('.scroll-arrow').hide();
+            if (jQuery(window).width() > 1025) {
+   jQuery('video').get(0).play();
 }
              
             //fading out navigation bullets
         }else{
-            $('.scroll-arrow').show();
-            $('video').get(0).pause();
+            jQuery('.scroll-arrow').show();
+            jQuery('video').get(0).pause();
         }
 
       }
@@ -82,13 +88,13 @@
     <?php } ?>
 
    <script type="text/javascript">
-    $(document).ready( function() {
-      $("[class$=-section-block]").easytabs();
+    jQuery(document).ready( function() {
+      jQuery("[class$=-section-block]").easytabs();
     });
   </script>
 
 <script>
-$('.carousel').carousel({
+jQuery('.carousel').carousel({
     pause: "false"
 });
 </script>
