@@ -30,7 +30,7 @@
                         'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
                     ) );
               ?>
-        </nav><!-- .main-navigation -->
+        </nav><!-- .main-navigation -->   
   </div>
     <?php endif; ?>
 </div>
@@ -47,7 +47,7 @@ jQuery.noConflict();
 
 </script>
 
-<?php if( is_front_page() ){ ?>
+<?php if(is_page(home)){ ?>
 <script type="text/javascript">
     var deleteLog = false;
     jQuery(document).ready(function() {
@@ -58,26 +58,26 @@ jQuery.noConflict();
                 'textColor': '#f2f2f2',
                 'bulletsColor': '#ccc',
                 'position': 'right',
-                'tooltips': ['Intro', 'Simple Solutions', 'Case Studies']
+                'tooltips': ['Intro', 'Simple Solutions', 'Case Studies', 'Process']
             },
                 afterRender: function(){
           //playing the video
-         jQuery('video').get(0).pause();
-        },
+        // jQuery('video').get(0).pause();
+        },  
 
         onLeave: function (index, nextIndex, direction) {
 
          //reaching our last section? The one with our normal site?
-        if (nextIndex == 4) {
+        if (nextIndex == 3) {
             jQuery('.scroll-arrow').hide();
             if (jQuery(window).width() > 1025) {
-   jQuery('video').get(0).play();
+ //  jQuery('video').get(0).play();
 }
-
+             
             //fading out navigation bullets
         }else{
             jQuery('.scroll-arrow').show();
-            jQuery('video').get(0).pause();
+//jQuery('video').get(0).pause();
         }
 
       }

@@ -17,7 +17,7 @@ get_header(); ?>
 
             <?php module( 'case-studies' ); ?>
 
-            <?php module( 'process' ); ?>
+     
 
             <div class="scroll-arrow"></div>
        

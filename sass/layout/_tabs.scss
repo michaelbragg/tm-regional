@@ -242,15 +242,16 @@
 
 /*--------------------- Region Selector  -----------------------*/
 
-.region-tab-container{
+.region-selector{
     position:relative;
+    z-index: 1;
 }
  
- .region-selector .tab a {
+.region-tab-container .tab a {
     border: solid 1px #989798;
     color:#989798;
 }
- .region-selector .tab a:hover {
+.region-tab-container.tab a:hover {
  }
 
 .region-tab-container {
@@ -276,18 +277,17 @@
 .region-selector .tab-container {
     margin-bottom: 0;
 }
-.region-selector .tab a {
+.region-tab-container .tab a {
     border: solid 1px #989798;
     color: #989798;
 }
-.region-selector .tab a:hover {
+.region-tab-container .tab a:hover {
 
     color: #fff !important;
-    border: 1px solid #fff !important;
     border-radius: 5px;
 }
 
-.region-selector .tab a:before {
+.region-tab-container .tab a:before {
     content: "";
     position: absolute;
     background-color: $primary-color;
@@ -301,27 +301,24 @@
     -webkit-transition: top 0.09s ease-in;
 }
 
-.region-selector .tab a:hover:before {
+.region-tab-container .tab a:hover:before {
     top: 0;
 }
 .region-selector .region-tab-container .etabs {
     margin-bottom: 10px;
 }
-.region-selector .tab a.active {
 
-    position: relative;
+
+.region-tab-container .tab a.active {
+ position: relative;
     border-color: #fff;
     background-color: #fff;
-}
-
-.region-selector .tab a.active {
-
     font-weight: bold;
     outline: none;
     color: #fff;
 }
 
-.fixed {
+.region__fixed {
     position: fixed;
     top: 75px;
     width: 100%;
@@ -329,7 +326,7 @@
     @include animate;
 }
 @media screen and(min-width: 481px) {
-    .fixed {
+    .region__fixed {
         position: fixed;
         top: 60px;
         width: 100%;
