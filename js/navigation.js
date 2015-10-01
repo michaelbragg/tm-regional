@@ -186,12 +186,11 @@ function js_height_init() {
 
     jQuery(window).scroll(function(event) {
         var scroll = jQuery(window).scrollTop();
-        console.log(scroll);
         if (scroll > 640) {
-            jQuery('.region-selector').addClass('fixed');
+            jQuery('.region-selector').addClass('region__fixed');
         }
         if (scroll < 640) {
-            jQuery('.region-selector').removeClass('fixed');
+            jQuery('.region-selector').removeClass('region__fixed');
         }
 
     });
