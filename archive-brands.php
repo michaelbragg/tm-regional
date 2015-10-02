@@ -78,6 +78,7 @@ $my_posts = get_posts($args);
 <div class="tab_expand tabicon brand-wrap">
     <div class="tabs-arrow-down"></div>
       <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
+
         <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a brand</small></h2>
           <ul class='posts-menu tabs-menu etabs brand-select'>
             <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>

@@ -9,6 +9,7 @@
 /* ---------------------------------------------
  Height 100%
  --------------------------------------------- */
+
 js_height_init();
 
 
@@ -19,12 +20,8 @@ jQuery(window).resize(function() {
 function js_height_init() {
     (function(jQuery) {
         jQuery('.js-height-full').height(jQuery(window).height());
-
     })(jQuery);
-
 }
-
-
 
 /* ---------------------------------------------
  Main Navigation 
@@ -160,13 +157,15 @@ function js_height_init() {
  Brand Tab Selector
  --------------------------------------------- */
 
-    jQuery('.posts-menu .tab a').click(function() {
+    jQuery('.posts-menu .tab a').click(function(event) {
+        event.preventDefault()
         jQuery('html, body').animate({
             scrollTop: jQuery(this).offset().top - 180
         }, 2000);
     });
 
-    jQuery('.tab_expand').on('click', function() {
+    jQuery('.tab_expand').on('click', function(event) {
+        event.preventDefault();
         jQuery(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
         jQuery(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
     });
@@ -175,14 +174,13 @@ function js_height_init() {
  Regional Tab Selector
  --------------------------------------------- */
 
-
-    jQuery('.region-tab-container .tabs-menu .tab a').click(function() {
+    jQuery('.region-tab-container .tabs-menu .tab a').click(function(event) {
+        event.preventDefault();
         var DivLink = jQuery(this).attr('href');
         jQuery('html, body').animate({
             scrollTop: jQuery(DivLink).offset().top - 130
         }, 2000);
     });
-
 
     jQuery(window).scroll(function(event) {
         var scroll = jQuery(window).scrollTop();
@@ -192,7 +190,8 @@ function js_height_init() {
         if (scroll < 640) {
             jQuery('.region-selector').removeClass('region__fixed');
         }
-
     });
-
 })(jQuery);
+
+
+
