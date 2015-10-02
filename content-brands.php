@@ -14,13 +14,13 @@
             <div class="title-item">
               <h3><?php the_title(); ?></h3>
              <p><?php the_content(); ?></p>
-              
+          <?php /* Check to see if there is a circulation figures */ ?>
           <?php 
             if( has_circulation() ) { ?>
               <h3>Circulation Figure </h3>
               <h2><?php the_circulation( 'figure' );?></h2>
           <?php } ?>
-
+<?php /* Check to see if there is a readership figures */ ?>
           <?php 
               if( has_average_readership() ) { ?>
                 <h3>Average Issue Readership</h3>
@@ -39,6 +39,7 @@
           </div>
         </div>
 
+ <?php /* Check to see if there is front page image*/ ?>
         <div class="col-sm-4 brand vertical-align">
           <div class="title-item front-page">
               <?php  if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
@@ -47,7 +48,7 @@
             </div>
           </div>
           </div>
-
+<?php /* Check to see if there content */ ?>
       <?php  if( has_blocks() ) {
           echo '<div class="row">';
             $blocks = the_blocks();
@@ -63,6 +64,7 @@
         }
         ?>
         
+         <?php /* Check to see if there is a website */ ?>
         <?php if( has_website_name() ) {  ?>
           <div class="row titles-margin">
             <div class="col-md-4 brand">
@@ -96,7 +98,7 @@
 
         <?php } ?>
 
-
+ <?php /* Check to see if there is a visualizer added */ ?>
     <?php if ( has_visualizer() ) { ?>
           <div class="row">
             <div class="col-sm-4 brand">
