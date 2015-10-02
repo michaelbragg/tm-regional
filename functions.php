@@ -70,11 +70,6 @@ function tm_regional_setup() {
 		'link',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'tm_regional_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // tm_regional_setup
 add_action( 'after_setup_theme', 'tm_regional_setup' );
