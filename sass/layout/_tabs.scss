@@ -138,7 +138,6 @@
     *display: inline;
     margin-left: 0;
     margin-bottom: 10px;
-    border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
     .tab {
@@ -155,7 +154,7 @@
     }
 }
 .tab a {
-    border-radius: 4px;
+  
     border: solid 1px $secondary-color;
     font-weight: 300;
     color: $secondary-color;
@@ -169,13 +168,13 @@
 .tab a:hover {
     color: #fff !important;
     border: 1px solid $secondary-color !important;
-    border-radius: 5px;
+  
 }
 .tab a:before {
     content: "";
     position: absolute;
     background-color: rgba(42, 42, 42, 0.9);
-    border-radius: 4px;
+ 
     bottom: 0;
     left: 0;
     right: 0;
@@ -284,14 +283,14 @@
 .region-tab-container .tab a:hover {
 
     color: #fff !important;
-    border-radius: 5px;
+   
 }
 
 .region-tab-container .tab a:before {
     content: "";
     position: absolute;
     background-color: $primary-color;
-    border-radius: 4px;
+
     bottom: 0;
     left: 0;
     right: 0;
