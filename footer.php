@@ -41,10 +41,7 @@
 <?php wp_footer(); ?>
 
 <script>
-
 jQuery.noConflict();
-// Do something with jQuery
-
 </script>
 
 <?php if(is_front_page()){ ?>
@@ -79,25 +76,28 @@ jQuery.noConflict();
             jQuery('.scroll-arrow').show();
 //jQuery('video').get(0).pause();
         }
-
       }
-
-      });
-      });
-    </script>
+    });
+  });
+</script>
     <?php } ?>
 
-   <script type="text/javascript">
-    jQuery(document).ready( function() {
-      jQuery("[class$=-section-block]").easytabs();
-    });
-  </script>
 
+ <?php /* Start Carousel if home page */ ?>
+
+<?php if(is_front_page()){ ?>
 <script>
 jQuery('.carousel').carousel({
     pause: "false"
 });
 </script>
+  <?php } ?>
+
+     <script type="text/javascript">
+    jQuery(document).ready( function() {
+      jQuery("[class$=-section-block]").easytabs();
+    });
+  </script>
 
 </body>
 </html>
