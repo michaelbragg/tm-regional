@@ -99,7 +99,6 @@ get_header(); ?>
   </section>
 </div>
   </div><!-- .tmr__wrapper  -->
-</div><!-- #titles-main -->
 <?php endforeach; ?>
 
     </main><!-- #main -->

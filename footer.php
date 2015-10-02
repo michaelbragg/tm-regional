@@ -47,7 +47,7 @@ jQuery.noConflict();
 
 </script>
 
-<?php if(is_page(home)){ ?>
+<?php if(is_front_page()){ ?>
 <script type="text/javascript">
     var deleteLog = false;
     jQuery(document).ready(function() {
