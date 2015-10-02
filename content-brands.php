@@ -96,6 +96,8 @@
 
         <?php } ?>
 
+
+    <?php if ( has_visualizer() ) { ?>
           <div class="row">
             <div class="col-sm-4 brand">
              <div class="title-item">
@@ -122,11 +124,14 @@
 
           </div>
           <div class="col-sm-8 white">
-           <?php if ( has_visualizer() ) {
+           <?php
               the_visualizer();
+           ?>
+            </div>
+        </div>
+         <?php
             } ?>
-        </div>
-        </div>
+        
     </div>
   </section><!-- .container -->
 </article><!-- #post-## -->
