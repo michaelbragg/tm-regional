@@ -74,12 +74,12 @@
     </div>
     <div class="container">
             <div class="site-header">
-                <div class="site-branding">
-                    <div class="tm-branding"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/gui/tm-logo.png"></a>
+                    <div class="site-branding">
+                        <a href="<?php echo get_home_url(); ?>">
+                            <div class="tm-branding">Trinity Mirror</div>
+                            <div class="regional-title"><?php bloginfo('name'); ?></div>
+                         </a>
                     </div>
-                    <div class="regional-title"><a href="<?php echo get_home_url(); ?>"><img src="<?php echo bloginfo('template_directory'); ?>/gui/nw-wales.png"></a>
-                    </div>
-                </div>
                 <!-- .site-branding -->
                 <div class="search-icon"></div>
 
