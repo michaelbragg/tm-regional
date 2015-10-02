@@ -159,6 +159,7 @@ function js_height_init() {
 
     jQuery('.posts-menu .tab a').click(function(event) {
         event.preventDefault()
+          jQuery("[id^=-visualizer]").width() +600;
         jQuery('html, body').animate({
             scrollTop: jQuery(this).offset().top - 180
         }, 2000);

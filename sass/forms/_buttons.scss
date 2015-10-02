@@ -14,9 +14,7 @@ input[type="submit"] {
 	&:hover {
 		   
   color: $primary-color;
-  -webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+
 	}
 
 	&:active,
@@ -32,13 +30,14 @@ border-radius: 5px;
 .btn {
 	position: relative;
     padding: 11px 17px;
+    border-radius: 0;
 }
 
 .btn:before {
   content: "";
   position: absolute;
   background-color: rgba(42, 42, 42, 0.9);
-  border-radius:4px;
+
   bottom: 0;
   left: 0;
   right: 0;
