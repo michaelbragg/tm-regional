@@ -44,10 +44,11 @@
     <div class="container">
         <div class="row">
             <article class="solutions-txt col-sm-6">
-                <h1>Simple advertising solutions</h1>
-                <p>Trinity Mirror are one of the UK’s largest multimedia publishers, and regionally in the North West and Wales. We have a large media portfolio reaching an unduplicated audience of 1.8 million adults. We recognise that to maximise audience reach our advertisers may like to use a variety of different mediums and our portfolio reflects this.</p>
-                <a class="btn btn-discover">Discover More</a>
-
+                <h1><?php echo get_theme_mod( 'fp2-title' ); ?></h1>
+                <p><?php echo get_theme_mod( 'fp2-text' ); ?></p>
+                <?php if( get_theme_mod( 'fp2-button-url') ): ?>
+                <a class="btn btn-discover" href="<?php echo get_theme_mod( 'fp2-button-url'); ?>"><?php echo get_theme_mod( 'fp2-button-text' ); ?></a>
+                <?php endif; ?>
             </article>
             <aside class="col-sm-6"></aside>
         </div>
