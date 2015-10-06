@@ -177,6 +177,7 @@
     width: 100%;
 }
 .menu-bg {
+    background-color: $primary-color;
     background-color: rgba($primary-color, 0.95);
 }
 .desktop-menu {
@@ -292,6 +293,7 @@
     background-image: url(./gui/icons/search-icon.svg);
     background-size: 200%;
     cursor: pointer;
+    background-position-y: 0;
 }
 @media screen and(min-width: 1024px) {
     .search-icon {

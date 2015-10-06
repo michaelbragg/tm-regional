@@ -176,8 +176,9 @@ function js_height_init() {
  --------------------------------------------- */
 
     jQuery('.region-tab-container .tabs-menu .tab a').click(function(event) {
-        event.preventDefault();
-        var DivLink = jQuery(this).attr('href');
+        event.returnValue = false;
+        if(event.preventDefault) event.preventDefault();
+                var DivLink = jQuery(this).attr('href');
         jQuery('html, body').animate({
             scrollTop: jQuery(DivLink).offset().top - 130
         }, 2000);
