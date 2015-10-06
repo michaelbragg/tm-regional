@@ -222,4 +222,22 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-
+// add ie conditional html5 shim to header
+function add_ie_html5_shim () {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>';
+    echo '<![endif]-->';
+}
+add_action('wp_head', 'add_ie_html5_shim');
+/**
+ * Respond
+ * A fast & lightweight polyfill for min/max-width CSS3 Media Queries
+ * (for IE 6-8, and more).
+ */
+// add ie conditional respond to header
+function add_ie_respond () {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"</script>';
+    echo '<![endif]-->';
+}
+add_action('wp_head', 'add_ie_respond');
