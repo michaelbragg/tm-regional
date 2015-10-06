@@ -36,6 +36,7 @@ input[type="submit"] {
 .btn:before {
   content: "";
   position: absolute;
+  background-color: rgb(42, 42, 42);
   background-color: rgba(42, 42, 42, 0.9);
 
   bottom: 0;

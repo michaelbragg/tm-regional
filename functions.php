@@ -117,12 +117,27 @@ function module($module, $options = null){
  */
 function tm_regional_scripts() {
 
+ global $wp_styles;
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,700' );
 
 	wp_enqueue_style( 'bootstrap-styles', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', array('google-fonts'), '3.3.5', 'screen' );
 
 	wp_enqueue_style( 'tm-regional-style', get_stylesheet_uri(), array('bootstrap-styles','google-fonts') );
+
+	/**
+     * Load our IE specific stylesheet for a range of older versions:
+     * <!--[if lt IE 9]> ... <![endif]-->
+     * <!--[if lte IE 8]> ... <![endif]-->
+     * NOTE: You can use the 'less than' or the 'less than or equal to' syntax here interchangeably.
+     */
+    wp_enqueue_style( 'tm-regional-old-ie', get_stylesheet_directory_uri() . "/css/old-ie.css", array( 'tm-regional' )  );
+    
+    $wp_styles->add_data( 'tm-regional-old-ie', 'conditional', 'lt IE 9' );
+
+    wp_enqueue_style( 'tm-regional-ie-only', get_stylesheet_directory_uri() . "/css/ie-only.css", array( 'tm-regional' )  );
+    
+    $wp_styles->add_data( 'tm-regional-ie-only', 'conditional', 'lt gtr 8' );
 
 	wp_register_script('tm-regional-grid-system', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '20150424', true);
 
