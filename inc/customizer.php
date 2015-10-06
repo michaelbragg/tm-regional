@@ -99,6 +99,57 @@ function tm_regional_customize_register( $wp_customize ) {
 
   $wp_customize->get_setting( 'fp2-button-url' )->transport = 'postMessage';
 
+ // Pulses
+
+  // 1
+  $wp_customize->add_setting('fp2-pulse-1', array(
+   'default'        => '',
+   ));
+  $wp_customize->add_control('fp2-pulse-1', array(
+   'label'   => __( 'Page 2: Pulse 1', 'tm-regional' ),
+    'section' => 'front-page',
+   'type'    => 'textarea',
+  ));
+
+  $wp_customize->get_setting( 'fp2-pulse-1' )->transport = 'postMessage';
+
+  // 2
+  $wp_customize->add_setting('fp2-pulse-2', array(
+   'default'        => '',
+   ));
+  $wp_customize->add_control('fp2-pulse-2', array(
+   'label'   => __( 'Page 2: Pulse 2', 'tm-regional' ),
+    'section' => 'front-page',
+   'type'    => 'textarea',
+  ));
+
+  $wp_customize->get_setting( 'fp2-pulse-2' )->transport = 'postMessage';
+
+  // 3
+  $wp_customize->add_setting('fp2-pulse-3', array(
+   'default'        => '',
+   ));
+  $wp_customize->add_control('fp2-pulse-3', array(
+   'label'   => __( 'Page 2: Pulse 3', 'tm-regional' ),
+    'section' => 'front-page',
+   'type'    => 'textarea',
+  ));
+
+  $wp_customize->get_setting( 'fp2-pulse-3' )->transport = 'postMessage';
+
+  // 4
+  $wp_customize->add_setting('fp2-pulse-4', array(
+   'default'        => '',
+   ));
+  $wp_customize->add_control('fp2-pulse-4', array(
+   'label'   => __( 'Page 2: Pulse 4', 'tm-regional' ),
+    'section' => 'front-page',
+   'type'    => 'textarea',
+  ));
+
+  $wp_customize->get_setting( 'fp2-pulse-4' )->transport = 'postMessage';
+
+
   // Add Video
   $wp_customize->add_setting('front-page-video');
   $wp_customize->add_control(
