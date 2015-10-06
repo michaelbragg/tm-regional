@@ -7,39 +7,38 @@
 ?>
  <section class="solutions section js-height-full" id="section2">
     <ul>
-        <li>
+        <?php if( get_theme_mod( 'fp2-pulse-1') ): ?><li>
             <button id="hotspotOne" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                  <div class="hotspot-info info-one">
-                    <p>Over 40 local newspapers and more than 50 local websites
-                        <p>
+                    <p><?php echo get_theme_mod( 'fp2-pulse-1' ); ?><p>
                 </div>
             </button>
-        </li>
-        <li>
+        </li><?php endif; ?>
+        <?php if( get_theme_mod( 'fp2-pulse-2') ): ?><li>
             <button id="hotspotTwo" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-two">
-                    <p>1.8 Million Adults reached by our multimedia portfolio</p>
+                    <p><?php echo get_theme_mod( 'fp2-pulse-2' ); ?></p>
                 </div>
             </button>
-        </li>
-        <li>
+        </li><?php endif; ?>
+        <?php if( get_theme_mod( 'fp2-pulse-3') ): ?><li>
             <button id="hotspotThree" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-three">
-                    <p>A range of lifestyle and major sporting publications</p>
+                    <p><?php echo get_theme_mod( 'fp2-pulse-3' ); ?></p>
                 </div>
             </button>
-        </li>
-        <li>
+        </li><?php endif; ?>
+        <?php if( get_theme_mod( 'fp2-pulse-4') ): ?><li>
             <button id="hotspotFour" class="hotspot desktop__visible pulse">
                 <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-four">
-                    <p>Outdoor advertising and leaflet services</p>
+                    <p><?php echo get_theme_mod( 'fp2-pulse-3' ); ?></p>
                 </div>
             </button>
-        </li>
+        </li><?php endif; ?>
     </ul>
     <div class="container">
         <div class="row">
