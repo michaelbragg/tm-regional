@@ -137,7 +137,7 @@ function tm_regional_scripts() {
 
     wp_enqueue_style( 'tm-regional-ie-only', get_stylesheet_directory_uri() . "/css/ie-only.css", array( 'tm-regional' )  );
     
-    $wp_styles->add_data( 'tm-regional-ie-only', 'conditional', 'lt gtr 8' );
+    $wp_styles->add_data( 'tm-regional-ie-only', 'conditional', 'gt IE 8');
 
 	wp_register_script('tm-regional-grid-system', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '20150424', true);
 
