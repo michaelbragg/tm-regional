@@ -8,7 +8,7 @@
  */
 
 ?><!DOCTYPE html>
-<!--[if gtr IE 8]><html class="gtr-ie8" <?php language_attributes(); ?>><![endif]-->
+<!--[if gte IE 8]>    <html class="gte-ie8" <?php language_attributes(); ?>> <![endif]-->
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
