@@ -70,6 +70,10 @@
     .lte-ie9 .titles-container .col-md-12 {
         margin-bottom: 0;
         margin-right: 0;
+            height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
     }
 }
 .lte-ie9 .titles-container .titles-margin .col-md-4,
