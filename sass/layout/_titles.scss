@@ -36,6 +36,58 @@
     display: flex;
     flex-direction: column;
 }
+
+/* IE FLEX Fix for Brands/Titles */
+
+.lte-ie9 .titles-container .row{
+    display: table;
+    height: 100%;
+    width: 100%;
+
+}
+
+.lte-ie9 .titles-container .vertical-align {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.lte-ie9 .titles-container .col-md-4,
+.lte-ie9 .titles-container .col-md-6,
+.lte-ie9 .titles-container .col-md-8,
+.lte-ie9 .titles-container .col-sm-4,
+.lte-ie9 .titles-container .col-sm-8,
+.lte-ie9 .titles-container .col-sm-12 {
+    margin-bottom: 0;
+    float: none;
+}
+@media screen and (min-width: 768px) {
+    .lte-ie9 .titles-container .col-md-4,
+   .lte-ie9  .titles-container .col-md-6,
+    .lte-ie9 .titles-container .col-md-8,
+    .lte-ie9 .titles-container .col-sm-4,
+    .lte-ie9 .titles-container .col-sm-8,
+    .lte-ie9 .titles-container .col-md-12 {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+.lte-ie9 .titles-container .titles-margin .col-md-4,
+.lte-ie9 .titles-container .titles-margin .col-md-8,
+.lte-ie9 .titles-container .titles-margin .titles-container .col-sm-4,
+.lte-ie9 .titles-container .titles-margin .col-sm-8 {
+    border: none;
+    margin-right: 0;
+}
+.lte-ie9 .titles-container .titles-margin .col-md-4:last-child {
+    margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .lte-ie9   .titles-container .titles-margin .col-md-4:last-child {
+        margin-right: 0;
+    }
+}
+
 .titles-container .col-md-4,
 .titles-container .col-md-6,
 .titles-container .col-md-8,
@@ -131,6 +183,7 @@
     .titles-container .vertical-align {
         display: flex;
         align-items: center;
+        vertical-align:middle;
     }
 }
 .graph-key {
