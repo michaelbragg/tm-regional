@@ -290,10 +290,11 @@
     right: 40px;
     top: 50%;
     margin-top: -15px;
-    background-image: url(./gui/icons/search-icon.svg);
+    background-image: url(./gui/icons/search-icon.png);
+    background-repeat: no-repeat;
     background-size: 200%;
     cursor: pointer;
-    background-position-y: 0;
+    background-position-y: 5px;
 }
 
   .gt-ie7 .search-icon {
@@ -307,7 +308,7 @@
     }
 }
 .search-icon-open {
-    background-position: -35px;
+    background-position: -42px;
 }
 /* Search bar*/
 
