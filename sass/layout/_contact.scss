@@ -23,6 +23,20 @@
 .contact-info .brand {
     background-color: $primary-color;
 }
+
+.lte-ie9  .contact-info .white {
+        display: table-cell;
+    height: 100%;
+    float: none;
+    vertical-align: middle;
+}
+.lte-ie9  .contact-info .brand {
+        display: table-cell;
+    height: 100%;
+    float: none;
+    vertical-align: middle;
+}
+
 .contact-right-col:before,
 .contact-right-col:after {
     content: "";
@@ -39,6 +53,12 @@
     .contact-info .row {
         display: flex;
         flex-direction: row;
+    }
+
+    .lte-ie9 .contact-info .row {
+        display: table;
+        flex-direction: row;
+        height: 100%;
     }
 }
 .contact-info .address-details {
