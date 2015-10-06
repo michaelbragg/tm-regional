@@ -19,10 +19,14 @@
 }
 .title-stats .white {
     background-color: #fff;
+    float: left;
+    width: 100%;
 }
 .title-stats .brand {
     background-color: $primary-color;
     color: #fff;
+    float: left;
+    width: 100%;
 }
 .title-stats .brand h3,
 .title-stats .brand h2 {
@@ -32,10 +36,7 @@
     width: 100%;
     padding: 0 15px;
 }
-.titles-container .row {
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* IE FLEX Fix for Brands/Titles */
 
