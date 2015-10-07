@@ -158,16 +158,21 @@ function js_height_init() {
  --------------------------------------------- */
 
     jQuery('.posts-menu .tab a').click(function(event) {
-        event.preventDefault()
-          jQuery("[id^=-visualizer]").width() +600;
+   
         jQuery('html, body').animate({
             scrollTop: jQuery(this).offset().top - 180
         }, 2000);
+
+    function renderVisualizer(){
+        visualizer.render();
+    }
+    setTimeout(renderVisualizer, 500);
     });
 
     jQuery('.tab_expand').on('click', function(event) {
-        event.preventDefault();
-        jQuery(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
+        event.returnValue = false;
+        if(event.preventDefault) event.preventDefault();
+         jQuery(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
         jQuery(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
     });
 
