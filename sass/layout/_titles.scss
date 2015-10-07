@@ -19,14 +19,11 @@
 }
 .title-stats .white {
     background-color: #fff;
-    float: left;
-    width: 100%;
+
 }
 .title-stats .brand {
     background-color: $primary-color;
     color: #fff;
-    float: left;
-    width: 100%;
 }
 .title-stats .brand h3,
 .title-stats .brand h2 {
@@ -39,6 +36,8 @@
 
 
 /* IE FLEX Fix for Brands/Titles */
+
+
 
 .lte-ie9 .titles-container .row{
     display: table;
@@ -60,7 +59,7 @@
 .lte-ie9 .titles-container .col-sm-8,
 .lte-ie9 .titles-container .col-sm-12 {
     margin-bottom: 0;
-    float: none;
+    float: left;
 }
 @media screen and (min-width: 768px) {
     .lte-ie9 .titles-container .col-md-4,
