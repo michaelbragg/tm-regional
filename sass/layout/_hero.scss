@@ -26,7 +26,7 @@
     background-image: url(./gui/hero/our-products.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 40% top;
+    background-position: left center;
     width: 100%;
 }
 .audience-page-hero {
@@ -54,7 +54,14 @@
     background-position: 40% top;
     width: 100%;
 }
-
+.contact-page-hero {
+    background-size: 150%;
+    position: relative;
+    background-image: url(./gui/hero/contact-us.jpg);
+    background-repeat: no-repeat;
+    background-position: 40% top;
+    width: 100%;
+}
 .hero-page-title {
     position: absolute;
     top: 60%;
@@ -76,7 +83,7 @@
 }
 @media screen and (min-width: 481px) {
     .products-page-hero {
-        background-position: left top;
+        background-position: center center;
         background-size: 110%;
     }
     .audience-page-hero {
@@ -90,6 +97,11 @@
     .rates-page-hero {
         background-position: left top;
         background-size: 110%;
+    }
+     .contact-page-hero {
+        background-position: left top;
+        background-size: 110%;
+        margin-bottom:30px;
     }
     .hero-page-title {
         max-width: 200px;
