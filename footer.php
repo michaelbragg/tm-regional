@@ -94,7 +94,7 @@ jQuery('.carousel').carousel({
   <?php } ?>
 
      <script type="text/javascript">
-    jQuery(document).ready( function() {
+      jQuery(document).ready( function() {
       jQuery("[class$=-section-block]").easytabs();
     });
   </script>
