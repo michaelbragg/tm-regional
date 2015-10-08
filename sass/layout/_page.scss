@@ -15,6 +15,13 @@
     padding: 35px 0 20px 0;
     text-align:center;
 }
+
+@media screen and (min-width:992px){
+  .page-contents p{
+    padding:0 80px;
+  }
+}
+
 .zopim iframe .meshim_widget_Widget{
   width:70px !important;
 }
