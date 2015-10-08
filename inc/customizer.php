@@ -149,6 +149,20 @@ function tm_regional_customize_register( $wp_customize ) {
 
   $wp_customize->get_setting( 'fp2-pulse-4' )->transport = 'postMessage';
 
+  // Case Studies Rotator
+  $wp_customize->add_setting( 'case-study-id' ,
+    array(
+    'default' => ''
+    )
+  );
+
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'case-study-id', array(
+    'label' => __( 'Case Study: ID', 'tm-regional' ),
+    'section' => 'front-page',
+    'settings' => 'case-study-id'
+  ) ) );
+
+  $wp_customize->get_setting( 'case-study-id' )->transport = 'postMessage';
 
   // Add Video
   $wp_customize->add_setting('front-page-video');
