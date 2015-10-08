@@ -14,13 +14,13 @@
     <div class="col-sm-5 col-md-3 solutions-container-item">
       <ul class="js-solutions--list ">
       <?php foreach ( the_adverts() as $advert ):
-        echo '<li><button class="js-products--button products-button" data-solutions-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
+        echo '<li><button data-divid="js-type-' . $advert['id'] . ' "  class="js-products--button products-button" data-solutions-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
       endforeach; ?>
       </ul>
     </div>
       <div class="col-sm-7 col-md-4 solutions-container-item">
            <?php foreach ( the_adverts() as $advert ): ?>
-           <article id="js-type-<?php echo $advert['id']; ?>">
+           <article id="js-type-<?php echo $advert['id']; ?>" class = "content js-solutions--description">
            <?php the_adverts_title($advert); ?>
            <?php the_adverts_description($advert); ?>
            </article>
@@ -39,21 +39,6 @@
 </div>
 
 <?php } ?>
-
-
-  <div class="col-md-4 solutions-container-item">
-
-       <?php foreach ( the_adverts() as $advert ): ?>
-       <article id="js-type-<?php echo $advert['id']; ?>">
-       <?php the_adverts_title($advert); ?>
-       <?php the_adverts_description($advert); ?>
-       </article>
-       <?php endforeach; ?>
-       <?php if( has_build_guide() ): ?>
-         <a class="btn dwld-btn" href="<?php the_build_guide(); ?>">Build Guide</a>
-       <?php endif; ?>
-
-   </div>
 
 
 
