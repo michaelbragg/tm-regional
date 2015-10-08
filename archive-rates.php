@@ -55,25 +55,43 @@ get_header(); ?>
             <?php /* Start the Loop for regions */ ?>
             <?php foreach( $terms as $term ): ?>
             <?php /* Start the Loop for posts within regions */ ?>
-            <?php $post_array=get_posts(array( 'post_type'=> 'rates', 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => true )); ?>
-            <?php /* Start sections loop */ ?>
-            <div id="<?php echo $term->slug; ?>" class='tab-container <?php echo $term->slug; ?>-section-block'>
-                <div id='tab-container' class='tab-container'>
-                    <h2><?php echo $term->name; ?></h2>
-                    <ul class='posts-menu etabs'>
-                        <?php foreach( $post_array as $post ): ?>
-                        <?php setup_postdata($post); ?>
-                        <li class='tab'>
-                            <a href="#<?php echo $post->post_name; ?>">
-                                <?php the_title(); ?>
-                            </a>
-                        </li>
-                        <?php wp_reset_postdata(); ?>
-                        <?php endforeach;?>
-                        <?php /* End sections loop */ ?>
-                    </ul>
+            <?php $post_array=get_posts(array( 
+            'post_type'=> 'rates', 
+            'taxonomy' => $term->taxonomy,
+            'term' => $term->slug,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'nopaging' => true
+      ));
+    ?>
+<div class="tab_expand tabicon brand-wrap">
+    <div class="tabs-arrow-down"></div>
+      <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
+
+        <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a brand</small></h2>
+          <ul class='posts-menu tabs-menu etabs brand-select'>
+            <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
+          </ul>
                     <div class='panel-container'>
-                        <?php $single_post_args=array( 'numberposts'=> 999, 'post_type' => 'rates', 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => false ); $single_post = get_posts( $single_post_args ); foreach( $single_post as $post ): setup_postdata($post); get_template_part( 'content-rates' ); wp_reset_postdata(); endforeach; ?>
+                       <?php
+      $single_post_args = array(
+        'posts_per_page'   => 99999,
+        'post_type' => 'rates',
+        'taxonomy' => $term->taxonomy,
+        'term' => $term->slug,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'nopaging' => false
+      );
+      $single_post = get_posts( $single_post_args );
+      //print_r( $single_post );
+      foreach( $single_post as $post ):
+      setup_postdata($post);
+      //print_r($single);
+        get_template_part( 'content-rates' );
+      endforeach;
+    ?>
+    <?php wp_reset_postdata(); ?>
                     </div>
                     <?php /* End post loop */ ?>
                 </div>

@@ -30,6 +30,7 @@
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 300px;
 }
 .main-heading {
     display: inline-block;
@@ -37,7 +38,7 @@
     border: solid 1px #fff;
     font-size: 1.4em;
     color: #fff;
-    max-width: 650px;
+    
 }
 .sub-heading {
     color: #fff;
@@ -48,12 +49,13 @@
 }
 @media screen and(min-width: 768px) {
     .welcome {
-      
+      width: 750px;
     
     }
     .main-heading {
         padding: 25px;
         font-size: 3em;
+        
     }
     .sub-heading {
         max-width: 570px;
