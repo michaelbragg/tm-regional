@@ -19,10 +19,16 @@
       </ul>
     </div>
       <div class="col-sm-7 col-md-4 solutions-container-item">
-        <h3><?php the_title(); ?></h3>
-      <?php the_content(); ?>
-      <button class="dwld-btn">Build Guide</button>
-    </div>
+           <?php foreach ( the_adverts() as $advert ): ?>
+           <article id="js-type-<?php echo $advert['id']; ?>">
+           <?php the_adverts_title($advert); ?>
+           <?php the_adverts_description($advert); ?>
+           </article>
+           <?php endforeach; ?>
+           <?php if( has_build_guide() ): ?>
+             <a class="btn dwld-btn" href="<?php the_build_guide(); ?>">Build Guide</a>
+           <?php endif; ?>
+      </div>
     <div class=" col-md-5 solutions-container-item products-container">
       <div class="js-solutions--preview solutions-preview__placeholder"></div>
 </div>
@@ -34,6 +40,20 @@
 
 <?php } ?>
 
+
+  <div class="col-md-4 solutions-container-item">
+
+       <?php foreach ( the_adverts() as $advert ): ?>
+       <article id="js-type-<?php echo $advert['id']; ?>">
+       <?php the_adverts_title($advert); ?>
+       <?php the_adverts_description($advert); ?>
+       </article>
+       <?php endforeach; ?>
+       <?php if( has_build_guide() ): ?>
+         <a class="btn dwld-btn" href="<?php the_build_guide(); ?>">Build Guide</a>
+       <?php endif; ?>
+
+   </div>
 
 
 
