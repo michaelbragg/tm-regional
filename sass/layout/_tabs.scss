@@ -259,6 +259,7 @@
 .region-selector {
     background-color: $secondary-color;
     top: 0;
+     -webkit-transform: translate3d(0,0,0);
     @include animate;
 }
 .region-selector h2 {
@@ -322,6 +323,7 @@
     top: 75px;
     width: 100%;
     z-index: 9998;
+
     @include animate;
 }
 @media screen and(min-width: 481px) {

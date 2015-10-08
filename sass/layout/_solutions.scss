@@ -51,7 +51,7 @@ padding-left:0;
  width:100%;
 }
 .solutions-container-item{
-  float:none;
+  float:left;
   vertical-align: middle;
   padding:20px 30px;
 }
@@ -74,17 +74,23 @@ margin-bottom: 0;
    background-color: $primary-color;
 text-align: center;
 }
+ @media screen and (max-width:992px){
+.products-container{
+  width:100%;
+}
+
+  }
  .js-solutions--preview img{
   width:100%;
   max-width: 300px;
  }
  @media screen and (min-width:768px){
 .solutions-container-separator{
-  border-right:1px solid #666;
+  border-left:1px solid #666;
 }
 }
 .dwld-btn{
-  background-image:url(./gui/download-icon.svg);
+  background-image:url(./gui/download-icon.png);
   background-repeat:no-repeat;
   padding-left:40px;
   background-size: 15%;
