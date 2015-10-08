@@ -30,7 +30,7 @@
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 210px;
 }
 .main-heading {
     display: inline-block;
@@ -49,9 +49,20 @@
 }
 @media screen and(min-width: 768px) {
     .welcome {
-      width: 750px;
+      width: 600px;
     
     }
+  }
+
+     @media screen and(min-width: 992px) {
+    .welcome {
+      width: 680px;
+    
+    }
+  }
+
+    @media screen and(min-width: 768px) {
+
     .main-heading {
         padding: 25px;
         font-size: 3em;
