@@ -15,6 +15,8 @@ var productPreview = productPreview || {};
    * Default config settings
    */
 
+   $(".js-solutions--description").hide();
+
   productPreview.config = {
     debug: true,
     list: '.js-solutions--list',
@@ -73,6 +75,7 @@ event.preventDefault();
     var _button = $(this),
         _parent = $(this).parents( productPreview.config.container );
 
+
     if( productPreview.debug() ) {
       console.log( 'getData', _parent, _button );
     }
@@ -85,9 +88,22 @@ event.preventDefault();
    * Push data to create or update the image
    */
 
+
+
+
+
   productPreview.pushData = function( _parent, _button ) {
 
     var _url = _button.data('solutions-preview');
+
+
+
+
+
+        var idname= $(_button).data('divid');
+        $("#"+idname).show("slow").siblings().hide("slow");
+console.log("#"+idname);
+
 
     productPreview.toggleCurrent( _parent, _button );
 
@@ -119,6 +135,8 @@ event.preventDefault();
     if( !_parent.find('.current-product').length ) {
       // Set the current toggle to the first item in the list
       _button.addClass('current-product');
+
+
       return;
     }
 
