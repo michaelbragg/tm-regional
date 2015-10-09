@@ -15,13 +15,13 @@
               <h3><?php the_title(); ?></h3>
              <p><?php the_content(); ?></p>
           <?php /* Check to see if there is a circulation figures */ ?>
-          <?php 
+          <?php
             if( has_circulation() ) { ?>
               <h3>Circulation Figure </h3>
               <h2><?php the_circulation( 'figure' );?></h2>
           <?php } ?>
 <?php /* Check to see if there is a readership figures */ ?>
-          <?php 
+          <?php
               if( has_average_readership() ) { ?>
                 <h3>Average Issue Readership</h3>
                 <h2><?php the_average_readership( 'figure' ); ?></h2>
@@ -30,7 +30,7 @@
           </div>
           </div>
           <div class="col-sm-4 brand vertical-align">
-             
+
           <div class="title-item dop">
               <?php if ( has_publications() ) {?>
                 <h3>Day of Publication</h3>
@@ -43,7 +43,7 @@
         <div class="col-sm-4 brand vertical-align">
           <div class="title-item front-page">
               <?php  if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                 the_post_thumbnail();
+                 the_post_thumbnail( 'brands-thumbnail' );
               } ?>
             </div>
           </div>
@@ -63,16 +63,16 @@
             echo '</div>';
         }
         ?>
-        
+
          <?php /* Check to see if there is a website */ ?>
         <?php if( has_website_name() ) {  ?>
           <div class="row titles-margin">
             <div class="col-md-4 brand">
               <div class="title-item">
                 <?php if( has_website_url() ) { ?>
-                <a href="<?php the_website_url(); ?>" target="_blank"> 
+                <a href="<?php the_website_url(); ?>" target="_blank">
                 <h3><?php the_website_name(); ?></h3></a>
-            </div><?php } ?> 
+            </div><?php } ?>
           </div>
 
           <div class="col-md-4 brand">
@@ -112,7 +112,7 @@
                   <li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li>
               </ul>
                 </div>
-              
+
             <?php  } else { ?>
               <h3>Readership profile - Print</h3>
               <p>Increase your reach - By booking an advert in our print title.</p>
@@ -133,7 +133,7 @@
         </div>
          <?php
             } ?>
-        
+
     </div>
   </section><!-- .container -->
 </article><!-- #post-## -->

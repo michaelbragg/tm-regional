@@ -132,11 +132,11 @@ function tm_regional_scripts() {
      * NOTE: You can use the 'less than' or the 'less than or equal to' syntax here interchangeably.
      */
     wp_enqueue_style( 'tm-regional-old-ie', get_stylesheet_directory_uri() . "/css/old-ie.css", array( 'tm-regional' )  );
-    
+
     $wp_styles->add_data( 'tm-regional-old-ie', 'conditional', 'lt IE 9' );
 
     wp_enqueue_style( 'tm-regional-ie-only', get_stylesheet_directory_uri() . "/css/ie-only.css", array( 'tm-regional' )  );
-    
+
     $wp_styles->add_data( 'tm-regional-ie-only', 'conditional', 'gt IE 8');
 
 	wp_register_script('tm-regional-grid-system', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), '20150424', true);
@@ -200,6 +200,12 @@ function the_slug($echo=true){
   do_action('after_slug', $slug);
   return $slug;
 }
+
+/**
+ * Custom media sizes to be generated
+ */
+
+require get_template_directory() . '/inc/media.php';
 
 /**
  * Custom template tags for this theme.
