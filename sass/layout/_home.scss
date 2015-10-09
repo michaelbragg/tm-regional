@@ -466,7 +466,14 @@ background-repeat: no-repeat;
 }
 /* PREV / NEXT BUTTON */
 
-.testimonial_rotator_nav {} .testimonial_rotator_prev,
+.testimonial_rotator_nav {
+
+position: absolute;
+    bottom: 90px;
+    left: 300px;
+} 
+
+.testimonial_rotator_prev,
 .testimonial_rotator_next {
       position: absolute;
   z-index:9999;
