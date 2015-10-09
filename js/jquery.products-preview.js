@@ -88,22 +88,16 @@ event.preventDefault();
    * Push data to create or update the image
    */
 
-
-
-
-
   productPreview.pushData = function( _parent, _button ) {
+
+/**
+   * Change description text on Button clicked
+   */
 
     var _url = _button.data('solutions-preview');
 
-
-
-
-
         var idname= $(_button).data('divid');
         $("#"+idname).show("slow").siblings().hide("slow");
-console.log("#"+idname);
-
 
     productPreview.toggleCurrent( _parent, _button );
 
