@@ -1,5 +1,9 @@
 #TM-Regional
 
+## OS
+.DS_Store
+
+## Sass
 .sass-cache
 style.css
 style.css.map
