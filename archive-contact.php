@@ -15,6 +15,18 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+
+            <?php /* Add page Description*/ ?>
+        <?php if( have_solutions_description() ): ?>
+        <div class="page-contents contacts-text">
+            <div class="container">
+                <p>
+                    <?php the_solutions_description(); ?>
+                </p>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <div class="container">
             <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
              
