@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 *
 * The template for displaying Contact Archive pages. *
@@ -17,11 +17,11 @@ get_header(); ?>
         </div>
 
             <?php /* Add page Description*/ ?>
-        <?php if( have_solutions_description() ): ?>
+        <?php if( have_offices_description() ): ?>
         <div class="page-contents contacts-text">
             <div class="container">
                 <p>
-                    <?php the_solutions_description(); ?>
+                    <?php the_offices_description(); ?>
                 </p>
             </div>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
 
         <div class="container">
             <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
-             
+
                 <ul class='posts-menu etabs'>
                     <?php /* Start the Loop */ ?>
                     <?php while ( have_posts() ) : the_post(); ?>
