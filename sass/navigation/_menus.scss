@@ -138,7 +138,7 @@
     width: 100%;
     position: fixed;
     top: -100%;
-    z-index: 999;
+    z-index: 9999;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -156,7 +156,7 @@
     @include animate;
     background-color: $primary-color;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .menu-panel {
         width: 37.5%;
         left: -37.5%;
@@ -251,6 +251,11 @@
     text-decoration: none;
     text-transform: uppercase;
     @include animate;
+}
+@media screen and (min-width: 600px){
+.main-nav-menu li a{
+    font-size: 2em;
+    }   
 }
 .main-nav-menu li {
     padding: 10px 50px;
