@@ -24,7 +24,7 @@
     position: absolute;
     top:50%;
     left:50%;
-   
+
      -ms-transform: translate(-50% -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -39,7 +39,7 @@
     font-size: 1.4em;
     color: #fff;
     text-transform: none;
-    
+
 }
 .sub-heading {
     color: #fff;
@@ -58,7 +58,7 @@
 @media screen and(min-width: 992px) {
     .welcome {
       width: 750px;
-    
+
     }
   }
 
@@ -67,7 +67,7 @@
     .main-heading {
         padding: 25px;
         font-size: 3em;
-        
+
     }
   }
 
@@ -76,7 +76,7 @@
     .main-heading {
         padding: 25px;
         font-size: 4em;
-        
+
     }
 
 
@@ -172,12 +172,12 @@
     from { transform: scale(0.9); }
     70% { transform: scale(1);
     box-shadow: 0 0 0 50px rgba($primary-color, 0); }
-    to { transform: scale(0.9); 
+    to { transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba($primary-color, 0);
 }
 }
 
-.hotspot-icon{position: absolute; top:0; left:0; width:25px; height:25px; z-index:2; 
+.hotspot-icon{position: absolute; top:0; left:0; width:25px; height:25px; z-index:2;
  background-image: url(./gui/hotspots-icon.png);
 background-size: 200%;
 top:11px;
@@ -310,7 +310,7 @@ background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: black;
     /* in case the video doesn't fit the whole page*/
-    
+
     background-position: center center;
     object-fit: cover;
     /*cover video background */
@@ -332,7 +332,7 @@ background-repeat: no-repeat;
 /* STRUCTURE */
 
 .testimonial_rotator_wrap {
-    
+
     position: relative;
 }
 .testimonial_rotator .slide {
@@ -484,7 +484,7 @@ background-repeat: no-repeat;
 position: absolute;
     bottom: 35px;
     left: 180px;
-} 
+}
 
 @media screen and (min-width:768px){
 .testimonial_rotator_nav {
@@ -492,7 +492,7 @@ position: absolute;
 position: absolute;
     bottom: 90px;
     left: 5px;
-} 
+}
   }
 
 .testimonial_rotator_prev,
@@ -559,7 +559,7 @@ top:-5px;
 }
 .testimonial_rotator_prev {
     left: 0px;
-   
+
 }
 .testimonial_rotator_next {
   left:50px;
@@ -590,7 +590,7 @@ div.testimonial-rotator-error {
 /* CAROUSEL */
 
 .carousel {
-  position: initial;
+  position: static;
 }
 
 .home-carousel{
