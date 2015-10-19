@@ -1,13 +1,13 @@
 .git/
 .gitignore
 .php-version
-/.sass-cache/
+.sass-cache/
 editor-style.css.map
 gruntfile.js
 node_modules/
 package.json
 README.md
 readme.txt
-/sass/
+sass/
 style.css.map
-/tmp/
+tmp/
