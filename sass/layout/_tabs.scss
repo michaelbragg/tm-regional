@@ -31,6 +31,63 @@
     display: none;
 }
 
+@media screen and (max-width: 992px) {
+    .region-selector .tabicon {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        min-height: 35px;
+    }
+     .region-selector .tabs-menu {
+        max-height: 0;
+        overflow: hidden;
+        -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        clear: both;
+    }
+     .region-selector .tabs-arrow-down {
+     position: absolute;
+        right: 0;
+        top: 25px;
+        width: 25px;
+        height: 25px;
+        background-image: url(./gui/icons/scroll-arrow.svg);
+        background-repeat: no-repeat;
+        margin: 3px 0 0 15px;
+    }
+    .region-selector .tabs-menu ul li a {
+        border-right: none;
+    }
+     .region-selector .tabs-menu-expand {
+        max-height: 500px;
+    }
+    .region-selector  .tabs-menu ul li {
+        display: block;
+    }
+    .region-selector .tabs-arrow-up {
+        position: absolute;
+
+      right: 0;
+        top: 25px;
+        width: 25px;
+        height: 25px;
+        background-image: url(./gui/icons/scroll-arrow-up.svg);
+
+        margin: 3px 0 0 15px;
+    }
+    .region-selector .tabs-text {
+        display: block;
+        float: left;
+        margin-left: 10px;
+        margin-top: -5px;
+        color: #fff;
+    }
+}
+
+
+
 @media screen and (max-width: 767px) {
     .tabicon {
         position: relative;
