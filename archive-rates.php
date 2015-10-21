@@ -14,7 +14,7 @@ get_header(); ?>
         <div class="rates-page-hero kenburns hero-height">
             <div class="container">
                 <div class="hero-page-title">
-                    <h1><?php echo post_type_archive_title(); ?></h1>
+                    <h1><?php echo the_rates_title(); ?></h1>
                 </div>
             </div>
         </div>
