@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="studies-txt col-md-12">
-              <h1>Case Studies</h1>
+              <h1>Customer Testimonials</h1>
                 <?php echo testimonial_rotator( array( 'id'=> get_theme_mod( 'case-study-id' ))); ?>
             </div>
         </div>

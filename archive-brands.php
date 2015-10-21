@@ -48,7 +48,7 @@ $my_posts = get_posts($args);
   <div class="tab_expand tabicon">
     <div class="tabs-arrow-down"></div>
     <div class='region-tab-container'>
-      <h2>Select your region</h2>
+      <h2>Select a region</h2>
          <ul class='tabs-menu etabs'>
           <?php foreach( $terms as $term ): ?>
           <li class='tab'><a href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
