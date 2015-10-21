@@ -9,11 +9,7 @@
 /* ---------------------------------------------
  Height 100%
  --------------------------------------------- */
-<<<<<<< Updated upstream
 
-=======
- 
->>>>>>> Stashed changes
 js_height_init();
 
 jQuery(window).resize(function() {
@@ -183,15 +179,12 @@ function js_height_init() {
  Regional Tab Selector
  --------------------------------------------- */
 
-<<<<<<< Updated upstream
+
     jQuery('.region-tab-container .tabs-menu .tab a').click(function(event) {
         event.returnValue = false;
         if(event.preventDefault) event.preventDefault();
                 var DivLink = jQuery(this).attr('href');
-=======
-    jQuery('.region-tab-container .tabs-menu .tab a').click(function() {
-        var DivLink = jQuery(this).attr('href');
->>>>>>> Stashed changes
+
         jQuery('html, body').animate({
             scrollTop: jQuery(DivLink).offset().top - 130
         }, 2000);
