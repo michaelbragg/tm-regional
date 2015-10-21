@@ -36,7 +36,7 @@ get_header(); ?>
                 <div class="tab_expand tabicon">
                     <div class="tabs-arrow-down"></div>
                     <div class='region-tab-container'>
-                        <h2>Select your media</h2>
+                        <h2>Select a media</h2>
                         <ul class='tabs-menu etabs'>
                             <?php foreach( $terms as $term ): ?>
                             <li class='tab'>
