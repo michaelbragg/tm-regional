@@ -1,11 +1,11 @@
-<?php /** * The template for displaying Rates Archive pages. * 
+<?php /** * The template for displaying Rates Archive pages. *
 * Learn more: http://codex.wordpress.org/Template_Hierarchy *
 * @package tm-regional */
 
 $taxonomy_type='regions' ;
 $posts=get_categories( 'taxonomy=' .
 $taxonomy_type . '&type=rates');
-$terms=get_terms($taxonomy_type, array()); 
+$terms=get_terms( $taxonomy_type, array( 'orderby' => 'menu_order' ) );
 
 get_header(); ?>
 
@@ -55,8 +55,8 @@ get_header(); ?>
             <?php /* Start the Loop for regions */ ?>
             <?php foreach( $terms as $term ): ?>
             <?php /* Start the Loop for posts within regions */ ?>
-            <?php $post_array=get_posts(array( 
-            'post_type'=> 'rates', 
+            <?php $post_array=get_posts(array(
+            'post_type'=> 'rates',
             'taxonomy' => $term->taxonomy,
             'term' => $term->slug,
         'orderby' => 'menu_order',

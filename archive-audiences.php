@@ -4,7 +4,7 @@
 
 $taxonomy_type='regions' ;
 $posts=get_categories( 'taxonomy=' . $taxonomy_type . '&type=audiences');
-$terms=get_terms($taxonomy_type, array());
+$terms=get_terms( $taxonomy_type, array( 'orderby' => 'menu_order' ) );
 
 get_header(); ?>
 

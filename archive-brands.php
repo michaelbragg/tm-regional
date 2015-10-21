@@ -12,7 +12,7 @@ get_header(); ?>
 <?php
   $taxonomy_type = 'regions';
   $posts = get_categories('taxonomy=' . $taxonomy_type . '&type=brands');
-  $terms = get_terms($taxonomy_type, array());
+  $terms = get_terms( $taxonomy_type, array( 'orderby' => 'menu_order' ) );
   ?>
 
 <?php
@@ -63,7 +63,7 @@ $my_posts = get_posts($args);
 <?php /* Start the Loop for regions */ ?>
 
 <div class="container">
-  
+
 <?php foreach( $terms as $term ): ?>
     <?php
       $post_array = get_posts(array(

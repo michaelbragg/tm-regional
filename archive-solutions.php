@@ -5,7 +5,7 @@
 $post_type=get_post_type();
 $taxonomy_type='mediums' ;
 $posts=get_categories( 'taxonomy=' . $taxonomy_type . '&type=' . $post_type );
-$terms=get_terms( $taxonomy_type, array() ); 
+$terms=get_terms(  $taxonomy_type, array( 'orderby' => 'menu_order' )  );
 
 get_header(); ?>
 
