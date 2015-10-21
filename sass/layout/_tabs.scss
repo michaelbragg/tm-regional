@@ -199,7 +199,7 @@
 @media screen and (min-width: 768px) {
     .tab {
         display: inline-block;
-        float: right;
+        float: left;
         margin-left: 10px;
         margin-bottom: 10px;
         margin-right: 0;
@@ -211,7 +211,7 @@
     }
 }
 .tab a {
-  
+
     border: solid 1px $secondary-color;
     font-weight: 300;
     color: $secondary-color;
@@ -225,7 +225,7 @@
 .tab a:hover {
     color: #fff !important;
     border: 1px solid $secondary-color !important;
-  
+
 }
 .tab a:before {
     content: "";
@@ -302,7 +302,7 @@
     position:relative;
     z-index: 1;
 }
- 
+
 .region-tab-container .tab a {
     border: solid 1px #989798;
     color:#989798;
@@ -342,7 +342,7 @@
 .region-tab-container .tab a:hover {
 
     color: #fff !important;
-   
+
 }
 
 .region-tab-container .tab a:before {
