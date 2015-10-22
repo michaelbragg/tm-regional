@@ -103,25 +103,14 @@
           <div class="row">
             <div class="col-sm-4 brand">
              <div class="title-item">
-               <?php if( has_website_name() ) {  ?>
-              <h3>Readership profile - Print and Online</h3>
-              <p>Increase your reach - By booking your advert in both print and online.</p>
+            <h3><?php the_visualizer_title(); ?></h3>
+            <p><?php the_visualizer_description(); ?></p>
             <div class="graph-key">
-                <ul>
-                  <li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_title(); ?></span></li>
-                  <li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li>
+              <ul>
+                <?php if( has_newspaper_name() ): ?><li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_newspaper_name(); ?></span></li><?php endif; ?>
+                <?php if( has_website_name() ): ?><li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li><?php endif; ?>
               </ul>
-                </div>
-
-            <?php  } else { ?>
-              <h3>Readership profile - Print</h3>
-              <p>Increase your reach - By booking an advert in our print title.</p>
-            <div class="graph-key">
-                <ul>
-                  <li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_title(); ?></span></li>
-              </ul>
-                </div>
-          <?php   } ?>
+            </div>
           </div>
 
           </div>
@@ -131,8 +120,8 @@
            ?>
             </div>
         </div>
-         <?php
-            } ?>
+         <?php } ?>
+         <?php /* End Visualizer */ ?>
 
     </div>
   </section><!-- .container -->
