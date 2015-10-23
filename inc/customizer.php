@@ -166,15 +166,18 @@ function tm_regional_customize_register( $wp_customize ) {
 
   // Add Video
   $wp_customize->add_setting('front-page-video');
+
   $wp_customize->add_control(
-    new WP_Customize_Upload_Control(
-      $wp_customize,
-      'front-page-video'
-      ,array(
-       'label'      => __('Video', 'tm-regional'),
-       'section'    => 'front-page',
-       'settings'   => 'front-page-video',
-  )));
+    new WP_Customize_Control(
+      $wp_customize, 'front-page-video',
+      array(
+        'label'      => __('Video', 'tm-regional'),
+        'description' => __('Add the YouTube id of your video.', 'tm-regional'),
+        'section' => 'front-page',
+        'settings' => 'front-page-video'
+      )
+    )
+  );
 
 }
 add_action( 'customize_register', 'tm_regional_customize_register' );
