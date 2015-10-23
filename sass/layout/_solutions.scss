@@ -109,3 +109,9 @@ text-align: center;
 .dwld-btn:hover{
     color:primary-color;
   }
+
+  #custom-display .js-solutions--list{
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
