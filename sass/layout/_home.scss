@@ -295,10 +295,18 @@ background-repeat: no-repeat;
     overflow: hidden;
 }
 
-/* Process (sectoion 4) */
+/* Process (Section 4) */
 
 .process{
-     background-color: #fff;
+
+}
+
+.process__video {
+  /* Centre the video */
+  margin-right: auto;
+  margin-left: auto;
+  /* Set the width to the same as the generic content */
+  max-width: 974px;
 }
 
 #myVideo {

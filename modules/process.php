@@ -8,7 +8,7 @@
 
 <?php if( get_theme_mod( 'front-page-video' ) ): ?>
   <section class="process section js-height-full" id="section4">
-        <div class="hero-gif">
+        <div class="process__video js-fitvid">
             <?php echo wp_oembed_get( 'https://www.youtube.com/watch?v=' . get_theme_mod( 'front-page-video' )  ); ?>
         </div>
 </section>
