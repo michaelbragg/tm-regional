@@ -12,22 +12,17 @@ get_header(); ?>
 <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         <div class="audience-page-hero kenburns hero-height">
-            <div class="container">
+            <div class="container page-headline">
+                     <?php /* Add page Description*/ ?>
+                 <?php if( have_audiences_description() ): ?>
                 <div class="hero-page-title">
-                    <h1><?php echo post_type_archive_title(); ?></h1>
+                     <p> <?php the_audiences_description(); ?> </p>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
-        <?php /* Add page Description*/ ?>
-        <?php if( have_audiences_description() ): ?>
-        <div class="page-contents">
-            <div class="container">
-                <p>
-                    <?php the_audiences_description(); ?>
-                </p>
-            </div>
-        </div>
-        <?php endif; ?>
+   
+
 
  <?php /* Add regional tab selector */ ?>
         <div class="region-selector">

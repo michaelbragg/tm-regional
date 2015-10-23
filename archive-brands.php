@@ -30,18 +30,17 @@ $my_posts = get_posts($args);
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <div class="titles-page-hero kenburns hero-height">
-        <div class="container">
-        <div class= "hero-page-title"><h1><?php echo post_type_archive_title(); ?></h1></div>
-      </div>
+         <div class="container page-headline">
+                     <?php /* Add page Description*/ ?>
+                 <?php if( have_brands_description() ): ?>
+                <div class="hero-page-title">
+                     <p> <?php the_brands_description(); ?> </p>
+                </div>
+                <?php endif; ?>
+            </div>
   </div>
 
-<?php if( have_brands_description() ): ?>
-  <div class="page-contents">
-    <div class="container">
-        <p><?php the_brands_description(); ?></p>
-    </div><!-- .tmr__wrapper  -->
-  </div>
-<?php endif; ?>
+
 
 <div class="region-selector">
 <div class=" container">
