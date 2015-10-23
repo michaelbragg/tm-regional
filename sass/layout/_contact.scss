@@ -78,7 +78,7 @@
     width: 100%;
 }
 .contact-info .contact-form-info {
-    padding: 30px;
+    padding: 5px 30px 30px 30px;
     color: #fff;
     float: left;
     width: 100%;
@@ -151,4 +151,10 @@ div.wpcf7-validation-errors {
     float:left;
     text-align: center;
     width:100%;
+}
+
+
+
+.contact-info .tab-container{
+    margin-top:30px;
 }
