@@ -116,13 +116,11 @@ h1::selection {
        
     }
 }
-.branding-resize {
-    width: 350px;
-    padding-top: 5px;
-}
+
 .regional-title {
     float: left;
     font-weight:400;
+    color: $primary-color;
 }
 
 .regional-title img, .tm-branding img{

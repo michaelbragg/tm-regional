@@ -27,7 +27,7 @@ get_header(); ?>
         </div>
         <?php endif; ?>
 
-        <div class="container">
+        <div class="container contact-info">
             <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
 
                 <ul class='posts-menu etabs'>

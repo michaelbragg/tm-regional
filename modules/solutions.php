@@ -42,14 +42,14 @@
     </ul>
     <div class="container">
         <div class="row">
-            <article class="solutions-txt col-sm-6">
+            <article class="solutions-txt col-sm-5">
                 <h1><?php echo get_theme_mod( 'fp2-title' ); ?></h1>
                 <p><?php echo get_theme_mod( 'fp2-text' ); ?></p>
                 <?php if( get_theme_mod( 'fp2-button-url') ): ?>
                 <a class="btn btn-discover" href="<?php echo get_theme_mod( 'fp2-button-url'); ?>"><?php echo get_theme_mod( 'fp2-button-text' ); ?></a>
                 <?php endif; ?>
             </article>
-            <aside class="col-sm-6"></aside>
+            <aside class="col-sm-7"></aside>
         </div>
     </div>
 </section>
