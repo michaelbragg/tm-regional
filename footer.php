@@ -51,6 +51,7 @@ jQuery.noConflict();
         jQuery('#pagepiling').pagepiling({
           menu: '#menu',
          anchors: ['intro', 'solutions', 'casestudies', 'process'],
+
           navigation: {
                 'textColor': '#f2f2f2',
                 'bulletsColor': '#ccc',
@@ -64,12 +65,12 @@ jQuery.noConflict();
 
         onLeave: function (index, nextIndex, direction) {
 
+           var sections = (jQuery('.section').length);
+
          //reaching our last section? The one with our normal site?
-        if (nextIndex == 3) {
+        if (nextIndex == sections) {
             jQuery('.scroll-arrow').hide();
-            if (jQuery(window).width() > 1025) {
- //  jQuery('video').get(0).play();
-}
+   
              
             //fading out navigation bullets
         }else{
