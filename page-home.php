@@ -1,9 +1,9 @@
-<?php 
+<?php
 
-/** 
+/**
 * Template Name: Home Page *
 * @package tm-regional *
-*/ 
+*/
 
 get_header(); ?>
 
@@ -17,10 +17,10 @@ get_header(); ?>
 
             <?php module( 'case-studies' ); ?>
 
-     
+            <?php module( 'process' ); ?>
 
             <div class="scroll-arrow"></div>
-       
+
     </main>
     <!-- #main -->
 </div>

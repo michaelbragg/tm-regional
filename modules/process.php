@@ -5,8 +5,11 @@
  * @package tm-regional
  */
 ?>
+
+<?php if( get_theme_mod( 'front-page-video' ) ): ?>
   <section class="process section js-height-full" id="section4">
         <div class="hero-gif">
-            <video autoplay controls muted loop id="myVideo" src="<?php echo bloginfo('template_directory'); ?>/gui/video/digital_hub.mp4" type="video/mp4"> 
+            <?php echo wp_oembed_get( 'https://www.youtube.com/watch?v=' . get_theme_mod( 'front-page-video' )  ); ?>
         </div>
 </section>
+<?php endif; ?>
