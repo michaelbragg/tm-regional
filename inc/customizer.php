@@ -37,8 +37,6 @@ function tm_regional_customize_register( $wp_customize ) {
     'settings' => 'fp-title',
   ) ) );
 
-  $wp_customize->get_setting( 'fp-title' )->transport = 'postMessage';
-
 // Page 2 Title
   $wp_customize->add_setting( 'fp2-title' ,
     array(
