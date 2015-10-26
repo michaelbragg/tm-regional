@@ -255,7 +255,7 @@
 @media screen and (min-width: 600px){
 .main-nav-menu li a{
     font-size: 2em;
-    }   
+    }
 }
 .main-nav-menu li {
     padding: 10px 50px;
@@ -352,7 +352,7 @@
     width: 80%;
     border: none;
     text-align: left;
-    color: #ffffff;
+    color: #fff;
     height: 100%;
     outline: none;
     margin-top: 20px;
@@ -414,7 +414,7 @@
     height: 50px;
     position: absolute;
     top: 20px;
-    color: white;
+    color: #fff;
     text-align: center;
     line-height: 50px;
     -webkit-transform: translate3d(0, 0, 0);
@@ -439,7 +439,7 @@
 }
 
 .social-menu-item:hover {
-    background: white;
+    background: #fff;
     color: #ff4081;
 }
 .social-menu-item:nth-child(3) {

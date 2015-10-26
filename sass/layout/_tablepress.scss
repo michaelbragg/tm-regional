@@ -118,14 +118,14 @@ font-size: 16px;
 
 }
 .tablepress .odd td {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .tablepress .even td {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .tablepress tr .column-2, .tablepress tr .column-4, .tablepress tr .column-6, .tablepress tr .column-8, , .tablepress tr .column-10, .tablepress tr .column-12{
-  background-color: #f0f0f0;
+  background-color: $color__background-screen;
 }
 .tablepress .row-hover tr:hover td {
   background-color: $primary-color;
@@ -247,7 +247,7 @@ font-size: 16px;
   background-color: #dddddd;
 }
 .paging_full_numbers .paginate_button:hover {
-  background-color: #cccccc;
+  background-color: #ccc;
 }
 .paging_full_numbers .paginate_active {
   background-color: #99b3ff;
