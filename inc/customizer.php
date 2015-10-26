@@ -27,7 +27,7 @@ function tm_regional_customize_register( $wp_customize ) {
   $wp_customize->add_setting( 'fp-title' ,
     array(
     'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_callback' => 'basic_html_sanitize_text',
     )
   );
 
@@ -181,6 +181,23 @@ function tm_regional_customize_register( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'tm_regional_customize_register' );
+
+/**
+ * Custom data sanitizer
+ */
+
+function basic_html_sanitize_text( $input ) {
+    return wp_kses( $input,
+      array(
+        'strong' => array(),
+        'em' => array(),
+        'abbr' => array(
+          'title' => array()
+        ),
+        'br' => array()
+      )
+    );
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
