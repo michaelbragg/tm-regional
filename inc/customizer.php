@@ -32,7 +32,8 @@ function tm_regional_customize_register( $wp_customize ) {
   );
 
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fp-title', array(
-    'label' => __( 'Title', 'tm-regional' ),
+    'label' => __( 'Main Title', 'tm-regional' ),
+    'description' => __('The following HTML tags are allowed; abbr, em, strong.', 'tm-regional'),
     'section' => 'front-page',
     'settings' => 'fp-title',
   ) ) );
