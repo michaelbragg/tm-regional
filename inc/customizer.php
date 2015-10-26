@@ -27,17 +27,16 @@ function tm_regional_customize_register( $wp_customize ) {
   $wp_customize->add_setting( 'fp-title' ,
     array(
     'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
+    'sanitize_callback' => 'basic_html_sanitize_text',
     )
   );
 
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'fp-title', array(
-    'label' => __( 'Title', 'tm-regional' ),
+    'label' => __( 'Main Title', 'tm-regional' ),
+    'description' => __('The following HTML tags are allowed; abbr, em, strong.', 'tm-regional'),
     'section' => 'front-page',
     'settings' => 'fp-title',
   ) ) );
-
-  $wp_customize->get_setting( 'fp-title' )->transport = 'postMessage';
 
 // Page 2 Title
   $wp_customize->add_setting( 'fp2-title' ,
@@ -181,6 +180,23 @@ function tm_regional_customize_register( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'tm_regional_customize_register' );
+
+/**
+ * Custom data sanitizer
+ */
+
+function basic_html_sanitize_text( $input ) {
+    return wp_kses( $input,
+      array(
+        'strong' => array(),
+        'em' => array(),
+        'abbr' => array(
+          'title' => array()
+        ),
+        'br' => array()
+      )
+    );
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
