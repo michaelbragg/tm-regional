@@ -1,25 +1,53 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-  font-family: "Open Sans",sans-serif; 
+  font-family: "Open Sans",sans-serif;
   line-height: 1.1;
 }
 
-h1 {
-  font-weight: 300; font-size: 1.8em; color:#2a2a2a; text-transform: uppercase;
-  }
-h2 { font-size: 1.6em; color: #2a2a2a; font-weight: 300; }
-h3 { font-size: 1.3em; margin: 1em 0; line-height: 1.5; font-weight:700;}
-h4 { font-size: 1em; margin: 1.33em 0; }
-h5 { font-size: 0.83em; margin: 1.67em 0; }
-h6 { font-size: 0.75em; margin: 2.33em 0; }
+h1, .alpha {
+  font-weight: 300;
+  font-size: 1.8em;
+  color:#2a2a2a;
+  text-transform: uppercase;
+}
+
+h2, .beta {
+  font-size: 1.6em;
+  color: #2a2a2a;
+  font-weight: 300;
+}
+
+h3, .gamma {
+  font-size: 1.3em;
+  margin: 1em 0;
+  line-height: 1.5;
+  font-weight:700;
+}
+
+h4, .delta {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5, .epsilon {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6, .zeta {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
 
 
 @media screen and (min-width:768px){
-  
-    h1 {
-  font-size: 2.6em;
+
+  h1, .alpha {
+    font-size: 2.6em;
   }
 
-  h2 { font-size: 2.2em;}
-
+  h2, .beta {
+    font-size: 2.2em;
   }
+
+}

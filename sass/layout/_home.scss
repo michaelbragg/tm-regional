@@ -361,6 +361,10 @@ background-repeat: no-repeat;
     width: 100%;
 }
 
+.testimonial_rotator_headline {
+  text-transform: uppercase;
+}
+
 /* TESTIMONIAL WITH IMAGE */
 
 .testimonial_rotator .has-image .img,
@@ -401,7 +405,7 @@ background-repeat: no-repeat;
     .testimonial_rotator_single.has-image .text {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 40%;
         -ms-transform: translate(0, -50%);
         -webkit-transform: translate(0, -50%);
         -moz-transform: translate(-0, -50%);
@@ -428,10 +432,10 @@ background-repeat: no-repeat;
     padding: 0;
 }
 .testimonial_rotator .testimonial_rotator_slide_title {
-    text-transform: uppercase;
     margin: 0 0 15px 0;
     padding-bottom: 15px;
     text-align: left;
+    text-transform: capitalize;
 }
 /* SINGLE VERSION */
 
