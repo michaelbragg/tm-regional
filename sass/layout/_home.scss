@@ -570,17 +570,22 @@ top:-5px;
   margin-top:10px;
 }
 
+/**
+ * Previous/Next buttons for testimonial
+ */
 
 .testimonial_rotator_prev:hover,
 .testimonial_rotator_next:hover {
-    background-color: $secondary-color;
+  color: $primary-color;
+  background-color: $color__background-body;
   cursor: pointer;
-  box-shadow: 0 0 0 5px rgba($secondary-color, .3);
+  box-shadow: 0 0 0 5px rgba($color__background-body,.3);
 }
-.testimonial_rotator_prev {
-    left: 0px;
 
+.testimonial_rotator_prev {
+  left: 0px;
 }
+
 .testimonial_rotator_next {
   left:50px;
 }
