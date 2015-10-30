@@ -212,9 +212,13 @@ function tm_regional_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-  if ( is_front_page() ){
+  if ( is_front_page() && get_theme_mod( 'front-page-video' ) ){
     wp_enqueue_script( 'tm-regional-fitvids', get_template_directory_uri() . '/js/libs/jquery.fitvids.js', array('jquery'), '1.1.0', true );
     enqueue_inline_script('tm-regional-fitvids-home',';(function( $ ){$(document).ready(function(){$(".js-fitvid").fitVids();});})( window.jQuery || window.Zepto );', array( 'jquery', 'tm-regional-fitvids' ) );
+
+    // Load YouTube API
+    wp_enqueue_script( 'youtube-api', '//www.youtube.com/player_api', array(), false, true );
+    enqueue_inline_script('tm-regional-youtube-api',';var player;function onYouTubePlayerAPIReady() {player = new YT.Player("player");}', array( 'youtube-api' ) );
   }
 
 }

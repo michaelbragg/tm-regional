@@ -30,7 +30,7 @@
                         'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
                     ) );
               ?>
-        </nav><!-- .main-navigation -->   
+        </nav><!-- .main-navigation -->
   </div>
     <?php endif; ?>
 </div>
@@ -61,21 +61,26 @@ jQuery.noConflict();
                 afterRender: function(){
           //playing the video
         // jQuery('video').get(0).pause();
-        },  
+        },
 
         onLeave: function (index, nextIndex, direction) {
 
            var sections = (jQuery('.section').length);
 
+        if ( index != 'process' ){
+          // If found pause YouTube video
+          if ( typeof player != 'undefined' ){
+            player.pauseVideo();
+          }
+        }
+
          //reaching our last section? The one with our normal site?
         if (nextIndex == sections) {
             jQuery('.scroll-arrow').hide();
-   
-             
             //fading out navigation bullets
         }else{
             jQuery('.scroll-arrow').show();
-//jQuery('video').get(0).pause();
+            //jQuery('video').get(0).pause();
         }
       }
     });
