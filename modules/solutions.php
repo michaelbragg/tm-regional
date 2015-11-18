@@ -35,7 +35,7 @@
             <button id="hotspotFour" class="hotspot desktop__visible pulse">
                 <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-four">
-                    <p><?php echo get_theme_mod( 'fp2-pulse-3' ); ?></p>
+                    <p><?php echo get_theme_mod( 'fp2-pulse-4' ); ?></p>
                 </div>
             </button>
         </li><?php endif; ?>
