@@ -14,13 +14,14 @@
     <div class="col-sm-5 col-md-3 solutions-container-item solutions-container-advert-item">
       <ul class="js-solutions--list ">
       <?php foreach ( the_adverts() as $advert ):
-        echo '<li><button data-divid="js-type-' . $advert['id'] . ' "  class="js-products--button products-button" data-solutions-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
+        echo '<li><button data-divid="js-type-' . sanitize_title($advert['type']) . ' "  class="js-products--button products-button" data-solutions-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
       endforeach; ?>
       </ul>
     </div>
       <div class="col-sm-7 col-md-4 solutions-container-item">
            <?php foreach ( the_adverts() as $advert ): ?>
-           <article id="js-type-<?php echo $advert['id']; ?>" class = "content js-solutions--description">
+            <?php #print_r( the_adverts() );?>
+           <article id="js-type-<?php echo sanitize_title($advert['type']); ?>" class = "content js-solutions--description">
            <?php the_adverts_title($advert); ?>
            <?php the_adverts_description($advert); ?>
            </article>
