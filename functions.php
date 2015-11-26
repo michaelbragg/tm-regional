@@ -310,3 +310,14 @@ function add_ie_respond () {
     echo '<![endif]-->';
 }
 add_action('wp_head', 'add_ie_respond');
+
+/**
+ * Dequeue visualizer pointer.
+ *
+ * Remove JavaScript for visualizer's pointers
+ * Temp fix for causing problems on production server
+ */
+function visualizer_dequeue_script() {
+   wp_dequeue_script( 'visualizer-pointer' );
+}
+add_action( 'wp_print_scripts', 'visualizer_dequeue_script', 100 );
