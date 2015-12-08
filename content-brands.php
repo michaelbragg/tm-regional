@@ -88,7 +88,7 @@
           <div class="col-md-4 brand">
             <div class="title-item">
               <?php if( has_page_views() ) {  ?>
-               <h3>Monthly unique users</h3>
+               <h3>Monthly page views</h3>
                 <h2><?php the_page_views( 'figure' ); ?></h2>
                 <small class="figure-source"><?php the_page_views( 'source' ); ?></small>
               <?php } ?>
