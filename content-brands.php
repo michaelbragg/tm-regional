@@ -19,12 +19,14 @@
             if( has_circulation() ) { ?>
               <h3>Circulation Figure </h3>
               <h2><?php the_circulation( 'figure' );?></h2>
+              <small class="figure-source"><?php the_circulation( 'source' );?></small>
           <?php } ?>
 <?php /* Check to see if there is a readership figures */ ?>
           <?php
               if( has_average_readership() ) { ?>
                 <h3>Average Issue Readership</h3>
                 <h2><?php the_average_readership( 'figure' ); ?></h2>
+                <small class="figure-source"><?php the_average_readership( 'source' );?></small>
           <?php } ?>
 
           </div>
