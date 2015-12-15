@@ -57,7 +57,7 @@ get_header(); ?>
             <div class="tab_expand tabicon brand-wrap">
                 <div class="tabs-arrow-down"></div>
                 <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
-                    <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select an statistic</small></h2>
+                    <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a statistic</small></h2>
                     <ul class='posts-menu tabs-menu etabs brand-select'>
                         <?php foreach( $post_array as $post ): ?>
                         <?php setup_postdata($post); ?>
