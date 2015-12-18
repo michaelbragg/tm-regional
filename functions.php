@@ -307,3 +307,14 @@ function visualizer_dequeue_script() {
    wp_dequeue_script( 'visualizer-pointer' );
 }
 add_action( 'wp_print_scripts', 'visualizer_dequeue_script', 100 );
+
+/**
+ * Dequeue Testimonial Rotator stlye.
+ *
+ * Remove CSS as it is loaded in before our styles
+ * and overwrites them causing layout issues.
+ */
+function testimonial_rotator_dequeue_styles() {
+   wp_dequeue_style( 'testimonial-rotator-style' );
+}
+add_action( 'wp_enqueue_scripts', 'testimonial_rotator_dequeue_styles', 100 );
