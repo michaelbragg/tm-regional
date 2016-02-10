@@ -19,7 +19,7 @@ function the_posts_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation posts-navigation" role="navigation">
+	<nav class="container navigation posts-navigation" role="navigation">
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'tm-regional' ); ?></h2>
 		<div class="nav-links">
 
@@ -52,7 +52,7 @@ function the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="container navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'tm-regional' ); ?></h2>
 		<div class="nav-links">
 			<?php

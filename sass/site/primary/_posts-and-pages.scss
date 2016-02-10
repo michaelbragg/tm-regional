@@ -19,12 +19,65 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin-top: 1.5em;
+  margin-bottom: 1.5em;
   background-color: #fff;
   padding:25px;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+.entry-content p {
+  font-size: 16px;
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+
+.entry-content p:first-of-type {
+  font-weight: bold;
+}
+
+.entry-meta {
+  line-height: 4em;
+  color: rgb(255,255,255);
+}
+
+.entry-meta a {
+  color: rgb(150,150,150);
+}
+
+.page-link {
+  clear: both;
+  display: block;
+  margin: 0 0 15em;
+}
+
+.post-aside {
+  background-color: #2a2a2a;
+}
+
+.post-aside__right {
+
+}
+
+@media (min-width: 768px) {
+  .post-aside__right {
+
+  }
+}
+
+.post-link-bar {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid grey;
+}
+
+.post-link-bar a {
+  color: rgb(150,150,150);
+}
+
+.post-link-bar .tags-links {
+  margin-left: 0.5em;
+}
+
+.post-link-bar .edit-link {
+  float: right;
 }
