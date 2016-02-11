@@ -9,14 +9,14 @@
 
 get_header(); ?>
 
+
   <section id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <div class="container">
-      <?php if ( have_posts() ) : ?>
 
-        <header class="page-header">
-          <h1 class="page-title">
-            <?php
+      <section class="hero hero-height hero--archive kenburns">
+        <div class="container page-headline">
+            <div class="hero-page-title">
+                 <p><?php
               if ( is_category() ) :
                 single_cat_title();
 
@@ -66,31 +66,39 @@ get_header(); ?>
                 _e( 'Archives', 'tm-regional' );
 
               endif;
-            ?>
-          </h1>
+            ?></p>
+            </div>
+        </div>
+      </section><!-- .hero -->
+
+
+      <div class="container page-content">
+      <?php if ( have_posts() ) : ?>
+
           <?php
             // Show an optional term description.
             $term_description = term_description();
-            if ( ! empty( $term_description ) ) :
-              printf( '<div class="taxonomy-description">%s</div>', $term_description );
-            endif;
-          ?>
-        </header><!-- .page-header -->
+            if ( ! empty( $term_description ) ) :?>
+            <header class="page-header">
+            <?php printf( '<div class="taxonomy-description">%s</div>', $term_description );?>
+            </header><!-- .page-header -->
+          <?php endif; ?>
 
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php
-            /* Include the Post-Format-specific template for the content.
-             * If you want to override this in a child theme, then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'content', get_post_format() );
-          ?>
+        <article>
+          <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+          <div class="post-link-bar">
+          <?php tm_regional_posted_on(); ?>
+          <?php tm_regional_entry_footer(); ?>
+          </div>
+          <?php the_excerpt(); ?>
+        </article>
 
         <?php endwhile; ?>
 
-        <?php regional_theme_paging_nav(); ?>
+        <?php #regional_theme_paging_nav(); ?>
 
       <?php else : ?>
 

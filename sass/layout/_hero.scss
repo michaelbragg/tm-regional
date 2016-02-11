@@ -20,6 +20,24 @@
         height: 450px;
     }
 }
+
+.hero {
+    background-size: 150%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+}
+
+.hero--blog {
+  background-image: url(./gui/hero/our-audience.jpg);
+}
+
+.hero--archive {
+  background-image: url(./gui/hero/our-audience.jpg);
+}
+
 .products-page-hero {
     background-size: 150%;
     position: relative;
