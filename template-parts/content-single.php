@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="hero-height hero entry-header" <?php if( has_post_thumbnail() ){ echo 'style="background-image: url(' . get_the_post_thumbnail_url() . ');"'; } else {}; ?> >
+	<header class="hero-height hero entry-header" <?php if( has_post_thumbnail() ){ echo 'style="background-image: url(' . get_the_post_thumbnail_url() . ');"'; } else { echo 'style="background-image: url(' . get_template_directory_uri() . '/gui/hero/our-products.jpg);"'; }; ?> >
     <div class="container page-headline">
         <div class="hero-page-title">
              <?php the_title( '<p>', '</p>' ); ?>
