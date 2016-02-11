@@ -13,7 +13,7 @@ get_header(); ?>
 			<section class="kenburns hero-height hero hero--blog entry-header">
 		    <div class="container page-headline">
 		        <div class="hero-page-title">
-		             <?php get_the_title( '<p>', '</p>' ); ?>
+		             <p><?php _e( 'Blog', 'tm-regional' ); ?></p>
 		        </div>
 		    </div>
 			</section><!-- .entry-header -->
