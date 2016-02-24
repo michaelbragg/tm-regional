@@ -1,15 +1,6 @@
 <?php
 
 /**
- * Enqueue styles.
- */
-
-
-/**
- * Dequeue styles.
- */
-
-/**
  * Enqueue scripts.
  */
 function tm_regional_scripts() {
@@ -51,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'tm_regional_scripts', 100 );
  */
 
 function tm_regional_dequeue_scripts()  {
-  wp_dequeue_script( 'contact-form-7' );
+  wp_dequeue_script( 'jquery-form' );
   wp_dequeue_script( 'visualizer-pointer' );
 }
 
@@ -87,15 +78,6 @@ wp_register_script(
   get_template_directory_uri() . '/js/jquery.products-preview.js',
    array('jquery'),
    '20140710',
-   true
-);
-
-/* Contact Form 7 */
-wp_register_script(
-  'tm-contact-form-7',
-  wpcf7_plugin_url( 'scripts.js' ),
-   array( 'jquery', 'jquery-form' ),
-   WPCF7_VERSION,
    true
 );
 
@@ -206,7 +188,7 @@ function tm_regional_load_contact_cpt(){
   //global $page;
   if( 'contact' == get_post_type() ){
     // Scripts to be loaded on the contact post type
-    wp_enqueue_script( 'tm-contact-form-7' );
+    wp_enqueue_script( 'jquery-form' );
     wp_enqueue_script( 'tm-regional-tabs' );
   }
 }
