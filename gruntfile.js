@@ -34,16 +34,26 @@ module.exports = function(grunt) {
   // Compile
 
 	 ,sass: {
-     theme: {
-      options: {
-        style: 'expanded'
-      },
-      files: {
-        '<%= dir.theme %>/style.css': ['<%= dir.theme %>/sass/style.scss'],
-        '<%= dir.theme %>/editor-style.css': ['<%= dir.theme %>/sass/editor-style.scss']
+      theme: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          '<%= dir.theme %>/style.css': ['<%= dir.theme %>/sass/style.scss'],
+          '<%= dir.theme %>/editor-style.css': ['<%= dir.theme %>/sass/editor-style.scss']
+        }
+      }
+     ,production: {
+        options: {
+          sourcemap: 'none'
+         ,style: 'compressed'
+        },
+        files: {
+          '<%= dir.theme %>/style.css': ['<%= dir.theme %>/sass/style.scss'],
+          '<%= dir.theme %>/editor-style.css': ['<%= dir.theme %>/sass/editor-style.scss']
+        }
       }
     }
-  }
 
   // Validate
 
@@ -170,12 +180,12 @@ module.exports = function(grunt) {
 
   // Options
 
-  grunt.registerTask('default', ['sass', 'serve']);
+  grunt.registerTask('default', ['dev', 'serve']);
   grunt.registerTask('test', ['cssmetrics', 'csslint', 'jshint']);
   grunt.registerTask('standard', ['phplint']);
   grunt.registerTask('optim', ['imagemin']);
-  grunt.registerTask('dev', ['sass']);
-  grunt.registerTask('build', ['sass', 'optim']);
+  grunt.registerTask('dev', ['sass:theme']);
+  grunt.registerTask('build', ['sass:production', 'optim']);
   grunt.registerTask('serve', ['watch']);
 
 };
