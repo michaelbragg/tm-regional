@@ -37,7 +37,7 @@
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
-  display: flex; 
+  display: flex;
     flex-direction: column;
 }
 .titles-container .col-md-4,
@@ -206,7 +206,7 @@
     background-repeat: no-repeat;
 }
 @media screen and (min-width: 768px) {
-    .brand-select-text {
+    .tab-select-text {
         display: none;
     }
 }
