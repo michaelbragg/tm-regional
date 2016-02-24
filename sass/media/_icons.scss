@@ -1,0 +1,100 @@
+
+.fa {
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  zoom: 1;
+  vertical-align: middle;
+  line-height: 1;
+  height: 20px;
+  width: 20px;
+  background-image: url('gui/sprite_icons.svg');
+  background-repeat: no-repeat;
+}
+
+//  Only use the svg if support is available
+.svg .fa {
+  background-image: url('gui/sprite_icons.png');
+}
+
+.fa-share-alt {
+	background-position: 0 0;
+}
+
+.fa-envelope {
+	background-position: 0 -20px;
+}
+
+.fa-envelope:hover,
+.fa-envelope:focus,
+.social-menu-item:hover .fa-envelope {
+  background-position: -20px -20px;
+}
+
+.fa-google-plus {
+  background-position: 0 -80px;
+}
+
+.fa-google-plus:hover,
+.fa-google-plus:focus,
+.social-menu-item:hover .fa-google-plus {
+  background-position: -20px -80px;
+}
+
+.fa-facebook {
+	background-position: 0 -60px;
+}
+
+.fa-facebook:hover,
+.fa-facebook:focus,
+.social-menu-item:hover .fa-facebook {
+	background-position: -20px -60px;
+}
+
+.fa-twitter {
+	background-position: 0 -40px;
+}
+
+.fa-twitter:hover,
+.fa-twitter:focus,
+.social-menu-item:hover .fa-twitter {
+	background-position: -20px -40px;
+}
+
+.fa-linkedin {
+	background-position: 0 -100px;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:focus,
+.social-menu-item:hover .fa-linkedin {
+	background-position: -20px -100px;
+}
+
+.fa-chevron-up{
+  height: 15px;
+  width: 15px;
+  background-image: url('gui/sprite_testimonial.svg');
+  background-position: 0 0;
+}
+
+.fa-chevron-up:hover,
+.fa-chevron-up:focus,
+.testimonial_rotator_next:hover .fa-chevron-up,
+.testimonial_rotator_next:focus .fa-chevron-up {
+  background-position: -15px 0;
+}
+
+.fa-chevron-down{
+  height: 15px;
+  width: 15px;
+  background-image: url('gui/sprite_testimonial.svg');
+  background-position: 0 -15px;
+}
+
+.fa-chevron-down:hover,
+.fa-chevron-down:focus,
+.testimonial_rotator_prev:hover .fa-chevron-down,
+.testimonial_rotator_prev:focus .fa-chevron-down {
+  background-position: -15px -15px;
+}

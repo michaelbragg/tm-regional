@@ -55,6 +55,7 @@ add_action('wp_print_scripts', 'tm_regional_dequeue_scripts', 100);
 function tm_regional_dequeue_styles()  {
   wp_dequeue_style( 'tablepress-default' );
   wp_dequeue_style( 'testimonial-rotator-style' );
+  wp_dequeue_style( 'font-awesome' );
 }
 
 add_action('wp_print_styles', 'tm_regional_dequeue_styles', 100);

@@ -29,8 +29,8 @@
     <input type="checkbox" href="#" class="social-menu-open" name="social-menu-open" id="social-menu-open" />
     <label class="social-menu-open-button" for="social-menu-open">
         <span class="fa fa-share-alt"></span>
-        <span class="social-hamburger social-hamburger-2"></span>
-        <span class="social-hamburger social-hamburger-3"></span>
+<!--        <span class="social-hamburger social-hamburger-2"></span>
+        <span class="social-hamburger social-hamburger-3"></span>-->
     </label>
 
     <?php if( has_social_media('email') ): ?><a href="mailto:<?php the_social_media('email'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-envelope"></i></a><?php endif; ?>
