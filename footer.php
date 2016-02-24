@@ -98,12 +98,12 @@ jQuery('.carousel').carousel({
 });
 </script>
   <?php } ?>
-
+<?php if( is_post_type( array( 'solutions', 'brands', 'audiences', 'rates', 'contact' ) ) ):?>
      <script type="text/javascript">
       jQuery(document).ready( function() {
       jQuery("[class$=-section-block]").easytabs();
     });
   </script>
-
+<?php endif; ?>
 </body>
 </html>
