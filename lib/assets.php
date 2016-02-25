@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'tm_regional_scripts', 100 );
  */
 
 function tm_regional_dequeue_scripts()  {
-  wp_dequeue_script( 'jquery-form' );
+  wp_dequeue_script( 'contact-form-7' );
   wp_dequeue_script( 'visualizer-pointer' );
 }
 
