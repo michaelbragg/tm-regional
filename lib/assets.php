@@ -203,6 +203,23 @@ add_action(
 /**
  * Dequeue scripts if is not front page
  */
+function tm_regional_exclude_contact(){
+  //global $page;
+  if( ! is_post_type( 'contact' ) ){
+    // Scripts to be dequeue if not on the front page
+    wp_dequeue_style( 'contact-form-7' );
+  }
+}
+
+add_action(
+  'wp_print_styles',
+  'tm_regional_exclude_contact',
+  100
+);
+
+/**
+ * Dequeue scripts if is not front page
+ */
 function tm_regional_exclude_front_page(){
   //global $page;
   if( ! is_front_page() ){
