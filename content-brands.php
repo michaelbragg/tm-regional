@@ -13,7 +13,7 @@
           <div class="col-sm-4 white">
             <div class="title-item">
               <h3><?php the_title(); ?></h3>
-             <p><?php the_content(); ?></p>
+              <p><?php the_content(); ?></p>
           <?php /* Check to see if there is a circulation figures */ ?>
           <?php
             if( has_circulation() ) { ?>
@@ -28,8 +28,13 @@
                 <h2><?php the_average_readership( 'figure' ); ?></h2>
                 <small class="figure-source"><?php the_average_readership( 'source' );?></small>
           <?php } ?>
+          <?php
+          if( has_media_pack() ):
+            printf( '<section><a class="btn" href="%1$s" target="_blank">%2$s</a></section>', the_media_pack(), __( 'Media Pack', 'tm-regional' ) );
+          endif;
+          ?>
 
-          </div>
+            </div>
           </div>
           <div class="col-sm-4 brand vertical-align">
 
