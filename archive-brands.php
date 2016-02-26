@@ -40,17 +40,15 @@ $my_posts = get_posts($args);
             </div>
   </div>
 
-
-
 <div class="region-selector">
-<div class=" container">
+<div class="container">
   <div class="tab_expand tabicon">
-    <div class="tabs-arrow-down"></div>
+    <div class="js-tabs-arrow tabs-arrow-down"></div>
     <div class='region-tab-container'>
       <h2>Select a region</h2>
          <ul class='tabs-menu etabs'>
           <?php foreach( $terms as $term ): ?>
-          <li class='tab'><a href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
+          <li class='tab'><a class="js-region-btn" href="#<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></li>
           <?php endforeach;?>
         <?php /* End sections loop */ ?>
       </ul>
@@ -75,12 +73,12 @@ $my_posts = get_posts($args);
       ));
     ?>
 <div class="tab_expand tabicon brand-wrap">
-    <div class="tabs-arrow-down"></div>
+    <div class="js-tabs-arrow tabs-arrow-down"></div>
       <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block' >
 
         <h2><?php echo $term->name; ?><small class="tab-select-text"> <?php _e( 'Select a brand', 'tm-regional' ); ?></small></h2>
           <ul class='posts-menu tabs-menu etabs brand-select'>
-            <?php foreach( $post_array as $post ): ?><li class='tab'><a href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
+            <?php foreach( $post_array as $post ): ?><li class='tab'><a class="js-tabs-btn" href="#<?php echo $post->post_name; ?>"><?php the_title(); ?></a></li><?php endforeach;?>
           </ul>
 
  <div class='panel-container'>

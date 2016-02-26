@@ -20,13 +20,13 @@ get_header(); ?>
         </div>
 
         <div class="container contact-info">
-            <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
+            <div class='tab-container -section-block'>
 
                 <ul class='posts-menu etabs'>
                     <?php /* Start the Loop */ ?>
                     <?php while ( have_posts() ) : the_post(); ?>
                     <li class='tab'>
-                        <a href="#<?php the_slug() ?>">
+                        <a class="js-region-btn" href="#<?php the_slug() ?>">
                             <?php the_title(); ?>
                         </a>
                     </li>

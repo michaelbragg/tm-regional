@@ -21,7 +21,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
-   
+
 
 
  <?php /* Add regional tab selector */ ?>
@@ -34,7 +34,7 @@ get_header(); ?>
                         <ul class='tabs-menu etabs'>
                             <?php foreach( $terms as $term ): ?>
                             <li class='tab'>
-                                <a href="#<?php echo $term->slug; ?>">
+                                <a class="js-region-btn" href="#<?php echo $term->slug; ?>">
                                     <?php echo $term->name; ?></a>
                             </li>
                             <?php endforeach;?>

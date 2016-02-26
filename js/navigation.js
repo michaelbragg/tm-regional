@@ -23,7 +23,7 @@ function js_height_init() {
 }
 
 /* ---------------------------------------------
- Main Navigation 
+ Main Navigation
  --------------------------------------------- */
 (function(jQuery) {
 
@@ -157,7 +157,7 @@ function js_height_init() {
  --------------------------------------------- */
 
     jQuery('.posts-menu .tab a').click(function(event) {
-   
+
         jQuery('html, body').animate({
             scrollTop: jQuery(this).offset().top - 180
         }, 2000);
@@ -168,27 +168,34 @@ function js_height_init() {
     setTimeout(renderVisualizer, 500);
     });
 
-    jQuery('.tab_expand').on('click', function(event) {
+/**
+ * Small screen region sub menu
+ */
+
+    jQuery('.js-tabs-arrow').on('click', function(event) {
         event.returnValue = false;
-        if(event.preventDefault) event.preventDefault();
-         jQuery(this).find('.tabs-menu').toggleClass('tabs-menu-expand');
-        jQuery(this).find('.tabs-arrow-down').toggleClass('tabs-arrow-up');
+        if(event.preventDefault){ event.preventDefault() };
+        // Hide and show sub menu at small screen sizes
+        jQuery(this).closest('.tab_expand').find('.tabs-menu').toggleClass('tabs-menu-expand');
+        // Toggle Arrow icon
+        jQuery(this).toggleClass('tabs-arrow-up');
     });
 
-/* ---------------------------------------------
- Regional Tab Selector
- --------------------------------------------- */
+/**
+ * Regional Tab Selector
+ *
+ * Controls the 'Select a Region' bar
+ */
 
+jQuery('.region-tab-container .tabs-menu .tab .js-region-btn').click(function(event) {
+    event.returnValue = false;
+    if(event.preventDefault) {event.preventDefault()};
+        var DivLink = jQuery(this).attr('href');
 
-    jQuery('.region-tab-container .tabs-menu .tab a').click(function(event) {
-        event.returnValue = false;
-        if(event.preventDefault) event.preventDefault();
-                var DivLink = jQuery(this).attr('href');
-
-        jQuery('html, body').animate({
-            scrollTop: jQuery(DivLink).offset().top - 130
-        }, 2000);
-    });
+    jQuery('html, body').animate({
+        scrollTop: jQuery(DivLink).offset().top - 130
+    }, 2000);
+});
 
     jQuery(window).scroll(function(event) {
         var scroll = jQuery(window).scrollTop();
