@@ -71,17 +71,17 @@ if ( ! function_exists( 'is_post_type' ) ) :
 
     $array = array();
     if( $post_types == get_post_type() ){
-      array_push( $array, $post_type );
+      array_push( $array, $post_types );
       return true;
     }
+    if( is_array( $post_types ) ) {
+        foreach ( $post_types as $value ) {
 
-    foreach ( $post_types as $value ) {
-
-      if( $value == get_post_type() ){
-        array_push( $array, $value );
-        return true;
-      }
-
+          if( $value == get_post_type() ){
+            array_push( $array, $value );
+            return true;
+          }
+        }
     }
 
     return false;
