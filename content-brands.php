@@ -30,7 +30,7 @@
 			<?php } ?>
 			<?php
 			if ( has_media_pack() ):
-				printf( '<section><a class="btn" href="%1$s" target="_blank">%2$s</a></section>', the_media_pack(), __( 'Media Pack', 'tm-regional' ) );
+				printf( '<section><a class="btn media-pack" href="%1$s" target="_blank">%2$s</a></section>', the_media_pack(), __( 'Media Pack', 'tm-regional' ) );
 			endif;
 			?>
 

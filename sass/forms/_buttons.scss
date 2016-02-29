@@ -12,7 +12,7 @@ input[type="submit"] {
 	line-height: 1.2;
 	text-align: left;
 	&:hover {
-		   
+
   color: $primary-color;
 
 	}
@@ -50,4 +50,8 @@ input[type="submit"] {
 
 .btn:hover:before {
   top: 0;
+}
+
+.media-pack {
+	margin: 1.5em 0;
 }
