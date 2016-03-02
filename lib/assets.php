@@ -135,6 +135,7 @@ function tm_regional_load_solutions_cpt(){
   //global $page;
   if( 'solutions' == get_post_type() ){
     // Scripts to be loaded on the solutions post type
+    wp_enqueue_script( 'tm-regional-productPreview' );
     wp_enqueue_script( 'tm-regional-tabs' );
   }
 }
