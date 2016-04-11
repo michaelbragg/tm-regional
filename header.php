@@ -33,7 +33,7 @@
         <span class="social-hamburger social-hamburger-3"></span>-->
     </label>
 
-    <?php if( has_social_media('email') ): ?><a href="mailto:<?php the_social_media('email'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-envelope"></i></a><?php endif; ?>
+    <?php if( has_social_media('email') ): ?><a href="mailto:<?php the_social_media('email'); ?>" target="_top" class="social-menu-item"> <i class="fa fa-envelope"></i></a><?php endif; ?>
     <?php if( has_social_media('google') ): ?><a href="https://plus.google.com/<?php the_social_media('email'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-google-plus"></i></a><?php endif; ?>
     <?php if( has_social_media('facebook') ): ?><a href="https://www.facebook.com/<?php the_social_media('facebook'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-facebook"></i></a><?php endif; ?>
     <?php if( has_social_media('twitter') ): ?><a href="http://twitter.com/<?php the_social_media('twitter'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-twitter"></i></a><?php endif; ?>
@@ -106,5 +106,3 @@
 </div>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
-
-
