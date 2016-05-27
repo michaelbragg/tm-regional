@@ -15,10 +15,10 @@ get_header(); ?>
 
 
 
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
+<?php if ( has_post_thumbnail( $post->ID ) ) :   ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-<div class="page-hero" style="background-image: url('<?php echo $image[0]; ?>')">
+<div class="page-hero" style="background-image: url('<?php echo esc_url( $image[0] ); ?>')">
 
 </div>
 
@@ -33,8 +33,8 @@ get_header(); ?>
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
 					endif;
 				?>
 
@@ -42,5 +42,5 @@ get_header(); ?>
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 <?php get_footer(); ?>

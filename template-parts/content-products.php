@@ -14,11 +14,11 @@
 
 <div class="entry-content">
     <?php
-      wp_link_pages( array(
-        'before' => '<div class="page-links">' . __( 'Pages:', 'tm-regional' ),
-        'after'  => '</div>',
-      ) );
-    ?>
+	  wp_link_pages( array(
+		  'before' => '<div class="page-links">' . __( 'Pages:', 'tm-regional' ),
+		  'after'  => '</div>',
+	  ) );
+	?>
 </div><!-- .entry-content -->
 
 <?php if ( have_adverts() ) { ?>
@@ -26,15 +26,15 @@
   <section class="js-advert container products-style cf">
     <div class="grid ss1-ss4 ms1-ms6 ls1-ls6">
 
-      <?php the_content(); ?>
+		<?php the_content(); ?>
 
       <ul class="js-advert--list">
 
-      <?php foreach ( the_adverts() as $advert ):
+		<?php foreach ( the_adverts() as $advert ) :
 
-        echo '<li><button class="js-products--button products-button" data-advert-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
+			echo '<li><button class="js-products--button products-button" data-advert-preview="' . wp_get_attachment_url( $advert['id'] ) . '">' . $advert['type'] . '</button></li></a>';
 
-      endforeach; ?>
+	  endforeach; ?>
       </ul>
     </div>
 
@@ -53,19 +53,19 @@
 
   <footer class="entry-meta">
     <?php
-      /* translators: used between list items, there is a space after the comma */
-      $category_list = get_the_category_list( __( ', ', 'tm-regional' ) );
+	  /* translators: used between list items, there is a space after the comma */
+	  $category_list = get_the_category_list( __( ', ', 'tm-regional' ) );
 
-      /* translators: used between list items, there is a space after the comma */
-      $tag_list = get_the_tag_list( '', __( ', ', 'tm-regional' ) );
+	  /* translators: used between list items, there is a space after the comma */
+	  $tag_list = get_the_tag_list( '', __( ', ', 'tm-regional' ) );
 
-      printf(
-        $meta_text,
-        $category_list,
-        $tag_list,
-        get_permalink()
-      );
-    ?>
+	  printf(
+		  $meta_text,
+		  $category_list,
+		  $tag_list,
+		  get_permalink()
+	  );
+	?>
 
     <?php edit_post_link( __( 'Edit', 'tm-regional' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->

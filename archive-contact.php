@@ -1,8 +1,11 @@
 <?php
-/*
-*
-* The template for displaying Contact Archive pages. *
-* Learn more: http://codex.wordpress.org/Template_Hierarchy * * @package tm-regional */
+/**
+ * The template for displaying Contact Archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package tm-regional
+ */
 
 get_header(); ?>
 
@@ -10,8 +13,8 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
          <div class="contact-page-hero kenburns hero-height">
              <div class="container page-headline">
-                     <?php /* Add page Description*/ ?>
-                 <?php if( have_offices_description() ): ?>
+						<?php /* Add page Description*/ ?>
+					<?php if ( have_offices_description() ) :   ?>
                 <div class="hero-page-title">
                      <p> <?php the_offices_description(); ?> </p>
                 </div>

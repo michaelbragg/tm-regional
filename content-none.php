@@ -22,12 +22,12 @@
     <?php elseif ( is_search() ) : ?>
 
       <h1><?php _e( '0 results found', 'tm-regional' ); ?></h1>
-      <?php get_search_form(); ?>
+		<?php get_search_form(); ?>
 
     <?php else : ?>
 
       <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'tm-regional' ); ?></p>
-      <?php get_search_form(); ?>
+		<?php get_search_form(); ?>
 
     <?php endif; ?>
   </div><!-- .page-content -->

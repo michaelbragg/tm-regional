@@ -1,9 +1,10 @@
 <?php
 
 /**
-* Template Name: Home Page *
-* @package tm-regional *
-*/
+ * Template Name: Home Page
+ *
+ * @package tm-regional
+ */
 
 get_header(); ?>
 
@@ -26,4 +27,4 @@ get_header(); ?>
 </div>
 <!-- #primary -->
 
- <?php get_footer(); ?>
+	<?php get_footer(); ?>

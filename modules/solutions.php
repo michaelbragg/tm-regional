@@ -7,7 +7,7 @@
 ?>
  <section class="solutions section js-height-full" id="section2">
     <ul>
-        <?php if( get_theme_mod( 'fp2-pulse-1') ): ?><li>
+        <?php if ( get_theme_mod( 'fp2-pulse-1' ) ) :   ?><li>
             <button id="hotspotOne" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                  <div class="hotspot-info info-one">
@@ -15,7 +15,7 @@
                 </div>
             </button>
         </li><?php endif; ?>
-        <?php if( get_theme_mod( 'fp2-pulse-2') ): ?><li>
+        <?php if ( get_theme_mod( 'fp2-pulse-2' ) ) :   ?><li>
             <button id="hotspotTwo" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-two">
@@ -23,7 +23,7 @@
                 </div>
             </button>
         </li><?php endif; ?>
-        <?php if( get_theme_mod( 'fp2-pulse-3') ): ?><li>
+        <?php if ( get_theme_mod( 'fp2-pulse-3' ) ) :   ?><li>
             <button id="hotspotThree" class="hotspot desktop__visible pulse">
                  <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-three">
@@ -31,7 +31,7 @@
                 </div>
             </button>
         </li><?php endif; ?>
-        <?php if( get_theme_mod( 'fp2-pulse-4') ): ?><li>
+        <?php if ( get_theme_mod( 'fp2-pulse-4' ) ) :   ?><li>
             <button id="hotspotFour" class="hotspot desktop__visible pulse">
                 <div class='hotspot-icon'></div>
                 <div class="hotspot-info info-four">
@@ -45,8 +45,8 @@
             <article class="solutions-txt col-sm-5">
                 <h1><?php echo get_theme_mod( 'fp2-title' ); ?></h1>
                 <p><?php echo get_theme_mod( 'fp2-text' ); ?></p>
-                <?php if( get_theme_mod( 'fp2-button-url') ): ?>
-                <a class="btn btn-discover" href="<?php echo get_theme_mod( 'fp2-button-url'); ?>"><?php echo get_theme_mod( 'fp2-button-text' ); ?></a>
+                <?php if ( get_theme_mod( 'fp2-button-url' ) ) :   ?>
+                <a class="btn btn-discover" href="<?php echo get_theme_mod( 'fp2-button-url' ); ?>"><?php echo get_theme_mod( 'fp2-button-text' ); ?></a>
                 <?php endif; ?>
             </article>
             <aside class="col-sm-7"></aside>

@@ -15,7 +15,7 @@ get_header(); ?>
 	<header>
 					<h1 class="error-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'tm-regional' ); ?></h1>
 					<p>We can take you to the Homepage if you want to.</p>
-					<a class='btn' href="<?php echo get_home_url(); ?>">Click Here</a>
+					<a class='btn' href="<?php echo esc_url( get_home_url() ); ?>">Click Here</a>
 				</header><!-- .page-header --></div>
 			</div>
 		</main><!-- #main -->

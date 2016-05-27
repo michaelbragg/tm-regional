@@ -23,8 +23,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tm-regional' ); ?></a>
 
 <?php /* Social Media Buttons */ ?>
-<?php if( function_exists( 'has_social_media' ) ): ?>
-<?php if( has_social_media() ): ?>
+<?php if ( function_exists( 'has_social_media' ) ) :   ?>
+<?php if ( has_social_media() ) :   ?>
 <nav class="social-menu">
     <input type="checkbox" href="#" class="social-menu-open" name="social-menu-open" id="social-menu-open" />
     <label class="social-menu-open-button" for="social-menu-open">
@@ -33,11 +33,11 @@
         <span class="social-hamburger social-hamburger-3"></span>-->
     </label>
 
-    <?php if( has_social_media('email') ): ?><a href="mailto:<?php the_social_media('email'); ?>" target="_top" class="social-menu-item"> <i class="fa fa-envelope"></i></a><?php endif; ?>
-    <?php if( has_social_media('google') ): ?><a href="https://plus.google.com/<?php the_social_media('email'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-google-plus"></i></a><?php endif; ?>
-    <?php if( has_social_media('facebook') ): ?><a href="https://www.facebook.com/<?php the_social_media('facebook'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-facebook"></i></a><?php endif; ?>
-    <?php if( has_social_media('twitter') ): ?><a href="http://twitter.com/<?php the_social_media('twitter'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-twitter"></i></a><?php endif; ?>
-    <?php if( has_social_media('linkedin') ): ?><a href="https://www.linkedin.com/company/<?php the_social_media('linkedin'); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-linkedin"></i></a><?php endif; ?>
+    <?php if ( has_social_media( 'email' ) ) :   ?><a href="mailto:<?php the_social_media( 'email' ); ?>" target="_top" class="social-menu-item"> <i class="fa fa-envelope"></i></a><?php endif; ?>
+    <?php if ( has_social_media( 'google' ) ) :   ?><a href="https://plus.google.com/<?php the_social_media( 'email' ); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-google-plus"></i></a><?php endif; ?>
+    <?php if ( has_social_media( 'facebook' ) ) :   ?><a href="https://www.facebook.com/<?php the_social_media( 'facebook' ); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-facebook"></i></a><?php endif; ?>
+    <?php if ( has_social_media( 'twitter' ) ) :   ?><a href="http://twitter.com/<?php the_social_media( 'twitter' ); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-twitter"></i></a><?php endif; ?>
+    <?php if ( has_social_media( 'linkedin' ) ) :   ?><a href="https://www.linkedin.com/company/<?php the_social_media( 'linkedin' ); ?>" target="_blank" class="social-menu-item"> <i class="fa fa-linkedin"></i></a><?php endif; ?>
 </nav>
 <?php endif; ?>
 <?php endif; ?>
@@ -45,16 +45,16 @@
           <!-- main menu container-->
           <article class="menu-bg">
             <div class="valign">
-             <?php if ( has_nav_menu( 'primary' ) ) : ?>
+				<?php if ( has_nav_menu( 'primary' ) ) : ?>
                <nav >
                 <?php
-                    // Primary navigation menu.
-                    wp_nav_menu( array(
-                        'menu_class'     => 'main-nav-menu',
-                        'theme_location' => 'primary',
-                        'items_wrap'     => '<ul id="%1$s" class="main-nav-menu">%3$s</ul>'
-                    ) );
-                ?>
+					// Primary navigation menu.
+					wp_nav_menu( array(
+						'menu_class'     => 'main-nav-menu',
+						'theme_location' => 'primary',
+						'items_wrap'     => '<ul id="%1$s" class="main-nav-menu">%3$s</ul>',
+					) );
+				?>
             </nav><!-- .main-navigation -->
         <?php endif; ?>
             </div>
@@ -72,9 +72,9 @@
     <div class="container">
             <div class="site-header">
                     <div class="site-branding">
-                        <a href="<?php echo get_home_url(); ?>">
+                        <a href="<?php echo esc_url( get_home_url() ); ?>">
                             <div class="tm-branding">Trinity Mirror</div>
-                            <div class="regional-title"><?php bloginfo('name'); ?></div>
+                            <div class="regional-title"><?php bloginfo( 'name' ); ?></div>
                          </a>
                     </div>
                 <!-- .site-branding -->
@@ -82,14 +82,14 @@
 
                 <div class="main-nav">
 	<div class="desktop-menu">
-	 <?php if ( has_nav_menu( 'primary' ) ) : ?>
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			   <nav >
 				<?php
 					// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'desktop-nav-menu',
 						'theme_location' => 'primary',
-						'items_wrap'     => '<ul id="%1$s" class="desktop-nav-menu">%3$s</ul>'
+						'items_wrap'     => '<ul id="%1$s" class="desktop-nav-menu">%3$s</ul>',
 					) );
 				?>
 			</nav><!-- .main-navigation -->

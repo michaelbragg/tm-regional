@@ -4,6 +4,7 @@
  *
  * @package tm-regional
  */
+
 ?>
 <div id="<?php the_slug() ?>">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -29,7 +30,7 @@
 								<small class="figure-source"><?php the_average_readership( 'source' );?></small>
 			<?php } ?>
 			<?php
-			if ( has_media_pack() ):
+			if ( has_media_pack() ) :
 				printf( '<section><a class="btn media-pack" href="%1$s" target="_blank">%2$s</a></section>', the_media_pack(), __( 'Media Pack', 'tm-regional' ) );
 			endif;
 			?>
@@ -110,8 +111,8 @@
 						<p><?php the_visualizer_description(); ?></p>
 						<div class="graph-key">
 							<ul>
-								<?php if ( has_newspaper_name() ): ?><li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_newspaper_name(); ?></span></li><?php endif; ?>
-								<?php if ( has_website_name() ): ?><li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li><?php endif; ?>
+								<?php if ( has_newspaper_name() ) :   ?><li><span class="graph-key-icon"></span><span class="graph-key-text paper-title"><?php the_newspaper_name(); ?></span></li><?php endif; ?>
+								<?php if ( has_website_name() ) :   ?><li><span class="graph-key-icon-online"></span><span class="graph-key-text paper-title"><?php the_website_name(); ?></span></li><?php endif; ?>
 							</ul>
 						</div>
 					</div>

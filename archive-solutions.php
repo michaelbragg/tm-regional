@@ -1,11 +1,14 @@
-<?php /** * The template for displaying Product Archive pages. *
-* Learn more: http://codex.wordpress.org/Template_Hierarchy *
-* @package tm-regional */
+<?php
+/**
+ * The template for displaying Product Archive pages. *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy *
+ * @package tm-regional
+ */
 
-$post_type=get_post_type();
-$taxonomy_type='mediums' ;
-$posts=get_categories( 'taxonomy=' . $taxonomy_type . '&type=' . $post_type );
-$terms=get_terms(  $taxonomy_type, array( 'orderby' => 'menu_order' )  );
+$post_type = get_post_type();
+$taxonomy_type = 'mediums' ;
+$posts = get_categories( 'taxonomy=' . $taxonomy_type . '&type=' . $post_type );
+$terms = get_terms( $taxonomy_type, array( 'orderby' => 'menu_order' ) );
 
 get_header(); ?>
 
@@ -13,8 +16,8 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
         <div class="products-page-hero kenburns hero-height">
             <div class="container page-headline">
-                     <?php /* Add page Description*/ ?>
-                 <?php if( have_solutions_description() ): ?>
+						<?php /* Add page Description*/ ?>
+					<?php if ( have_solutions_description() ) :   ?>
                 <div class="hero-page-title">
                      <p> <?php the_solutions_description(); ?> </p>
                 </div>
@@ -30,7 +33,7 @@ get_header(); ?>
                     <div class='region-tab-container'>
                         <h2>Select a media</h2>
                         <ul class='tabs-menu etabs'>
-                            <?php foreach( $terms as $term ): ?>
+                            <?php foreach ( $terms as $term ) :   ?>
                             <li class='tab'>
                                 <a class="js-region-btn" href="#<?php echo $term->slug; ?>">
                                     <?php echo $term->name; ?></a>
@@ -43,20 +46,20 @@ get_header(); ?>
             </div>
         </div>
         <?php /* Start the Loop for regions */ ?>
-        <?php foreach( $terms as $term ): ?>
+        <?php foreach ( $terms as $term ) :   ?>
         <div id="titles-main">
             <div class="container">
                 <section>
                     <?php /* Start the Loop for posts within regions */ ?>
-                    <?php $post_array=get_posts( array( 'post_type'=> $post_type, 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => true ) ); ?>
+                    <?php $post_array = get_posts( array( 'post_type' => $post_type, 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => true ) ); ?>
                     <div class="tab_expand tabicon brand-wrap">
                         <div class="tabs-arrow-down"></div>
                         <div id='<?php echo $term->slug; ?>' class='tab-container <?php echo $term->slug; ?>-section-block'>
                             <h2><?php echo $term->name; ?><small class="brand-select-text"> / Select a solution</small></h2>
                             <?php /* Start sections loop */ ?>
                             <ul class='posts-menu tabs-menu etabs brand-select'>
-                                <?php foreach( $post_array as $post ): ?>
-                                <?php setup_postdata($post); ?>
+                                <?php foreach ( $post_array as $post ) :   ?>
+                                <?php setup_postdata( $post ); ?>
                                 <li class='tab'>
                                     <a href="#<?php echo $post->post_name; ?>">
                                         <?php the_title(); ?>
@@ -66,7 +69,7 @@ get_header(); ?>
                                 <?php endforeach;?>
                             </ul>
                             <?php /* End sections loop */ ?>
-                            <?php $single_post_args=array( 'posts_per_page'=> 9999, 'post_type' => $post_type, 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => false ); $single_post = get_posts( $single_post_args ); foreach( $single_post as $post ): setup_postdata( $post ); get_template_part( 'content-' . $post_type ); wp_reset_postdata(); endforeach;?>
+                            <?php $single_post_args = array( 'posts_per_page' => 9999, 'post_type' => $post_type, 'taxonomy' => $term->taxonomy, 'term' => $term->slug, 'orderby' => 'menu_order', 'order' => 'ASC', 'nopaging' => false ); $single_post = get_posts( $single_post_args ); foreach ( $single_post as $post ) :   setup_postdata( $post ); get_template_part( 'content-' . $post_type ); wp_reset_postdata(); endforeach;?>
                         </div>
                 </section>
                 </div>

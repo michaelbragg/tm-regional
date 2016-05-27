@@ -22,14 +22,14 @@
     <?php if ( has_nav_menu( 'footer' ) ) : ?>
   <div class="footer-menu">
          <nav >
-              <?php
-                    // Primary navigation menu.
-                    wp_nav_menu( array(
-                        'menu_class'     => 'footer-nav-menu',
-                        'theme_location' => 'footer',
-                        'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
-                    ) );
-              ?>
+				<?php
+					// Primary navigation menu.
+					wp_nav_menu( array(
+						'menu_class'     => 'footer-nav-menu',
+						'theme_location' => 'footer',
+						'items_wrap'     => '<ul id="%1$s" class="footer-nav-menu">%3$s</ul>'
+					) );
+				?>
         </nav><!-- .main-navigation -->
   </div>
     <?php endif; ?>
@@ -44,7 +44,7 @@
 jQuery.noConflict();
 </script>
 
-<?php if(is_front_page()){ ?>
+<?php if ( is_front_page() ) { ?>
 <script type="text/javascript">
     var deleteLog = false;
     jQuery(document).ready(function() {
@@ -89,16 +89,16 @@ jQuery.noConflict();
     <?php } ?>
 
 
- <?php /* Start Carousel if home page */ ?>
+	<?php /* Start Carousel if home page */ ?>
 
-<?php if(is_front_page()){ ?>
+<?php if ( is_front_page() ) { ?>
 <script>
 jQuery('.carousel').carousel({
     pause: "false"
 });
 </script>
-  <?php } ?>
-<?php if( is_post_type( array( 'solutions', 'brands', 'audiences', 'rates', 'contact' ) ) ):?>
+	<?php } ?>
+<?php if ( is_post_type( array( 'solutions', 'brands', 'audiences', 'rates', 'contact' ) ) ) :  ?>
      <script type="text/javascript">
       jQuery(document).ready( function() {
       jQuery("[class$=-section-block]").easytabs();
